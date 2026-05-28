@@ -24,22 +24,19 @@ florida_weights <- migration %>%
 master_panel <- remit_clean %>%
   inner_join(florida_weights, by = c("mx_state", "mx_municipality"))
 
-# Restrict timeline 
+# Restrict timeline to -8/+8 quarters
 shock_date <- as.Date("2022-10-01")
 unique_quarters <- sort(unique(master_panel$period_date))
 shock_index <- which(unique_quarters == shock_date)
-
-# Restrict timeline to -8/+8 quarters
 master_panel <- master_panel %>%
   mutate(
     rel_quarter = match(period_date, unique_quarters) - shock_index
   ) %>%
   filter(rel_quarter >= -8 & rel_quarter <= 8)
 
-# Create IDs and convert florida weights to percentage points
+# Convert florida weights to percentage points
 analysis_data <- master_panel %>%
   mutate(
-    unit_id = paste(mx_state, mx_municipality, sep = "_"),
     florida_pct = Florida * 100
   )
 
@@ -50,25 +47,25 @@ analysis_data <- master_panel %>%
 # OLS DiD without Mexican state-time fixed effects
 ols_no_state_fe <- feols(
   log(remittances + 1) ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) | 
-    unit_id + period_date,
+    cvegeo + period_date,
   data = analysis_data,
-  cluster = ~unit_id
+  cluster = ~cvegeo
 )
 
 # OLS DiD with Mexican state-time fixed effects
 ols_with_state_fe <- feols(
   log(remittances + 1) ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) | 
-    unit_id + mx_state^period_date,
+    cvegeo + mx_state^period_date,
   data = analysis_data,
-  cluster = ~unit_id
+  cluster = ~cvegeo
 )
 
 # PPML DiD with Mexican state-time fixed effects
 ppml_with_state_fe <- fepois(
   remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) | 
-    unit_id + mx_state^period_date,
+    cvegeo + mx_state^period_date,
   data = analysis_data,
-  cluster = ~unit_id
+  cluster = ~cvegeo
 )
 
 # Table to show results
@@ -76,6 +73,24 @@ etable(
   ols_no_state_fe, ols_with_state_fe, ppml_with_state_fe,
   headers = c("OLS: No State-Time FE", "OLS: With State-Time FE", "PPML: With State-Time FE")
 )
+
+################################################################################
+# SPATIAL CLUSTERING
+################################################################################
+
+# Base model
+ppml_base <- fepois(
+  remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) | 
+    cvegeo + mx_state^period_date,
+  data = analysis_data
+)
+
+# Compute different spatial covariance structures using different cutoffs
+ppml_conley_10  <- summary(ppml_base, vcov = conley(cutoff = 10))
+ppml_conley_20  <- summary(ppml_base, vcov = conley(cutoff = 20))
+ppml_conley_30  <- summary(ppml_base, vcov = conley(cutoff = 30))
+ppml_conley_50  <- summary(ppml_base, vcov = conley(cutoff = 50))
+ppml_conley_100 <- summary(ppml_base, vcov = conley(cutoff = 100))
 
 ################################################################################
 # VISUALIZATION
@@ -140,6 +155,56 @@ iplot(
   ylim = c(-0.03, 0.03),
   ref.line = 9,
   ref.line.par = list(col = "firebrick3", lty = 2)
+)
+
+# Saving file
+dev.off()
+
+# Start png for saving
+png("figures-tables/municipality-inflows/muni_did_ppml.png", 
+    width = 12, height = 5, units = "in", res = 300)
+
+# PPML with Mexican state-time FE
+iplot(
+  ppml_with_state_fe,
+  main = "PPML: State-Time FE",
+  xlab = "Quarter", 
+  ylab = "Coefficient Effect",
+  ylim = c(-0.03, 0.03),
+  ref.line = 9,
+  ref.line.par = list(col = "firebrick3", lty = 2)
+)
+
+# Saving file
+dev.off()
+
+# Define colors and shapes
+plot_colors <- c("blue", "purple", "darkgreen", "darkorange", "firebrick3")
+plot_shapes <- c(16, 17, 15, 18, 19)
+
+# Start png for saving
+png("figures-tables/municipality-inflows/muni_spatial_clustering.png", 
+    width = 12, height = 5, units = "in", res = 300)
+
+# PPML with spatial clustering
+iplot(
+  list(
+    "10 km Cutoff (Blue)"    = ppml_conley_10,
+    "30 km Cutoff (Purple)"  = ppml_conley_20,
+    "50 km Cutoff (Green)"   = ppml_conley_30,
+    "100 km Cutoff (Orange)" = ppml_conley_50,
+    "150 km Cutoff (Red)"    = ppml_conley_100
+  ),
+  main = "PPML Event Study: Sensitivity to Spatial Cutoffs",
+  xlab = "Quarter",
+  ylab = "Coefficient Effect",
+  ylim = c(-0.03, 0.03),
+  ref.line = 9,
+  ref.line.par = list(col = "grey50", lty = 2),
+  col = plot_colors,
+  pt.pch = plot_shapes,
+  # Customizes the legend appearance and places it safely in the bottom left
+  legend.options = list(x = "bottomleft", bty = "n", cex = 0.9)
 )
 
 # Saving file
