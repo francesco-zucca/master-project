@@ -127,6 +127,7 @@ dev.off()
 # Resetting the plotting layout back to standard
 par(mfrow = c(1, 1))
 
+# Start png for saving
 png("figures-tables/municipality-inflows/muni_did_ppml.png", 
     width = 12, height = 5, units = "in", res = 300)
 

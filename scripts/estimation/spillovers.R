@@ -4,12 +4,11 @@
 
 # Load libraries
 library(tidyverse)
-library(readxl)
 library(fixest)
 
 # Loading the data
-migration <- read_xlsx("Data/final-data/migration_matrix_rows.xlsx")
-remit  <- read.csv("Data/final-data/municipality_inflows.csv")                                                                                                         
+migration <- read.csv("data/migration_matrix_rows.csv")
+remit     <- read.csv("data/mx_muni_inflows.csv")                                                                                                         
 
 # Converting remittance data to unit dollars and formatting date variable
 remit_clean <- remit %>%
@@ -95,11 +94,15 @@ etable(
 # Displaying 2 plots side-by-side
 par(mfrow = c(1, 2))
 
+# Start png for saving
+png("figures-tables/spillovers/spillovers_effect.png", 
+    width = 12, height = 5, units = "in", res = 300)
+
 # PPML Texas Spillover Interaction Effect
 iplot(
   ppml_spillover_tx,
   i.select = 3,
-  main = "Texas Spillover Effect (Beta 3)",
+  main = "Texas Spillover Effect",
   xlab = "Quarter", 
   ylab = "Coefficient Effect",
   ylim = c(-0.005, 0.005),
@@ -111,7 +114,7 @@ iplot(
 iplot(
   ppml_spillover_ca,
   i.select = 3,
-  main = "California Spillover Effect (Beta 3)",
+  main = "California Spillover Effect",
   xlab = "Quarter", 
   ylab = "Coefficient Effect",
   ylim = c(-0.005, 0.005),
@@ -119,11 +122,18 @@ iplot(
   ref.line.par = list(col = "firebrick3", lty = 2)
 )
 
-# PPML Texas Spillover Interaction Effect
+# Saving file
+dev.off()
+
+# Start png for saving
+png("figures-tables/spillovers/hurricane_effect.png", 
+    width = 12, height = 5, units = "in", res = 300)
+
+# Shock effect accounting for spillovers (Texas)
 iplot(
   ppml_spillover_tx,
   i.select = 1,
-  main = "Texas Spillover Effect (Beta 3)",
+  main = "Hurricane effect on remittance inflows (average Texas exposure)",
   xlab = "Quarter", 
   ylab = "Coefficient Effect",
   ylim = c(-0.1, 0.1),
@@ -131,17 +141,20 @@ iplot(
   ref.line.par = list(col = "firebrick3", lty = 2) 
 )
 
-# PPML California Spillover Interaction Effect
+# Shock effect accounting for spillovers (California)
 iplot(
   ppml_spillover_ca,
   i.select = 1,
-  main = "California Spillover Effect (Beta 3)",
+  main = "Hurricane effect on remittance inflows (average California exposure)",
   xlab = "Quarter", 
   ylab = "Coefficient Effect",
   ylim = c(-0.1, 0.1),
   ref.line = 9,
   ref.line.par = list(col = "firebrick3", lty = 2)
 )
+
+# Saving file
+dev.off()
 
 # Resetting the plotting layout back to standard
 par(mfrow = c(1, 1))
