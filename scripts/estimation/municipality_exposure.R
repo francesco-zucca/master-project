@@ -10,18 +10,7 @@ library(patchwork)
 library(zoo)
 
 # Set global plot theme
-theme_set(
-  theme_minimal(base_size = 12) +
-    theme(
-      plot.title        = element_text(face = "bold", size = 14, hjust = 0),
-      plot.subtitle     = element_text(size = 11, hjust = 0),
-      axis.text.x       = element_text(angle = 45, hjust = 1),
-      panel.grid.major  = element_line(color = "grey95", linewidth = 0.4),
-      panel.grid.minor  = element_blank(),
-      legend.position   = "bottom",
-      legend.background = element_blank()
-    )
-)
+source("figures-tables/theme.R")
 
 ################################################################################
 # DATA PREPARATION
@@ -108,8 +97,7 @@ ppml_base <- fepois(
 
 # Compute different spatial covariance structures using different cutoffs
 ppml_conley_10  <- summary(ppml_base, vcov = conley(cutoff = 10))
-ppml_conley_20  <- summary(ppml_base, vcov = conley(cutoff = 20))
-ppml_conley_30  <- summary(ppml_base, vcov = conley(cutoff = 30))
+ppml_conley_25  <- summary(ppml_base, vcov = conley(cutoff = 25))
 ppml_conley_50  <- summary(ppml_base, vcov = conley(cutoff = 50))
 ppml_conley_100 <- summary(ppml_base, vcov = conley(cutoff = 100))
 
@@ -158,8 +146,8 @@ plot_event_study <- function(data, title, y_limits) {
     geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-07-01")), 
                linetype = "dotted", color = "grey30", linewidth = 0.7) +
     geom_errorbar(aes(ymin = ci_low, ymax = ci_high), 
-                  width = 0.05, linewidth = 0.6, color = "black") +
-    geom_point(size = 1, color = "black") +
+                  width = 0.05, linewidth = 0.6, color = "grey10") +
+    geom_point(size = 1, color = "grey10") +
     scale_x_yearqtr(format = "%Y Q%q", breaks = seq(min(data$period_quarter), max(data$period_quarter), by = 0.25)) +
     scale_y_continuous(limits = y_limits) +
     labs(title = title, x = "Quarter", y = "Coefficient Effect")
@@ -209,9 +197,9 @@ ggsave(
 
 # Combine all spatial cutoffs into one dataframe
 spatial_plot_data <- bind_rows(
+  event_study(ppml_with_state_fe, "Municipality"), 
   event_study(ppml_conley_10,  "10 km"),
-  event_study(ppml_conley_20,  "20 km"),
-  event_study(ppml_conley_30,  "30 km"),
+  event_study(ppml_conley_25,  "25 km"),
   event_study(ppml_conley_50,  "50 km"),
   event_study(ppml_conley_100, "100 km")
 )
@@ -219,33 +207,44 @@ spatial_plot_data <- bind_rows(
 # Lock in factor levels for legend ordering
 spatial_plot_data$model_label <- factor(
   spatial_plot_data$model_label, 
-  levels = c("10 km", "20 km", "30 km", "50 km", "100 km")
+  levels = c("Municipality", "10 km", "25 km", "50 km", "100 km")
 )
 
-# Construct plot
-spatial_gg <- ggplot(spatial_plot_data, aes(x = period_quarter, y = estimate, 
-                                            color = model_label, shape = model_label)) +
-  geom_hline(yintercept = 0, linetype = "dashed", color = "grey60", linewidth = 0.5) +
-  geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-07-01")), 
-             linetype = "dotted", color = "firebrick", linewidth = 0.7) +
-  geom_errorbar(aes(ymin = ci_low, ymax = ci_high), 
-                width = 0.04, position = position_dodge(width = 0.08), linewidth = 0.6) +
-  geom_point(position = position_dodge(width = 0.08), size = 2.5) +
+# Construct the center-point plot
+spatial_gg_center <- ggplot(
+  spatial_plot_data, aes(x = period_quarter, y = estimate, color = model_label)) +
+  geom_hline(yintercept = 0, color = "grey60", linewidth = 0.5) +
+  geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-10-01")), 
+             linetype = "dotted", color = "grey20", linewidth = 0.7) +
+  
+  # Confidence intervals
+  geom_errorbar(data = subset(spatial_plot_data, period_quarter != zoo::as.yearqtr(as.Date("2022-07-01"))),
+                aes(ymin = ci_low, ymax = ci_high), 
+                width = 0.02, position = position_dodge(width = 0.12), linewidth = 0.6) +
+  
+  # Point estimates
+  geom_point(data = subset(spatial_plot_data, model_label == "Municipality"), 
+             aes(x = period_quarter, y = estimate), 
+             color = "grey10", size = 1.5) +
+  
   scale_x_yearqtr(format = "%Y Q%q", 
                   breaks = seq(min(spatial_plot_data$period_quarter), 
                                max(spatial_plot_data$period_quarter), by = 0.25)) +
-  scale_y_continuous(limits = c(-0.03, 0.03), breaks = seq(-0.03, 0.03, 0.01)) +
-  scale_color_manual(values = c("blue", "purple", "darkgreen", "darkorange", "firebrick3")) +
-  scale_shape_manual(values = c(16, 17, 15, 18, 19)) +
+  scale_y_continuous(limits = c(-0.015, 0.015), breaks = seq(-0.015, 0.015, 0.01)) +
+  
+  # Shades of grey for levels
+  scale_color_manual(values = c("grey10", "grey30", "grey50", "grey65", "grey80")) +
+  
   labs(
-    title = "PPML Event Study: Sensitivity to Spatial Cutoffs",
-    subtitle = "Comparing Conley standard error adjustments across distance thresholds",
-    x = "Quarter", y = "Coefficient Effect",
-    color = "Spatial Cutoff", shape = "Spatial Cutoff"
+    title = "PPML event study: sensitivity to spatial cutoffs",
+    subtitle = "Comparing standard error adjustments across distance thresholds",
+    x = "Quarter", y = "Coefficient",
+    color = "Clustering level:"
   )
 
+# Save
 ggsave(
   filename = "figures-tables/municipality-inflows/muni_spatial_clustering.png",
-  plot = spatial_gg,
+  plot = spatial_gg_center,
   width = 11, height = 6, dpi = 300
 )
