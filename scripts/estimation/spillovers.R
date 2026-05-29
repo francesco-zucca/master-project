@@ -19,7 +19,6 @@ migration <- read.csv("data/migration_matrix_rows.csv")
 remit     <- read.csv("data/mx_muni_inflows.csv")                                                                                                                                                                                                                                                                                                  
 
 # Converting remittance data to unit dollars and formatting date variable
-# Note: Keeping cvegeo, lon, and lat in the select statement
 remit_clean <- remit %>%
   mutate(
     remittances = remittances_musd * 1000000,
@@ -27,21 +26,19 @@ remit_clean <- remit %>%
   ) %>%
   select(-remittances_musd, -c(year, quarter))
 
-# Select relevant network exposure variables from migration (Florida, Texas, California)
+# Select relevant network exposure variables from migration
 spillover_weights <- migration %>%
   select(mx_state, mx_municipality, Florida, Texas, California) 
 
-# Merge using spatial names to pull migration weights into the panel with cvegeo/coordinates
+# Merge using spatial names to attach geographic coordinates
 master_panel <- remit_clean %>%
   inner_join(spillover_weights, by = c("mx_state", "mx_municipality"))
 
-# Restrict timeline 
-shock_date <- as.Date("2022-10-01")
-unique_quarters <- sort(unique(master_panel$period_date))
-shock_index <- which(unique_quarters == shock_date)
-
 # Restrict timeline to -8/+8 quarters
-master_panel <- master_panel %>%
+shock_date      <- as.Date("2022-10-01")
+unique_quarters <- sort(unique(master_panel$period_date))
+shock_index     <- which(unique_quarters == shock_date)
+master_panel    <- master_panel %>%
   mutate(
     rel_quarter = match(period_date, unique_quarters) - shock_index
   ) %>%
@@ -65,18 +62,18 @@ tx_p90 <- quantile(analysis_data$texas_pct, probs = 0.90, na.rm = TRUE)
 # Create recentered variables and interaction terms
 analysis_data <- analysis_data %>%
   mutate(
-    # 1. Base interactions for Texas and California spillovers
+    # Baseline interactions for Texas and California spillovers
     fl_tx_interaction = florida_pct * texas_pct,
     fl_ca_interaction = florida_pct * cali_pct,
     
-    # 2. Recentered Texas variables for the percentile table
+    # Recentered Texas variables for the percentile table
     tx_pct_p10 = texas_pct - tx_p10,
     tx_pct_p25 = texas_pct - tx_p25,
     tx_pct_p50 = texas_pct - tx_p50,
     tx_pct_p75 = texas_pct - tx_p75,
     tx_pct_p90 = texas_pct - tx_p90,
     
-    # 3. Recentered interactions
+    # Recentered interactions
     fl_tx_int_p10 = florida_pct * tx_pct_p10,
     fl_tx_int_p25 = florida_pct * tx_pct_p25,
     fl_tx_int_p50 = florida_pct * tx_pct_p50,
@@ -85,13 +82,45 @@ analysis_data <- analysis_data %>%
   )
 
 ################################################################################
-# ESTIMATION 1: THE TEXAS PERCENTILE TABLE (Municipality Clustered SEs)
+# ESTIMATION 1: TEXAS VS CALIFORNIA SPILLOVERS
+################################################################################
+
+# Texas spillover
+ppml_tx_base <- fepois(
+  remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) +
+    i(period_date, texas_pct, ref = as.Date("2022-07-01")) +
+    i(period_date, fl_tx_interaction, ref = as.Date("2022-07-01")) | 
+    cvegeo + mx_state^period_date,
+  data = analysis_data,
+  vcov = ~cvegeo
+)
+
+# California spillover
+ppml_ca_base <- fepois(
+  remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) +
+    i(period_date, cali_pct, ref = as.Date("2022-07-01")) +
+    i(period_date, fl_ca_interaction, ref = as.Date("2022-07-01")) | 
+    cvegeo + mx_state^period_date,
+  data = analysis_data,
+  vcov = ~cvegeo
+)
+
+# Output table 1: Texas vs California spillovers
+etable(
+  ppml_tx_base, ppml_ca_base,
+  headers = c("Texas Network", "California Network"),
+  keep = "interaction",
+  file = "figures-tables/spillovers/spillovers_tx_ca.tex",
+  replace = TRUE,
+  title = "Network Spillovers: Texas vs. California",
+  label = "tab:spillovers_tx_ca"
+)
+
+################################################################################
+# ESTIMATION 2: BETA1 FOR DIFFERENT RECENTERINGS OF TEXAS
 ################################################################################ 
 
-# Note on SEs: Clustering standard errors at the municipality level (cvegeo).
-# Fixed effects explicitly utilize the bulletproof 'cvegeo' variable.
-
-# Texas Network at 10th Percentile
+# 10th percentile Texas exposure
 ppml_tx_p10 <- fepois(
   remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) +
     i(period_date, tx_pct_p10, ref = as.Date("2022-07-01")) +
@@ -101,7 +130,7 @@ ppml_tx_p10 <- fepois(
   vcov = ~cvegeo
 )
 
-# Texas Network at 25th Percentile
+# 25th percentile Texas exposure
 ppml_tx_p25 <- fepois(
   remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) +
     i(period_date, tx_pct_p25, ref = as.Date("2022-07-01")) +
@@ -111,7 +140,7 @@ ppml_tx_p25 <- fepois(
   vcov = ~cvegeo
 )
 
-# Texas Network at 50th Percentile (Median)
+# 50th percentile Texas exposure
 ppml_tx_p50 <- fepois(
   remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) +
     i(period_date, tx_pct_p50, ref = as.Date("2022-07-01")) +
@@ -121,7 +150,7 @@ ppml_tx_p50 <- fepois(
   vcov = ~cvegeo
 )
 
-# Texas Network at 75th Percentile
+# 75th percentile Texas exposure
 ppml_tx_p75 <- fepois(
   remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) +
     i(period_date, tx_pct_p75, ref = as.Date("2022-07-01")) +
@@ -131,7 +160,7 @@ ppml_tx_p75 <- fepois(
   vcov = ~cvegeo
 )
 
-# Texas Network at 90th Percentile
+# 90th percentile Texas exposure
 ppml_tx_p90 <- fepois(
   remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) +
     i(period_date, tx_pct_p90, ref = as.Date("2022-07-01")) +
@@ -141,7 +170,7 @@ ppml_tx_p90 <- fepois(
   vcov = ~cvegeo
 )
 
-# Output Table 1: Net Florida Shock evaluated at different levels of Texas network density
+# Output table 2: net Florida shock at different levels of Texas exposure
 etable(
   ppml_tx_p10, ppml_tx_p25, ppml_tx_p50, ppml_tx_p75, ppml_tx_p90,
   headers = c("10th Pct", "25th Pct", "50th Pct", "75th Pct", "90th Pct"),
@@ -153,44 +182,10 @@ etable(
 )
 
 ################################################################################
-# ESTIMATION 2: TEXAS VS CALIFORNIA SPILLOVERS (Municipality Clustered SEs)
+# VISUALIZATION: 10th vs 90th exposure percentile
 ################################################################################
 
-# 1. Base Texas Spillover Effect
-ppml_tx_base <- fepois(
-  remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) +
-    i(period_date, texas_pct, ref = as.Date("2022-07-01")) +
-    i(period_date, fl_tx_interaction, ref = as.Date("2022-07-01")) | 
-    cvegeo + mx_state^period_date,
-  data = analysis_data,
-  vcov = ~cvegeo
-)
-
-# 2. Base California Spillover Effect
-ppml_ca_base <- fepois(
-  remittances ~ i(period_date, florida_pct, ref = as.Date("2022-07-01")) +
-    i(period_date, cali_pct, ref = as.Date("2022-07-01")) +
-    i(period_date, fl_ca_interaction, ref = as.Date("2022-07-01")) | 
-    cvegeo + mx_state^period_date,
-  data = analysis_data,
-  vcov = ~cvegeo
-)
-
-# Output Table 2: Comparing Network Spillovers between Texas and California
-etable(
-  ppml_tx_base, ppml_ca_base,
-  headers = c("Texas Network", "California Network"),
-  keep = "interaction", # Filters down strictly to the spillover interaction terms
-  file = "figures-tables/spillovers/spillovers_tx_ca.tex",
-  replace = TRUE,
-  title = "Network Spillovers: Texas vs. California",
-  label = "tab:spillovers_tx_ca"
-)
-
-################################################################################
-# VISUALIZATION: THE NETWORK DIVERGENCE (10th vs 90th Percentile)
-################################################################################
-
+# Helper function to extract event study data
 event_study <- function(model_object, model_label) {
   coef_mat <- as.data.frame(fixest::coeftable(model_object))
   names(coef_mat) <- c("estimate", "std_error", "t_stat", "p_value")
@@ -198,7 +193,8 @@ event_study <- function(model_object, model_label) {
   
   # Filter strictly to the main Florida terms
   coef_mat <- coef_mat[
-    grepl("florida_pct", coef_mat$term) & !grepl("texas|interaction|tx_pct_p", tolower(coef_mat$term)), 
+    grepl("florida_pct", coef_mat$term) & !grepl("texas|interaction|tx_pct_p", 
+                                                 tolower(coef_mat$term)), 
   ]
   
   # Extract dates
@@ -226,11 +222,11 @@ event_study <- function(model_object, model_label) {
   return(clean_df)
 }
 
-# 1. Extract data using helper function
+# Extract data using helper function
 data_p10 <- event_study(ppml_tx_p10, "10th Pct: Low Texas Network")
 data_p90 <- event_study(ppml_tx_p90, "90th Pct: High Texas Network")
 
-# 2. Combine into one plotting dataframe
+# Combine into one plotting dataframe
 percentile_plot_data <- bind_rows(data_p10, data_p90)
 
 # Lock in factor levels so they appear in a logical order in the legend
@@ -239,47 +235,58 @@ percentile_plot_data$model_label <- factor(
   levels = c("10th Pct: Low Texas Network", "90th Pct: High Texas Network")
 )
 
-# 3. Construct the Divergence Plot
+# Construct the divergence plot
 percentile_gg <- ggplot(
-  percentile_plot_data, aes(x = period_quarter, 
-                            y = estimate, color = model_label)) +
+  percentile_plot_data, 
+  aes(x = period_quarter, y = estimate, 
+      color = model_label, 
+      shape = model_label,
+      group = model_label)
+) +
   
   # Baseline zero and shock vertical lines
-  geom_hline(yintercept = 0, color = "grey60", linewidth = 0.5) +
+  geom_hline(yintercept = 0, color = "grey20", linewidth = 0.5, linetype = "dotted") +
   geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-10-01")), 
              linetype = "dotted", color = "grey20", linewidth = 0.7) +
   
-  # Confidence intervals (dodged so they don't overlap)
+  # Confidence intervals
   geom_errorbar(data = subset(percentile_plot_data, 
                               period_quarter != zoo::as.yearqtr(as.Date("2022-07-01"))),
                 aes(ymin = ci_low, ymax = ci_high), 
                 width = 0.06, position = position_dodge(width = 0.1), 
-                linewidth = 0.6, lineend = "square") +
+                linewidth = 0.6, lineend = "square",
+                color = "grey70") + 
   
-  # Point estimates (dodged to match the error bars perfectly)
+  # Point estimates
   geom_point(aes(x = period_quarter, y = estimate), 
-             position = position_dodge(width = 0.1), size = 1.5) +
+             position = position_dodge(width = 0.1), size = 2) +
   
-  # X-axis formatting matching your script
+  # X-axis formatting
   scale_x_yearqtr(format = "%Y Q%q", 
                   breaks = seq(min(percentile_plot_data$period_quarter), 
                                max(percentile_plot_data$period_quarter), by = 0.25)) +
   
-  # High-contrast, colorblind-friendly grayscale colors from your latest update
-  scale_color_manual(values = c("grey40", "grey20")) +
+  # Colors
+  scale_color_manual(values = c("grey20", "grey20")) +
   
+  # Shapes
+  scale_shape_manual(values = c(16, 17)) +
+  
+  # Labels
   labs(
     title = "Divergent Remittance Responses by Network Density",
     subtitle = "Evaluating the Florida Shock at High vs. Low Texas Network Exposure",
-    x = "Quarter", y = "Coefficient Effect",
-    color = "Network Exposure:"
+    x = NULL, 
+    y = "Coefficient",
+    color = "Network exposure:",
+    shape = "Network exposure:"
   ) + 
-  
   theme(legend.position = "bottom")
 
-# 4. Save the plot to your figures folder
+# Save the plot
 ggsave(
-  filename = "figures-tables/spillovers/muni_network_divergence_muni.png",
+  filename = "figures-tables/spillovers/muni_network_divergence_muni.pdf",
   plot = percentile_gg,
-  width = 11, height = 6, dpi = 300
+  width = 11, height = 6, dpi = 300,
+  device = cairo_pdf
 )
