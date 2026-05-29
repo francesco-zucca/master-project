@@ -1,0 +1,47 @@
+\chapter{Investigating Spillover Effects}
+
+A fundamental requirement for standard causal inference models is the Stable Unit Treatment Value Assumption (SUTVA), formalized by \textcite{rubin1980}. SUTVA assumes that the potential outcomes of any unit depend exclusively on its own treatment assignment, excluding the possibility of any indirect spillover between units.
+
+In our context, U.S. states not directly exposed to a local shock might still be affected if control units are exposed to the treatment through indirect channels, leading to biased estimates \parencite{clarke2017}. For instance, given that California and Texas all host a big proportion of Mexican migrants, we hypothesize that these two states might have played a role in offsetting the negative Florida shock. If a Mexican municipality highly dependent on Florida remittances experiences an income shock due to Hurricane Ian, connected migrants residing in Texas might respond by increasing their transfers to compensate for the drop. If this was the case, the estimated Florida-exposure effect on total remittances would capture the net effect of the shock after within-network adjustment, rather than the direct fall in Florida-origin remittances. 
+
+Therefore, we argue that our estimates are subject to general equilibrium effects. We base our analysis on the exposure-mapping logic of \textcite{aronow2017} to define indirect exposure through alternative migrant networks. Rather than assuming that a municipality’s remittances respond only to Florida exposure, we allow the response to vary with exposure to other major U.S. destinations, especially Texas and California. 
+
+\section{Empirical Strategy}
+
+The biggest hosts of Mexican migrants are Texas and California (include data here); thus, it is likely that those municipalities exposed to the Florida shock might also be connected to a certain extent to California and Texas. Plot \ref{fig:stacked_bar_top30_fl_tx_ca_composition} helps us visualize that there exists indeed some migrant networks spanning across Florida and California and Florida and Texas.
+
+Figure \ref{fig:time_series_bilateral_fl_tx_ca_with_2022q4_line} suggests that there has been a dip in all 3 states in 2022Q4, after the Hurricane Ian hit Florida. However, we are interested in examining how the inflow of remittances from Texas and California evolved around the shock relative to the evolution of Florida inflows, specifically for the municipalities that are jointly highly exposed to Florida and Texas, as there exists parallel trends in the remittance patterns.
+\begin{figure}[H]
+    \centering
+    \IfFileExists{figures/06_time_series_bilateral_fl_tx_ca_with_2022q4_line.png}{%
+        \includegraphics[width=0.7\textwidth]{figures/06_time_series_bilateral_fl_tx_ca_with_2022q4_line.png}%
+    }{%
+        \fbox{\parbox{0.7\textwidth}{\centering\vspace{2cm}[Figure pending]\vspace{2cm}}}%
+    }
+    \caption{Evolution of Remittances Inflows from FL, TX and CA to all Mexican municipalities}
+    \label{fig:time_series_bilateral_fl_tx_ca_with_2022q4_line}
+\end{figure}
+Let's define a measure of joint exposure FL-TX of Mexican municipality $m$ as the geometric mean of its exposure to Florida and its exposure to Texas, as follows:
+$$JointExposure_m^{FL,TX} = sqrt(Exposure_m^{FL} \times Exposure_m^{TX})$$
+Similarly, we can also define a measure of joint exposure FL-CA.
+
+Note that in the TX-FL regression, the sample is restricted to the highly exposed municipalities (As defined above). Similarly, in the CA-FL regression, the sample is also restricted to the corresponding high jointly exposed municipalities.\\
+We include $\alpha_t$ as the quarter FE, $\gamma_{ms}$ as the corridor MX municipality - US State FE and $Post_t$ is defined such that $Post_t = 1$ for quarters from 2022Q4 onward, and 0 otherwise. Since Florida is the baseline category, the coefficient of interest $\beta_{TX}$ (or $\beta_{CA}$) compares the post-2022Q4 change in Texas remittances to the post-2022Q4 change in Florida remittances (among our subsamples of interest). To ensure robustness of results, we also clustered at corridor and quarter level.\\
+In other words, the coefficients $\beta_{TX}$ and $\beta_{CA}$ capture respectively:
+\begin{align*}
+\beta_{TX} &= [\Delta \log R_{m,Texas}] - [\Delta \log R_{m,Florida}] \\
+\beta_{CA} &= [\Delta \log R_{m,California}] - [\Delta \log R_{m,Florida}]
+\end{align*} 
+
+\section{Results}
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{figures/11f_corridor_fe_event_study_two_way_cluster_corridor_quarter.png}{%
+        \includegraphics[width=0.7\textwidth]{figures/11f_corridor_fe_event_study_two_way_cluster_corridor_quarter.png}%
+    }{%
+        \fbox{\parbox{0.7\textwidth}{\centering\vspace{2cm}[Figure pending]\vspace{2cm}}}%
+    }
+    \caption{Change in log remittances inflows from TX and CA rel. to FL to high joint exposure municipalities}
+    \label{fig:corridor_fe_event_study_two_way_cluster_corridor_quarter}
+\end{figure}

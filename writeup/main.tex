@@ -140,7 +140,11 @@
     \vspace{2cm}
 
     \noindent\makebox[\textwidth][s]{
-        \includegraphics[width=0.22\textwidth]{BSE_logo.png}
+        \IfFileExists{../figures-tables/introduction/bse_logo.png}{%
+            \includegraphics[width=0.22\textwidth]{../figures-tables/introduction/bse_logo.png}%
+        }{%
+            \hbox to 0.22\textwidth{}%
+        }%
         \hfill
         {\normalsize Academic year 2025--2026}%
     }
@@ -165,19 +169,22 @@
 \pagenumbering{arabic}
 
 % Chapter 1: introduction
-\input{chapters/1_introduction}
+\input{chapters_v2/1_introduction}
 
-% Chapter 2: theoretical framework and estimation technique
-\input{chapters/2_framework_estimation}
+% Chapter 2: theoretical framework
+\input{chapters_v2/2_structural_model}
 
-% Chapter 3: data and remittance estimation
-\input{chapters/3_data}
+% Chapter 3: introduce the shock and data discussion
+\input{chapters_v2/3_data_empirics}
 
-% Chapter 4: shock selection
-\input{chapters/4_shock_results}
+% Chapter 4: empirical methodology and results
+\input{chapters_v2/4_shock_results}
+
+% Chapter 5: spillover effects
+\input{chapters_v2/5_spillovers}
 
 % Conclusions
-\chapter{Conclusion}
+\input{chapters_v2/6_conclusion}
 
 % Bibliography
 \printbibliography[heading=bibintoc, title={Bibliography}]

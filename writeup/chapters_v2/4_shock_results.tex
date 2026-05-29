@@ -1,0 +1,22 @@
+% !TEX root = ../main.tex
+\chapter{Empirical Methodology and Results}
+
+\section{Methodology}
+
+We use the following Poisson Psuedo Maximum Likelihood event-study specification to analyze the impact of the Hurricane Ian shock on remittance inflows to Mexican municipalities:
+
+\begin{equation}
+\mathbb{E}[R_{mt} \mid X_{mt}] = \exp(\alpha_t + \gamma_{st} + \sum_{k \neq -1} \beta_k \cdot w_{m,\text{FL}} \cdot vmathbb{1}\{t - T_0 = k \}+  \epsilon_{st})
+\end{equation}
+
+This methodology is motivated by \cite{silva_tenreyro_2006}, who show that the Poisson Pseudo Maximum Likelihood (PPML) estimator is consistent in the presence of heteroskedasticity and excess zeros, which are common features of remittance data at the municipality level. The event-study specification allows us to estimate dynamic treatment effects of the shock over time, while controlling for time-varying unobservables at the state level through $\gamma_{st}$ and common shocks through $\alpha_t$. The interaction term $w_{m,\text{FL}} \cdot \mathbb{1}\{t - T_0 = k \}$ captures the differential effect of the shock on municipalities with varying levels of exposure to Florida, where $w_{m,\text{FL}}$ is a measure of pre-shock exposure to Florida and $\mathbb{1}\{t - T_0 = k \}$ is an indicator for each time period relative to the shock. The coefficients $\beta_k$ thus represent the change in remittance inflows for a one-unit increase in Florida exposure at each time period $k$ relative to the shock. We cluster standard errors at the municipality level to account for potential correlation within municipalities over time. Note that as a robustness check, we also consider clusters at the spatial level, using 10km, 25km, 50km, and 100km-radius clusters to account for potential spatial correlation in remittance responses among nearby municipalities. See the online appendix for results with spatial clustering.
+
+\section{Robustness checks}
+
+**miguel TDL: insert charts (or just ramsay RESET test) to check for conditional mean form misspecification. can put additional stuff in online appendix.**  
+
+\section{Results}
+
+**insert PPML event study results here.**
+
+**insert interpretation and discussion of results here.**

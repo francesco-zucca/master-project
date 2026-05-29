@@ -1,0 +1,15 @@
+\section{Bilateral remittance estimation} \label{sec:remittance-estimation}
+
+To estimate bilaterance remittance flows from U.S. states to Mexican municipalities, we construct a migration-based weighting matrix using annual MCAS from 2010 to 2024. Because these records capture new consular issuances rather than the complete stock of the remitting population, which also includes previously arrived migrants, we rely on the assumption of persistance of migration patterns over time. To mitigate the volatility of yearly migration fluctuation and construct a robust proxy for the long-term spatial distribution of Mexican migrants, we compute the average of these matrices across all years. We then apply this averaged weighting matrix to the state-level remittance outflows from Banxico's series CE168 to derive the U.S. to Mexican municipality bilateral flows. 
+
+\par
+
+Formally, we define $MCAS_{ms}$ as the average annual count of MCAS issuances to migrants from Mexican municipality $m$ residing in U.S. state $s$. For each U.S. state, we calculate the average migration share, $w_{ms}$, which represents the proportion of that state $s$'s Mexican population originating from the $m$ municipality, as the ratio of $MCAS_{ms}$ to the total number of MCAS issuances from that state across all municipalities $M$:
+\begin{equation} \label{eq:weights}
+    w_{ms} = \frac{MCAS_{ms}}{\sum_{m=1}^{M} MCAS_{ms}}
+\end{equation}
+By applying the weights computed from equation \eqref{eq:weights} to the official aggregate state-level outflows from Banxico ($r_s$), we derive the estimated bilateral remittance flow ($\hat{r}_{ms}$) from state $s$ to municipality $m$:
+\begin{equation}
+    \hat{r}_{ms} = r_s \cdot w_{ms}
+\end{equation}
+This migration share estimation approach yields the final estimate of our outcome variable. 
