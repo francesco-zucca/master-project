@@ -1,21 +1,27 @@
 % !TEX root = ../main.tex
 \chapter{Empirical Methodology and Results}
 
-\section{Methodology}
+\section{Estimation Strategy}
 
-We use the following Poisson Psuedo Maximum Likelihood event-study specification to analyze the impact of the Hurricane Ian shock on remittance inflows to Mexican municipalities:
+The primary challenge in estimating the impact of the Hurricane Ian shock on remittance inflows to Mexican municipalities lies in the sorting of migrants. Municipalities with higher exposure to Florida may differ systematically from those with networks concentrated in other U.S. states. Therefore, a standard cross-sectional analysis comparing municipalities with different levels of exposure to Florida would likely lead to biased estimates due to confounding factors correlated with both the treatment (i.e. exposure to Florida) and the outcome (i.e. remittance inflows). This classic omitted variable bias problem makes a causal interpretation of cross-sectional estimates impossible \parencite{wooldridge2010}. To overcome this challenge, we leverage the temporal variation in remittance inflows by employing a continuous Difference-in-Differences (DiD) event-study design \parencite{callaway2024}, where our treatment is the pre-shock exposure to Florida, measured by $w_{m,\text{FL}}$. 
 
-\begin{equation}
-\mathbb{E}[R_{mt} \mid X_{mt}] = \exp(\alpha_t + \gamma_{st} + \sum_{k \neq -1} \beta_k \cdot w_{m,\text{FL}} \cdot vmathbb{1}\{t - T_0 = k \}+  \epsilon_{st})
+\section{Event-Study Specification}
+
+We use the following Poisson Pseudo Maximum Likelihood (PPML) event-study specification to analyze the impact of the Hurricane Ian shock on remittance inflows to Mexican municipalities:
+
+\begin{equation} \label{eq:ppml-event-study}
+\mathbb{E}[R_{mt} \mid \mathbf{X}_{mt}] = \exp \left( \alpha_m + \gamma_{s(m),t} + \sum_{k \neq -1} \beta_k \cdot \left( w_{m,\text{FL}} \times \mathbb{1}\{t - T_0 = k\} \right) \right)
 \end{equation}
 
-This methodology is motivated by \cite{silva_tenreyro_2006}, who show that the Poisson Pseudo Maximum Likelihood (PPML) estimator is consistent in the presence of heteroskedasticity and excess zeros, which are common features of remittance data at the municipality level. The event-study specification allows us to estimate dynamic treatment effects of the shock over time, while controlling for time-varying unobservables at the state level through $\gamma_{st}$ and common shocks through $\alpha_t$. The interaction term $w_{m,\text{FL}} \cdot \mathbb{1}\{t - T_0 = k \}$ captures the differential effect of the shock on municipalities with varying levels of exposure to Florida, where $w_{m,\text{FL}}$ is a measure of pre-shock exposure to Florida and $\mathbb{1}\{t - T_0 = k \}$ is an indicator for each time period relative to the shock. The coefficients $\beta_k$ thus represent the change in remittance inflows for a one-unit increase in Florida exposure at each time period $k$ relative to the shock. We cluster standard errors at the municipality level to account for potential correlation within municipalities over time. Note that as a robustness check, we also consider clusters at the spatial level, using 10km, 25km, 50km, and 100km-radius clusters to account for potential spatial correlation in remittance responses among nearby municipalities. See the online appendix for results with spatial clustering.
-
+This methodology is motivated by \cite{silva_tenreyro_2006}, who show that the PPML estimator remains consistent in the presence of heteroskedasticity and excess zeros, which are common features of remittance data at the municipality level. The event-study specification allows us to estimate the dynamic treatment effects of the shock over time. We include municipality fixed effects ($\alpha_m$) to control for all time-invariant, unobserved municipal characteristics that might otherwise introduce omitted variable bias. Additionally, we incorporate state-by-time fixed effects ($\gamma_{s(m),t}$), where $s(m)$ denotes the specific Mexican state to which municipality $m$ belongs. These fixed effects account for both macroeconomic shocks common to all regions and time-varying unobservables at the state level. The interaction term $w_{m,\text{FL}} \cdot \mathbb{1}\{t - T_0 = k \}$ captures the differential effect of the shock on Mexican municipalities based on their varying degrees of baseline exposure to Florida, where $w_{m,\text{FL}}$ is a measure of pre-shock exposure to Florida and $\mathbb{1}\{t - T_0 = k \}$ is an indicator for each time period relative to the shock. The coefficients $\beta_k$ thus represent the change in remittance inflows for a one-percent increase in Florida exposure at each time period $k$ relative to the shock. Errors are clustered at the municipality level to account for potential correlation within municipalities over time. 
+ 
 \section{Robustness checks}
 
 **miguel TDL: insert charts (or just ramsay RESET test) to check for conditional mean form misspecification. can put additional stuff in online appendix.**  
 
 \section{Results}
+
+Figure \ref{fig:ppml-event-study} shows the result of the PPML event-study estimation, where the vertical dashed line represents the timing of the shock (Q4 2022). The pre-shock coefficients ($\beta_k$ for $k < 0$) are close to zero, suggesting that there were no significant pre-trends in remittance inflows based on Florida exposure prior to the shock, supporting the parallel trends assumption underlying our DiD design.
 
 **insert PPML event study results here.**
 
