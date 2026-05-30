@@ -6,6 +6,7 @@
 library(tidyverse)
 library(fixest)
 library(ggplot2)
+library(knitr)
 
 ################################################################################
 # DATA PREPARATION
@@ -105,16 +106,92 @@ ppml_ca_base <- fepois(
   vcov = ~cvegeo
 )
 
-# Output table 1: Texas vs California spillovers
-etable(
-  ppml_tx_base, ppml_ca_base,
-  headers = c("Texas Network", "California Network"),
-  keep = "interaction",
-  file = "figures-tables/spillovers/spillovers_tx_ca.tex",
-  replace = TRUE,
-  title = "Network Spillovers: Texas vs. California",
-  label = "tab:spillovers_tx_ca"
-)
+################################################################################
+# TABLE 1: TEXAS VS CALIFORNIA SPILLOVERS (POST-SHOCK ONLY)
+################################################################################
+
+# Extract and format the Texas results into a dataframe
+tx_df <- as.data.frame(coeftable(ppml_tx_base)) %>%
+  rownames_to_column("term") %>%
+  filter(grepl("fl_tx_interaction", term)) %>%
+  mutate(
+    raw_date = str_extract(term, "\\d{4}-\\d{2}-\\d{2}")
+  ) %>%
+  # Keep only the shock quarter (2022-10-01) and subsequent quarters
+  filter(as.Date(raw_date) >= as.Date("2022-10-01")) %>%
+  mutate(
+    Date = format(zoo::as.yearqtr(as.Date(raw_date)), "%Y Q%q"),
+    stars = case_when(
+      `Pr(>|z|)` < 0.01 ~ "***",
+      `Pr(>|z|)` < 0.05 ~ "**",
+      `Pr(>|z|)` < 0.1  ~ "*",
+      TRUE              ~ ""
+    ),
+    # Multiply by 100 for percentage terms, keep 2 decimal places
+    Estimate_str = paste0(sprintf("%.2f", Estimate * 100), stars),
+    SE_str       = paste0("(", sprintf("%.2f", `Std. Error` * 100), ")")
+  ) %>%
+  select(Date, Estimate_str, SE_str) %>%
+  pivot_longer(cols = c(Estimate_str, SE_str), names_to = "type", values_to = "Texas")
+
+# Extract and format the California results into a dataframe
+ca_df <- as.data.frame(coeftable(ppml_ca_base)) %>%
+  rownames_to_column("term") %>%
+  filter(grepl("fl_ca_interaction", term)) %>%
+  mutate(
+    raw_date = str_extract(term, "\\d{4}-\\d{2}-\\d{2}")
+  ) %>%
+  # Keep only the shock quarter (2022-10-01) and subsequent quarters
+  filter(as.Date(raw_date) >= as.Date("2022-10-01")) %>%
+  mutate(
+    Date = format(zoo::as.yearqtr(as.Date(raw_date)), "%Y Q%q"),
+    stars = case_when(
+      `Pr(>|z|)` < 0.01 ~ "***",
+      `Pr(>|z|)` < 0.05 ~ "**",
+      `Pr(>|z|)` < 0.1  ~ "*",
+      TRUE              ~ ""
+    ),
+    Estimate_str = paste0(sprintf("%.2f", Estimate * 100), stars),
+    SE_str       = paste0("(", sprintf("%.2f", `Std. Error` * 100), ")")
+  ) %>%
+  select(Date, Estimate_str, SE_str) %>%
+  pivot_longer(cols = c(Estimate_str, SE_str), names_to = "type", values_to = "California")
+
+# Merge and pivot columns
+final_table_data <- tx_df %>%
+  left_join(ca_df, by = c("Date", "type")) %>%
+  
+  # Stack into rows
+  pivot_longer(cols = c(Texas, California), names_to = "Network", values_to = "Coefficient") %>%
+  
+  # Push Dates into columns
+  pivot_wider(names_from = Date, values_from = Coefficient) %>%
+  
+  # Sort
+  arrange(desc(Network), type) %>%
+  
+  # Blank out standard error row labels
+  mutate(Network = ifelse(type == "SE_str", "", Network)) %>%
+  select(-type)
+
+# Wrap column names
+rotated_colnames <- colnames(final_table_data)
+rotated_colnames[-1] <- paste0("\\rotatebox{45}{", rotated_colnames[-1], "}")
+
+# Setup dynamic column alignment
+align_string <- paste0("l", strrep("c", ncol(final_table_data) - 1))
+
+# Export dataset into latex
+final_table_data %>%
+  kable(
+    format = "latex", 
+    booktabs = TRUE, 
+    align = align_string,
+    col.names = rotated_colnames, 
+    caption = "Network Spillovers: Texas vs. California (Post-Shock Periods). \\textit{Note: Coefficients and standard errors are multiplied by 100 to represent percentage effects.} \\label{tab:spillovers_tx_ca}",
+    escape = FALSE 
+  ) %>%
+  cat(file = "figures-tables/spillovers/spillovers_tx_ca.tex")
 
 ################################################################################
 # ESTIMATION 2: BETA1 FOR DIFFERENT RECENTERINGS OF TEXAS
@@ -285,7 +362,7 @@ percentile_gg <- ggplot(
 
 # Save the plot
 ggsave(
-  filename = "figures-tables/spillovers/muni_network_divergence_muni.pdf",
+  filename = "figures-tables/spillovers/total_effect_texas_exposure.pdf",
   plot = percentile_gg,
   width = 11, height = 6, dpi = 300,
   device = cairo_pdf
