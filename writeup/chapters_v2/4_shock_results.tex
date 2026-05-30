@@ -8,11 +8,9 @@ The primary challenge in estimating the impact of the Hurricane Ian shock on rem
 \section{Event-Study Specification}
 
 We use the following Poisson Pseudo Maximum Likelihood (PPML) event-study specification to analyze the impact of the Hurricane Ian shock on remittance inflows to Mexican municipalities:
-
 \begin{equation} \label{eq:ppml-event-study}
 \mathbb{E}[R_{mt} \mid \mathbf{X}_{mt}] = \exp \left( \alpha_m + \gamma_{s(m),t} + \sum_{k \neq -1} \beta_k \cdot \left( w_{m,\text{FL}} \times \mathbb{1}\{t - T_0 = k\} \right) \right)
 \end{equation}
-
 This methodology is motivated by \cite{silva_tenreyro_2006}, who show that the PPML estimator remains consistent in the presence of heteroskedasticity and excess zeros, which are common features of remittance data at the municipality level. The event-study specification allows us to estimate the dynamic treatment effects of the shock over time. We include municipality fixed effects ($\alpha_m$) to control for all time-invariant, unobserved municipal characteristics that might otherwise introduce omitted variable bias. Additionally, we incorporate state-by-time fixed effects ($\gamma_{s(m),t}$), where $s(m)$ denotes the specific Mexican state to which municipality $m$ belongs. These fixed effects account for both macroeconomic shocks common to all regions and time-varying unobservables at the state level. The interaction term $w_{m,\text{FL}} \cdot \mathbb{1}\{t - T_0 = k \}$ captures the differential effect of the shock on Mexican municipalities based on their varying degrees of baseline exposure to Florida, where $w_{m,\text{FL}}$ is a measure of pre-shock exposure to Florida and $\mathbb{1}\{t - T_0 = k \}$ is an indicator for each time period relative to the shock. The coefficients $\beta_k$ thus represent the change in remittance inflows for a one-percent increase in Florida exposure at each time period $k$ relative to the shock. Errors are clustered at the municipality level to account for potential correlation within municipalities over time. 
  
 \section{Robustness checks}
@@ -21,8 +19,18 @@ This methodology is motivated by \cite{silva_tenreyro_2006}, who show that the P
 
 \section{Results}
 
-Figure \ref{fig:ppml-event-study} shows the result of the PPML event-study estimation, where the vertical dashed line represents the timing of the shock (Q4 2022). The pre-shock coefficients ($\beta_k$ for $k < 0$) are close to zero, suggesting that there were no significant pre-trends in remittance inflows based on Florida exposure prior to the shock, supporting the parallel trends assumption underlying our DiD design.
-
-**insert PPML event study results here.**
-
-**insert interpretation and discussion of results here.**
+Figure \ref{fig:ppml-event-study-fig} shows the result of the PPML event-study estimation, where the vertical dashed line represents the timing of the shock (Q4 2022). The pre-shock coefficients ($\beta_k$ for $k < 0$) are close to zero and statistically insignificant, suggesting that there were no pre-trends in remittance inflows based on Florida exposure prior to the shock and supporting the parallel trends assumption underlying our DiD design. The point estimate in the quarter of the shock (Q4 2022) is negative and statistically significant at the 1\% level, indicating that municipalities with higher exposure to Florida experienced a larger drop in remittance inflows immediately following the shock. Specifically, a one percentage point increase in Florida exposure is associated with a 0.16\% decrease in remittance inflows in the quarter of the shock. In the subsequent quarters, the coefficients become slightly positive but statistically insignificant at the 5\% level, suggesting that the initial negative impact of the shock on remittance inflows dissipated over time. These results suggest that the Hurricane Ian shock had a significant, but short lived impact on remittance flows, suggesting a rapid re-adjustment of remittance networks after the shock (connection to the model?). However, the fact that the point estimates in the post-shock period are positive, altough not statistically significant, may be indicate a potential overshooting of remittance inflows due to post-shock reconstruction period, or some form of spillover effects through migrant networks in other states, which we will investigate in the next chapter.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../figures-tables/municipality-inflows/muni_did_ppml.png}
+    \caption{PPML Event Study Estimates}
+    \label{fig:ppml-event-study-fig}
+\end{figure}
+\par
+As a robustness check, we also estimate the same event-study specification using spatially clustered errors, following the metodology of \textcite{conley1999}, to account for potential spatial correlation in remittance inflow shocks affecting neighboring municipalities. The results, shown in Figure \ref{fig:ppml-event-study-conley}, are qualitatively similar to the baseline specification, with the main difference being the thighter confidence intervals in the preperiod as buffer distance increases, and slightly wider in the post-shock period. Given that the results are robust to both clustering methods, and that the spatial clustering specification doesn't produce positive definite variance-covariance matrices for buffer distances above 50km, we consider the municipality-level clustering as our baseline specification.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../figures-tables/municipality-inflows/muni_spatial_clustering.png}
+    \caption{PPML Event Study Estimates with Conley Standard Errors for Different Buffer Distances}
+    \label{fig:ppml-event-study-conley}
+\end{figure}
