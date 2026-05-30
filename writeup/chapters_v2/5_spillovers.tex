@@ -1,3 +1,4 @@
+% !TeX root = ../main.tex
 \chapter{Investigating Spillover Effects}
 
 A fundamental requirement for standard causal inference models is the Stable Unit Treatment Value Assumption (SUTVA), formalized by \textcite{rubin1980}. SUTVA assumes that the potential outcomes of any unit depend exclusively on its own treatment assignment, excluding the possibility of any indirect spillover between units.
@@ -8,40 +9,62 @@ Therefore, we argue that our estimates are subject to general equilibrium effect
 
 \section{Empirical Strategy}
 
-The biggest hosts of Mexican migrants are Texas and California (include data here); thus, it is likely that those municipalities exposed to the Florida shock might also be connected to a certain extent to California and Texas. Plot \ref{fig:stacked_bar_top30_fl_tx_ca_composition} helps us visualize that there exists indeed some migrant networks spanning across Florida and California and Florida and Texas.
+The biggest hosts of Mexican migrants are Texas and California (\textcolor{red}{include data here}); thus, it is likely that those municipalities exposed to the Florida (FL) shock might also be connected to a certain extent to California (CA) and Texas (TX). We test the possible compensation from the states of TX and CA using a triple interaction strategy, using the PPML specification as already deployed in previous sections: 
+\begin{equation}
+\begin{aligned}
+\mathbb{E}[R_{mt}|X] = \exp \Bigl( & \alpha_m + \gamma_{st} + \beta_1(\text{Exposure}^{FL}_m \times \text{Post}_t) + \beta_2(\text{Exposure}^{TX}_m \times \text{Post}_t) \\
+& + \beta_3(\text{Exposure}^{FL}_m \times \text{Exposure}^{TX}_m \times \text{Post}_t) + \epsilon_{mt} \Bigr)    
+\end{aligned}
+\end{equation}
+As constructed above, the measure of exposure $Exposure^{FL}_m$ represents the percentage of migrants from the origin municipality $m$ that have moved to FL. Analogous measures can also be constructed for the states of TX and CA. The equation above accounts for municipality fixed effects ($\alpha_m$), state fixed effects ($\gamma_{st}$), Mexican state-quarter fixed effects ($\gamma_{st}$) and clustered standard errors at the municipality-quarter level. 
 
-Figure \ref{fig:time_series_bilateral_fl_tx_ca_with_2022q4_line} suggests that there has been a dip in all 3 states in 2022Q4, after the Hurricane Ian hit Florida. However, we are interested in examining how the inflow of remittances from Texas and California evolved around the shock relative to the evolution of Florida inflows, specifically for the municipalities that are jointly highly exposed to Florida and Texas, as there exists parallel trends in the remittance patterns.
-\begin{figure}[H]
-    \centering
-    \IfFileExists{figures/06_time_series_bilateral_fl_tx_ca_with_2022q4_line.png}{%
-        \includegraphics[width=0.7\textwidth]{figures/06_time_series_bilateral_fl_tx_ca_with_2022q4_line.png}%
-    }{%
-        \fbox{\parbox{0.7\textwidth}{\centering\vspace{2cm}[Figure pending]\vspace{2cm}}}%
-    }
-    \caption{Evolution of Remittances Inflows from FL, TX and CA to all Mexican municipalities}
-    \label{fig:time_series_bilateral_fl_tx_ca_with_2022q4_line}
-\end{figure}
-Let's define a measure of joint exposure FL-TX of Mexican municipality $m$ as the geometric mean of its exposure to Florida and its exposure to Texas, as follows:
-$$JointExposure_m^{FL,TX} = sqrt(Exposure_m^{FL} \times Exposure_m^{TX})$$
-Similarly, we can also define a measure of joint exposure FL-CA.
+In this setting,
+\[
+\frac{\partial \log \mathbb{E}[R_{mt}\mid X]}{\partial Exposure^{FL}_m}\Big|_{Post=1} = \beta_1+\beta_3 Exposure^{TX}_m
+\]
+Meaning that $\beta_1$ captures the post-shock effect of FL exposure when TX exposure is 0, while $\beta_3$ captures how the effect of FL exposure changes with TX exposure. In other words, $\beta_3$ allows us to explore how a continuous change in TX exposure affects the response of FL remittances after the FL shock. If $\beta_1 < 0$ and $\beta_3 > 0$, this would suggest that the negative effect of FL exposure on remittances is mitigated for municipalities with higher TX exposure, indicating a compensatory effect from the TX migrant network.
 
-Note that in the TX-FL regression, the sample is restricted to the highly exposed municipalities (As defined above). Similarly, in the CA-FL regression, the sample is also restricted to the corresponding high jointly exposed municipalities.\\
-We include $\alpha_t$ as the quarter FE, $\gamma_{ms}$ as the corridor MX municipality - US State FE and $Post_t$ is defined such that $Post_t = 1$ for quarters from 2022Q4 onward, and 0 otherwise. Since Florida is the baseline category, the coefficient of interest $\beta_{TX}$ (or $\beta_{CA}$) compares the post-2022Q4 change in Texas remittances to the post-2022Q4 change in Florida remittances (among our subsamples of interest). To ensure robustness of results, we also clustered at corridor and quarter level.\\
-In other words, the coefficients $\beta_{TX}$ and $\beta_{CA}$ capture respectively:
-\begin{align*}
-\beta_{TX} &= [\Delta \log R_{m,Texas}] - [\Delta \log R_{m,Florida}] \\
-\beta_{CA} &= [\Delta \log R_{m,California}] - [\Delta \log R_{m,Florida}]
-\end{align*} 
+
+
+
 
 \section{Results}
+The results of the regression are shown in Figure \ref{fig:spillovers_main_regression} and the coefficients of interest $\beta_3$ are reported in Table \ref{tab:spillovers_tx_ca}. 
 
+\textcolor{red}{MAYBE CONSIDER RESCALING THE FIGURE SO WE SET UPPER AND LOWER BOUNDS OF +- 0.02 so the negative effect is more appreciated?}
 \begin{figure}[H]
     \centering
-    \IfFileExists{figures/11f_corridor_fe_event_study_two_way_cluster_corridor_quarter.png}{%
-        \includegraphics[width=0.7\textwidth]{figures/11f_corridor_fe_event_study_two_way_cluster_corridor_quarter.png}%
+    \IfFileExists{../figures-tables/spillovers/spillovers_main_regression.jpeg}{%
+        \includegraphics[width=0.7\textwidth]{../figures-tables/spillovers/spillovers_main_regression.jpeg}%
     }{%
         \fbox{\parbox{0.7\textwidth}{\centering\vspace{2cm}[Figure pending]\vspace{2cm}}}%
     }
-    \caption{Change in log remittances inflows from TX and CA rel. to FL to high joint exposure municipalities}
-    \label{fig:corridor_fe_event_study_two_way_cluster_corridor_quarter}
+    \caption{Evolution of the coefficient $\beta_3$ over time for the interaction between FL and TX (left) and FL and CA (right). The vertical dashed line indicates the timing of the Hurricane Ian shock. The shaded area represents the 95\% confidence interval.}
+    \label{fig:spillovers_main_regression}
 \end{figure}
+
+\input{../figures-tables/spillovers/spillovers_tx_ca.tex}
+
+From Figure \ref{fig:spillovers_main_regression} we can see how for both CA and TX, the pre-trends are flat before the Hurricane event, suggesting parallel trends that would validate our identification strategy. When it comes to the coefficients reported in Table \ref{tab:spillovers_tx_ca}, we observe different patterns across the two states. In the CA case, we observe that the panel stays essentially flat around zero, which suggests that no significant spillover effects were found. As for TX, we see a slightly negative, significant and persistent decline of the coefficient, meaning that the more exposed a given municipality is to TX, the more pronounced is the negative post-shock effect of the FL exposure on remittance patterns. In other words, TX exposure is associated to a larger net decline in remittances after the FL shock.
+
+Since this result a priori does not support the compensatory spillover hypothesis of the model, we next aim to explore how the post-shock FL effect on remittances varies according to different levels of TX exposure. That is, \ref{fig:total_effect_texas_exposure} plots the effect 
+$$\beta_1 + \beta_3 \text{Exposure}^{TX}_m$$
+by inserting different values of $Exposure^{TX}_m$ (specifically, the 10th and 90th percentiles of the distribution of TX exposure across municipalities). The figure shows that the net effect of the FL shock on remittances is more negative for municipalities with higher levels of TX exposure, which is consistent with the negative and significant $\beta_3$ coefficient found above. This reinforces the idea that instead of a compensatory effect, we observe an amplification effect, where the negative impact of the FL shock on remittances is more pronounced for municipalities that are also highly exposed to TX.
+\begin{figure}[H]
+    \centering
+    \IfFileExists{../figures-tables/spillovers/total_effect_texas_exposure.png}{%
+        \includegraphics[width=0.9\textwidth]{../figures-tables/spillovers/total_effect_texas_exposure.png}%
+    }{%
+        \fbox{\parbox{0.9\textwidth}{\centering\vspace{2cm}[Figure pending]\vspace{2cm}}}%
+    }
+    \caption{Net Florida shock evaluated at low and high levels of Texas exposure. The figure compares the implied post-shock Florida effect for municipalities at the 10th and 90th percentiles of Texas exposure.}
+    \label{fig:total_effect_texas_exposure}
+\end{figure}
+
+There are several possible explanations to this: 
+\textcolor{red}{AQUI EXPLICAR QUE HI HA 2 RAONS PER LA QUAL AIXÒ PASSA:}
+
+\begin{itemize}
+    \item 1. INTERNAL TRANSFERS: ELS MEXICANS D TEXES ENVIEN ELS DINERS ALS MEXICANS D FLORIDA EN LLOC DELS MEXICANS DE MEXIC I PER TANT VEIEM UN DESCENS DE REMITTANCES QUE REBEN ELS MEXICANS D MEXIC Q TENEN HIGH EPOSURE TO BOTH TX AND FL
+    \item 2. same pero amb internal mobility que podria explicar la raó per la qual l efecte negtaiu de la beta3 es persistent en el temps, ja que els migrants de TX es podrien moure a FL per intentar compensar la caiguda de remittances, però al final acaben quedant-se a TX i per tant no veiem cap efecte compensatori.
+\end{itemize}
