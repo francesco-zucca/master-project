@@ -16,7 +16,7 @@ The biggest hosts of Mexican migrants are Texas and California (\textcolor{red}{
 & + \beta_3(\text{Exposure}^{FL}_m \times \text{Exposure}^{TX}_m \times \text{Post}_t) + \epsilon_{mt} \Bigr)    
 \end{aligned}
 \end{equation}
-As constructed above, the measure of exposure $Exposure^{FL}_m$ represents the percentage of migrants from the origin municipality $m$ that have moved to FL. Analogous measures can also be constructed for the states of TX and CA. The equation above accounts for municipality fixed effects ($\alpha_m$), state fixed effects ($\gamma_{st}$), Mexican state-quarter fixed effects ($\gamma_{st}$) and clustered standard errors at the municipality-quarter level. 
+As constructed above, the measure of exposure $Exposure^{FL}_m$ represents the percentage of migrants from the origin municipality $m$ that have moved to FL. Analogous measures can also be constructed for the states of TX and CA. The equation above accounts for municipality fixed effects ($\alpha_m$), Mexican state-quarter fixed effects ($\gamma_{st}$) and clustered standard errors at the municipality-quarter level. 
 
 In this setting,
 \[
@@ -57,14 +57,10 @@ by inserting different values of $Exposure^{TX}_m$ (specifically, the 10th and 9
     }{%
         \fbox{\parbox{0.9\textwidth}{\centering\vspace{2cm}[Figure pending]\vspace{2cm}}}%
     }
+
     \caption{Net Florida shock evaluated at low and high levels of Texas exposure. The figure compares the implied post-shock Florida effect for municipalities at the 10th and 90th percentiles of Texas exposure.}
     \label{fig:total_effect_texas_exposure}
 \end{figure}
 
-There are several possible explanations to this: 
-\textcolor{red}{AQUI EXPLICAR QUE HI HA 2 RAONS PER LA QUAL AIXÒ PASSA:}
-
-\begin{itemize}
-    \item 1. INTERNAL TRANSFERS: ELS MEXICANS D TEXES ENVIEN ELS DINERS ALS MEXICANS D FLORIDA EN LLOC DELS MEXICANS DE MEXIC I PER TANT VEIEM UN DESCENS DE REMITTANCES QUE REBEN ELS MEXICANS D MEXIC Q TENEN HIGH EPOSURE TO BOTH TX AND FL
-    \item 2. same pero amb internal mobility que podria explicar la raó per la qual l efecte negtaiu de la beta3 es persistent en el temps, ja que els migrants de TX es podrien moure a FL per intentar compensar la caiguda de remittances, però al final acaben quedant-se a TX i per tant no veiem cap efecte compensatori.
-\end{itemize}
+We believe this pattern could be explained by internal transfers or internal mobility across the US states. That is, it could be the case that the Mexican migrants residing in TX try to help their family/friends residing in FL which have been hit by the Hurricane. Thus, the money that would have been sent back to Mexico is now being sent internally to FL, explaining why we see a decline in remittances received in municipalities with high exposure to both FL and TX. A similar argument could be made for the internal mobility cause. It could be the case that the migrants residing in FL decide to move away after the shock, and relocate to TX, which is the closest state and also a major host of Mexican migrants. This would lead to a decline in remittances received by municipalities with high exposure to both FL and TX, since we believe that relocated households have (at least temporarily) less capacity to send money back to Mexico. These two concerns are not accounted in the theoretical model, which assumes that the shock only affects remittances through the direct channel of the FL exposure.
+\textcolor{red}{AQUI falta inserit refernces xenia i michael}
