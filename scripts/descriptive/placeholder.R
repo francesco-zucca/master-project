@@ -292,8 +292,3 @@ ggplot(
 
 ggsave("figures-tables/municipality-inflows/network_persistence_all_base_years.png", width = 8, height = 5)
 
-##### ###########################################################################
-
-# percetages needed for section 5.1
-
-

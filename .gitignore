@@ -54,6 +54,18 @@ rsconnect/
 .DS_Store
 
 # Latex stuff
+writeup/*.aux
+writeup/*.bbl
+writeup/*.bcf
+writeup/*.blg
+writeup/*.fdb_latexmk
+writeup/*.fls
+writeup/*.log
+writeup/*.out
+writeup/*.run.xml
+writeup/*.synctex.gz
+writeup/*.synctex-*.gz
+writeup/*.toc
 thesis-writeup/*.aux
 thesis-writeup/*.bbl
 thesis-writeup/*.bcf

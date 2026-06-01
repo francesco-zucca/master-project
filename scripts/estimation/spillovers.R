@@ -7,6 +7,7 @@ library(tidyverse)
 library(fixest)
 library(ggplot2)
 library(knitr)
+library(zoo)
 
 ################################################################################
 # DATA PREPARATION
