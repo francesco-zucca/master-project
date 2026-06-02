@@ -10,11 +10,13 @@
 \usepackage{bbm}
 \usepackage{booktabs}
 \usepackage{amsmath}
+\usepackage{subcaption}
 \usepackage{setspace}
 \usepackage{float}
 \usepackage{parskip}          
 \usepackage{titlesec}             
 \usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage{caption}
 \usepackage{fancyhdr}
 \usepackage[
@@ -35,6 +37,7 @@
 \fancyfoot[C]{\thepage} 
 \renewcommand{\headrulewidth}{0.4pt} 
 \renewcommand{\footrulewidth}{0pt} 
+\setlength{\headheight}{14.5pt}
 
 % This ensures that the very first page of the document doesn't get the header line
 \fancypagestyle{plain}{
@@ -68,6 +71,7 @@
 
 % Font sizes for titles
 % Chapter titles: 16pt bold
+\titleclass{\chapter}{straight}
 \titleformat{\chapter}[hang]
     {\normalfont\fontsize{16}{20}\bfseries}
     {\thechapter.}{0.5em}{}
@@ -83,9 +87,9 @@
     {\thesubsection.}{1em}{}
 
 % Title spacing
-\titlespacing*{\chapter}{0pt}{-30pt}{8pt}
-\titlespacing*{\section}{0pt}{16pt}{8pt}
-\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\titlespacing*{\chapter}{0pt}{0pt}{6pt}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\titlespacing*{\subsection}{0pt}{6pt}{4pt}
 
 % Captions and footnotes: 11pt
 \DeclareCaptionFont{captionfont}{\fontsize{11}{13}\selectfont}
@@ -105,8 +109,15 @@
     \setlength{\belowdisplayshortskip}{\belowdisplayskip}%
 }{}{}
 
+\newcommand{\thesisabstract}{%
+This paper studies how localized shocks in migrant destination areas propagate to origin communities through remittance networks. We use Hurricane Ian, which struck Florida in 2022, as a spatially concentrated negative shock to remittance senders in the United States. Combining municipality-level remittance data from Banco de México with migration-network measures based on Mexican consular records, we examine whether Mexican municipalities more exposed to Florida experienced differential changes in remittance inflows after the shock. We then use the structure of migrant networks to study whether exposure to other major U.S. destinations, especially Texas and California, mitigated or amplified the shock. The results speak to how international remittance networks transmit local economic disruptions across borders and to the role of migrant-network diversification in shaping the distribution of these effects.
+}
+\newcommand{\thesiskeywords}{Remittances, migration networks, localized shocks, Hurricane Ian, Mexico, spillover effects}
+
 % ════════════════════════════════════════════════════════════
 \begin{document}
+
+\hypersetup{pageanchor=false}
 
 % Cover Page
 \begin{titlepage}
@@ -123,7 +134,7 @@
 
     {\large \bfseries Authors\par}
     {
-    \setlength{\parskip}{2pt} 
+    \setlength{\parskip}{2pt}
     \normalsize
     Anqi Wang Liu,
     Francesco Zucca,
@@ -148,25 +159,62 @@
         \hfill
         {\normalsize Academic year 2025--2026}%
     }
-
 \end{titlepage}
 
-% Front matter
+% Abstract page
 \pagenumbering{roman}
-\pagestyle{fancy}
-
-% Table of contents
-\tableofcontents
-\newpage
-
-% Abstract
+\pagestyle{plain}
 \chapter*{Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
+\thesisabstract
 
-\newpage
+\vspace{0.5cm}
+\noindent\textbf{Keywords:} \thesiskeywords
+
+\clearpage
+
+% Paper-style title page
+\thispagestyle{plain}
+
+\begin{center}
+    {\large MASTER PROJECT\par}
+    \vspace{0.5cm}
+
+    {\Large \bfseries Shock propagation through the lens of remittances\par}
+    {\large Who bears the cost? Evidence from US--Mexico migration corridors\par}
+    \vspace{0.5cm}
+
+    {
+    \setlength{\parskip}{2pt}
+    \normalsize
+    Anqi Wang Liu,
+    Francesco Zucca,
+    Joan Costa Rodríguez, \par
+    Michael Fehl,
+    Xènia Alemany Rovira
+    }
+
+    \vspace{0.2cm}
+    \today
+
+    \vspace{0.5cm}
+    {\large \bfseries Abstract\par}
+\end{center}
+
+\thesisabstract
+
+\vspace{0.35cm}
+\noindent\textbf{Keywords:} \thesiskeywords
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
 
 % Main body
+\hypersetup{pageanchor=true}
 \pagenumbering{arabic}
+\pagestyle{fancy}
 
 % Chapter 1: introduction
 \input{chapters_v2/1_introduction}
@@ -186,7 +234,8 @@
 % Conclusions
 \input{chapters_v2/6_conclusion}
 
+\newpage
 % Bibliography
-\printbibliography[heading=bibintoc, title={Bibliography}]
+\printbibliography[heading=bibintoc, title={References}]
 
 \end{document}
