@@ -141,14 +141,14 @@ event_study <- function(model_object, model_label) {
 
 # Generic plotting function for single event studies
 plot_event_study <- function(data, title, y_limits) {
-  ggplot(data, aes(x = period_quarter, y = estimate)) +
+  ggplot(data, aes(x = period_quarter, y = estimate, color = model_label)) +
     geom_hline(yintercept = 0, linetype = "dotted", 
                color = "grey75", linewidth = 0.5) +
     geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-10-01")), 
                linetype = "dotted", color = "grey75", linewidth = 0.5) +
     geom_errorbar(aes(ymin = ci_low, ymax = ci_high), 
                   width = 0.05, linewidth = 0.5, color = "grey60") +
-    geom_point(size = 1.5, color = "grey10") +
+    geom_point(size = 1.5, show.legend = FALSE) + # Suppress the legend here
     scale_x_yearqtr(format = "%Y Q%q", 
                     breaks = seq(min(data$period_quarter), 
                                  max(data$period_quarter), by = 0.25)) +
@@ -195,7 +195,7 @@ ppml_single_plot <- plot_event_study(data_ppml,
 ggsave(
   filename = "figures-tables/municipality-inflows/muni_did_ppml.png",
   plot = ppml_single_plot,
-  width = 11, height = 6, dpi = 300
+  width = 6, height = 4, dpi = 300
 )
 
 ################################################################################
