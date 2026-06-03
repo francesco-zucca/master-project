@@ -45,7 +45,7 @@ Figure \ref{fig:ppml-event-study-fig} shows the result of the PPML event-study e
 As a robustness check, we also estimate the same event-study specification using spatially clustered errors, following the methodology of \textcite{conley1999}, to account for potential spatial correlation in remittance inflow shocks affecting neighboring municipalities. The results, shown in Figure \ref{fig:ppml-event-study-conley}, are qualitatively similar to the baseline specification, with the main difference being the thighter confidence intervals in the preperiod as buffer distance increases, and slightly wider in the post-shock period. Given that the results are robust to both clustering methods, and that the spatial clustering specification doesn't produce positive definite variance-covariance matrices for buffer distances above 50km, we consider the municipality-level clustering as our baseline specification.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{../figures-tables/municipality-inflows/muni_spatial_clustering.png}
+    \includegraphics[width=1\textwidth]{../figures-tables/municipality-inflows/muni_spatial_clustering.pdf}
     \caption{PPML Event Study Estimates with Conley Standard Errors for Different Buffer Distances}
     \label{fig:ppml-event-study-conley}
 \end{figure}

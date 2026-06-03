@@ -140,7 +140,7 @@ event_study <- function(model_object, model_label) {
 }
 
 # Generic plotting function for single event studies
-plot_event_study <- function(data, title, y_limits) {
+plot_event_study <- function(data, title, y_limits, subtitle = NULL) {
   ggplot(data, aes(x = period_quarter, y = estimate, color = model_label)) +
     geom_hline(yintercept = 0, linetype = "dotted", 
                color = "grey75", linewidth = 0.5) +
@@ -148,12 +148,17 @@ plot_event_study <- function(data, title, y_limits) {
                linetype = "dotted", color = "grey75", linewidth = 0.5) +
     geom_errorbar(aes(ymin = ci_low, ymax = ci_high), 
                   width = 0.05, linewidth = 0.5, color = "grey50") +
-    geom_point(size = 1.5, show.legend = FALSE) + # Suppress the legend here
+    geom_point(size = 1.5, show.legend = FALSE) + 
     scale_x_yearqtr(format = "%Y Q%q", 
                     breaks = seq(min(data$period_quarter), 
                                  max(data$period_quarter), by = 0.25)) +
     scale_y_continuous(limits = y_limits) +
-    labs(title = title, x = "Quarter", y = "Coefficient Effect")
+    labs(
+      title = title, 
+      subtitle = subtitle,
+      x = NULL, 
+      y = "Coefficient Effect"
+    )
 }
 
 ################################################################################
@@ -180,7 +185,7 @@ combined_plot <- p1 + p2 + p3 + plot_layout(ncol = 3)
 ggsave(
   filename = "figures-tables/municipality-inflows/muni_dids.png",
   plot = combined_plot,
-  width = 15, height = 5, dpi = 300
+  width = 12, height = 4, dpi = 300
 )
 
 ################################################################################
@@ -188,8 +193,10 @@ ggsave(
 ################################################################################
 
 # Construct plot
-ppml_single_plot <- plot_event_study(data_ppml, 
-                                     "PPML: State-Time FE", c(-0.015, 0.015))
+ppml_single_plot <- plot_event_study(
+  data_ppml, c(-0.015, 0.015),
+  title = "Impact of Hurricane Ian on remittance inflows to Mexican municipalities",
+  subtitle = "PPML TWFE estimates based on exposure to Florida, including state-by-time FE")
 
 # Save
 ggsave(
@@ -206,10 +213,10 @@ ggsave(
 # Combine all spatial cutoffs into one dataframe
 spatial_plot_data <- bind_rows(
   event_study(ppml_with_state_fe, "Municipality"), 
-  event_study(ppml_conley_10,  "10 km"),
-  event_study(ppml_conley_25,  "25 km"),
-  event_study(ppml_conley_50,  "50 km"),
-  event_study(ppml_conley_100, "100 km")
+  event_study(ppml_conley_10,     "10 km"),
+  event_study(ppml_conley_25,     "25 km"),
+  event_study(ppml_conley_50,     "50 km"),
+  event_study(ppml_conley_100,    "100 km")
 )
 
 # Lock in factor levels for legend ordering
@@ -231,32 +238,30 @@ spatial_gg_center <- ggplot(
   geom_errorbar(data = subset(spatial_plot_data, 
                               period_quarter != zoo::as.yearqtr(as.Date("2022-07-01"))),
                 aes(ymin = ci_low, ymax = ci_high), 
-                width = 0.06, position = position_dodge(width = 0.12), 
-                linewidth = 0.45, lineend = "square") +
+                width = 0.06, position = position_dodge(width = 0.15), 
+                linewidth = 0.5, lineend = "square") +
   
   # Point estimates
   geom_point(data = subset(spatial_plot_data, model_label == "Municipality"), 
              aes(x = period_quarter, y = estimate), 
-             color = "grey10", size = 1) +
+             color = "grey10", size = 1.2) +
   
   scale_x_yearqtr(format = "%Y Q%q", 
                   breaks = seq(min(spatial_plot_data$period_quarter), 
                                max(spatial_plot_data$period_quarter), by = 0.25)) +
   scale_y_continuous(limits = c(-0.015, 0.015), breaks = seq(-0.015, 0.015, 0.01)) +
   
-  # Shades of grey for levels
-  scale_color_manual(values = c("grey10", "grey30", "grey50", "grey65", "grey80")) +
-  
   labs(
     title = "PPML event study: sensitivity to spatial cutoffs",
     subtitle = "Comparing standard error adjustments across distance thresholds",
-    x = "Quarter", y = "Coefficient",
+    y = "Coefficient",
     color = "Clustering level:"
   )
 
 # Save
 ggsave(
-  filename = "figures-tables/municipality-inflows/muni_spatial_clustering.png",
+  filename = "figures-tables/municipality-inflows/muni_spatial_clustering.pdf",
   plot = spatial_gg_center,
-  width = 11, height = 6, dpi = 300
+  width = 8, height = 6, dpi = 300,
+  device = cairo_pdf
 )
