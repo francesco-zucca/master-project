@@ -147,7 +147,7 @@ plot_event_study <- function(data, title, y_limits) {
     geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-10-01")), 
                linetype = "dotted", color = "grey75", linewidth = 0.5) +
     geom_errorbar(aes(ymin = ci_low, ymax = ci_high), 
-                  width = 0.05, linewidth = 0.5, color = "grey60") +
+                  width = 0.05, linewidth = 0.5, color = "grey50") +
     geom_point(size = 1.5, show.legend = FALSE) + # Suppress the legend here
     scale_x_yearqtr(format = "%Y Q%q", 
                     breaks = seq(min(data$period_quarter), 
@@ -189,13 +189,14 @@ ggsave(
 
 # Construct plot
 ppml_single_plot <- plot_event_study(data_ppml, 
-                                     "PPML: State-Time FE", c(-0.02, 0.02))
+                                     "PPML: State-Time FE", c(-0.015, 0.015))
 
 # Save
 ggsave(
-  filename = "figures-tables/municipality-inflows/muni_did_ppml.png",
+  filename = "figures-tables/municipality-inflows/muni_did_ppml.pdf",
   plot = ppml_single_plot,
-  width = 6, height = 4, dpi = 300
+  width = 8, height = 4, dpi = 300,
+  device = cairo_pdf
 )
 
 ################################################################################
