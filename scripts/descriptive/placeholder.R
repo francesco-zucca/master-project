@@ -201,6 +201,11 @@ migration_long <- map_dfr(files, function(file) {
 # Compute correlations using every available year as the base year
 base_years <- sort(unique(migration_long$year))
 
+base_years <- base_years[base_years > 2013] # because we do not have remittances data until 2014
+
+migration_long <- migration_long %>%
+  filter(year > 2013) # because we do not have remittances data until 2014
+
 persistence_data <- map_dfr(base_years, function(base_year) {
   
   baseline <- migration_long %>%
@@ -227,8 +232,7 @@ persistence_data <- map_dfr(base_years, function(base_year) {
 persistence_data <- persistence_data %>%
   mutate(
     highlight_group = case_when(
-      base_year == 2011 ~ "2011",
-      base_year == 2016 ~ "2016",
+      base_year == 2018 ~ "2018",
       TRUE ~ "Other Years"
     )
   )
@@ -236,7 +240,7 @@ persistence_data <- persistence_data %>%
 # Data for labels
 label_data <- persistence_data %>%
   filter(
-    base_year %in% c(2011, 2016),
+    base_year %in% c(2018),
     year == max(year)
   )
 
@@ -250,8 +254,14 @@ ggplot(
   )
 ) +
   
-  geom_line(linewidth = 0.8, alpha = 0.75) +
-  geom_point(size = 1.5, alpha = 0.8) +
+  geom_line(
+  aes(linetype = highlight_group),
+  linewidth = 0.9,
+  alpha = 0.9,
+  show.legend = FALSE
+  ) +
+  
+  geom_point(size = 1.5, alpha = 1, show.legend = FALSE) +
   
   geom_label_repel(
     data = label_data,
@@ -264,31 +274,28 @@ ggplot(
   scale_color_manual(
     values = c(
       "Other Years" = "grey50",
-      "2011" = "blue",
-      "2016" = "blue"
-    ),
-    breaks = c("2011", "2016"),
-    labels = c("2011 Base Year", "2016 Base Year")
+      "2018" = "#2171b5"
+    )
   ) +
   
-  scale_x_continuous(breaks = base_years) +
+  scale_x_continuous(breaks = base_years, expand = c(0.1, 0)) +
   
   scale_y_continuous(
-    limits = c(0.70, 1),
+    limits = c(0.90, 1),
     labels = scales::label_number(accuracy = 0.01)
   ) +
   
   labs(
-    title = "Migration Network Persistence Across Base Years",
+    title = "Migration Network Persistence",
     subtitle = "Correlation of yearly migration matrices using each year as the base",
     x = "Comparison Year",
-    y = "Correlation with Base-Year Matrix",
-    color = NULL
+    y = "Correlation with Base-Year Matrix"
   ) +
   
   theme(
-    legend.position = "bottom"
+    legend.position = "none"
   )
 
-ggsave("figures-tables/municipality-inflows/network_persistence_all_base_years.png", width = 8, height = 5)
+ggsave("figures-tables/municipality-inflows/network_persistence_all_base_years.png", width = 6, height = 4)
+
 

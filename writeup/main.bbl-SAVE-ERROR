@@ -1,0 +1,3065 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{albert_monras_2022}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fd60d56b188558a7c71185d2fd695fa2}{%
+           family={Albert},
+           familyi={A\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2731dffc9be5533d49e3adf42ae3f404}{%
+           family={Monras},
+           familyi={M\bibinitperiod},
+           given={Joan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{fullhash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{fullhashraw}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{bibnamehash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{authorbibnamehash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{authornamehash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{authorfullhash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{authorfullhashraw}{2a57cf7fdbd009df908c8184b36893f8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Economic Review}
+      \field{number}{11}
+      \field{title}{Immigration and Spatial Equilibrium: The Role of Expenditures in the Country of Origin}
+      \field{volume}{112}
+      \field{year}{2022}
+      \field{pages}{3763\bibrangedash 3802}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1257/aer.20211241
+      \endverb
+    \endentry
+    \entry{ALCARAZ2012156}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1765602d9ce870830af2b92f69a654f2}{%
+           family={Alcaraz},
+           familyi={A\bibinitperiod},
+           given={Carlo},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6c84676895c0adce6bf7deb9da8fd292}{%
+           family={Chiquiar},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=623a59171f48d05d9e88f21fab1ffcad}{%
+           family={Salcedo},
+           familyi={S\bibinitperiod},
+           given={Alejandrina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0fd05cf56acedfc6caa781832bad7b76}
+      \strng{fullhash}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \strng{fullhashraw}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \strng{bibnamehash}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \strng{authorbibnamehash}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \strng{authornamehash}{0fd05cf56acedfc6caa781832bad7b76}
+      \strng{authorfullhash}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \strng{authorfullhashraw}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Development Economics}
+      \field{number}{1}
+      \field{title}{Remittances, Schooling, and Child Labor in {Mexico}}
+      \field{volume}{97}
+      \field{year}{2012}
+      \field{pages}{156\bibrangedash 165}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.jdeveco.2010.11.004
+      \endverb
+    \endentry
+    \entry{dorantes_pozo_2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=98ad6b1422bdb26c9fff5c1b805bde63}{%
+           family={Amuedo-Dorantes},
+           familyi={A\bibinithyphendelim D\bibinitperiod},
+           given={Catalina},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f75a3b8f8eb469fc01a85be63226fcf7}{%
+           family={Pozo},
+           familyi={P\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{fullhash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{fullhashraw}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{bibnamehash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{authorbibnamehash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{authornamehash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{authorfullhash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{authorfullhashraw}{b86b793e38dd2b5602f8654c6592684d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Population Economics}
+      \field{month}{06}
+      \field{title}{Remittances as insurance: Evidence from Mexican immigrants}
+      \field{volume}{19}
+      \field{year}{2006}
+      \field{pages}{227\bibrangedash 254}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1007/s00148-006-0079-6
+      \endverb
+    \endentry
+    \entry{aronow2017}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=edad3f3ce580076d5d7b40c23b2a494f}{%
+           family={Aronow},
+           familyi={A\bibinitperiod},
+           given={Peter\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a90ecb8b014be65da2e690c5ddd4e0f2}{%
+           family={Samii},
+           familyi={S\bibinitperiod},
+           given={Cyrus},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{fullhash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{fullhashraw}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{bibnamehash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{authorbibnamehash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{authornamehash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{authorfullhash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{authorfullhashraw}{961f9dcb3b73e64dd295e41f9181bd33}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Applied Statistics}
+      \field{number}{4}
+      \field{title}{Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment}
+      \field{volume}{11}
+      \field{year}{2017}
+      \field{pages}{1912\bibrangedash 1947}
+      \range{pages}{36}
+      \verb{doi}
+      \verb 10.1214/16-AOAS1005
+      \endverb
+    \endentry
+    \entry{banxico_ce168}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0d4573467792951d4ea73629bfda5bac}{%
+           family={{Banco de México}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \strng{bibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorbibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authornamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Sistema de Información Económica (SIE), Banco de México}
+      \field{title}{Estado de origen de los ingresos por remesas provenientes de {Estados Unidos} ({CE168})}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CE168&locale=es
+      \endverb
+      \verb{url}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CE168&locale=es
+      \endverb
+    \endentry
+    \entry{banxico_remittances_ca11}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0d4573467792951d4ea73629bfda5bac}{%
+           family={{Banco de México}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \strng{bibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorbibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authornamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Sistema de Información Económica (SIE), Banco de México}
+      \field{title}{Ingresos por remesas familiares ({CA11})}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA11&sector=1&locale=es
+      \endverb
+      \verb{url}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA11&sector=1&locale=es
+      \endverb
+    \endentry
+    \entry{banxico_ce166}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0d4573467792951d4ea73629bfda5bac}{%
+           family={{Banco de México}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \strng{bibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorbibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authornamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \field{extraname}{3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Sistema de Información Económica (SIE), Banco de México}
+      \field{title}{Ingresos por remesas, distribución por municipio ({CE166})}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CE166&locale=es
+      \endverb
+      \verb{url}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CE166&locale=es
+      \endverb
+    \endentry
+    \entry{bettin_2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=af8ff089539cc8cb6d95c5d7779b3ec0}{%
+           family={Bettin},
+           familyi={B\bibinitperiod},
+           given={Giulia},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ca01b0514629c633364b5e19f8ce510}{%
+           family={Jallow},
+           familyi={J\bibinitperiod},
+           given={Amadou},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5fbc58ba6296b50408a0f3147de67fde}{%
+           family={Zazzaro},
+           familyi={Z\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a261f8b4addd1b603d19d575130fa5d0}
+      \strng{fullhash}{233da3a63f2f37ac43781b77993080c1}
+      \strng{fullhashraw}{233da3a63f2f37ac43781b77993080c1}
+      \strng{bibnamehash}{233da3a63f2f37ac43781b77993080c1}
+      \strng{authorbibnamehash}{233da3a63f2f37ac43781b77993080c1}
+      \strng{authornamehash}{a261f8b4addd1b603d19d575130fa5d0}
+      \strng{authorfullhash}{233da3a63f2f37ac43781b77993080c1}
+      \strng{authorfullhashraw}{233da3a63f2f37ac43781b77993080c1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Development Economics}
+      \field{title}{Responding to Natural Disasters: What Do Monthly Remittance Data Tell Us?}
+      \field{volume}{174}
+      \field{year}{2025}
+      \field{pages}{103413}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jdeveco.2024.103413
+      \endverb
+    \endentry
+    \entry{natural_disasters_US}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=977bb0d156bd9a4f11d72cb1cd1a9159}{%
+           family={Boustan},
+           familyi={B\bibinitperiod},
+           given={Leah\bibnamedelima Platt},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d388e55470172d7e86c427fe6935fd71}{%
+           family={Kahn},
+           familyi={K\bibinitperiod},
+           given={Matthew\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d56048e6cfbd70a7feba6769a7141d5e}{%
+           family={Rhode},
+           familyi={R\bibinitperiod},
+           given={Paul\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=720b51b3728b919db037ef3312d2a801}{%
+           family={Yanguas},
+           familyi={Y\bibinitperiod},
+           given={Maria\bibnamedelima Lucia},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{11c50133fc12b9f558836a2d4f5386f4}
+      \strng{fullhash}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \strng{fullhashraw}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \strng{bibnamehash}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \strng{authorbibnamehash}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \strng{authornamehash}{11c50133fc12b9f558836a2d4f5386f4}
+      \strng{authorfullhash}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \strng{authorfullhashraw}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Urban Economics}
+      \field{title}{The Effect of Natural Disasters on Economic Activity in {US} Counties: A Century of Data}
+      \field{volume}{118}
+      \field{year}{2020}
+      \field{pages}{103257}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jue.2020.103257
+      \endverb
+    \endentry
+    \entry{nhc_ian_2026}{report}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=4496a82ad94a14676abdccbf345bc987}{%
+           family={Bucci},
+           familyi={B\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=55f226ba36e7022babce1214c64554ec}{%
+           family={Alaka},
+           familyi={A\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e15ebddd09f6ef805e07814eac43143e}{%
+           family={Hagen},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=403a00ae0185b047e9ab4e28373f8785}{%
+           family={Delgado},
+           familyi={D\bibinitperiod},
+           given={Sandy},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a28af47c5ea668c1cb6068bb707ccd5f}{%
+           family={Beven},
+           familyi={B\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{2}{%
+        {National Hurricane Center, National Oceanic}%
+        {Atmospheric Administration}%
+      }
+      \strng{namehash}{dc03c30efb390f9bcc5f56dd67aa3f1d}
+      \strng{fullhash}{fd6fa09a51f81dab6db270c7bc42a911}
+      \strng{fullhashraw}{fd6fa09a51f81dab6db270c7bc42a911}
+      \strng{bibnamehash}{fd6fa09a51f81dab6db270c7bc42a911}
+      \strng{authorbibnamehash}{fd6fa09a51f81dab6db270c7bc42a911}
+      \strng{authornamehash}{dc03c30efb390f9bcc5f56dd67aa3f1d}
+      \strng{authorfullhash}{fd6fa09a51f81dab6db270c7bc42a911}
+      \strng{authorfullhashraw}{fd6fa09a51f81dab6db270c7bc42a911}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{month}{3}
+      \field{title}{Tropical Cyclone Report: {Hurricane Ian} ({AL092022}), 23--30 {September} 2022}
+      \field{type}{techreport}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nhc.noaa.gov/data/tcr/AL092022_Ian.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.nhc.noaa.gov/data/tcr/AL092022_Ian.pdf
+      \endverb
+    \endentry
+    \entry{butts2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=186f99b33d835f3175ded1f498188a92}{%
+           family={Butts},
+           familyi={B\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{186f99b33d835f3175ded1f498188a92}
+      \strng{fullhash}{186f99b33d835f3175ded1f498188a92}
+      \strng{fullhashraw}{186f99b33d835f3175ded1f498188a92}
+      \strng{bibnamehash}{186f99b33d835f3175ded1f498188a92}
+      \strng{authorbibnamehash}{186f99b33d835f3175ded1f498188a92}
+      \strng{authornamehash}{186f99b33d835f3175ded1f498188a92}
+      \strng{authorfullhash}{186f99b33d835f3175ded1f498188a92}
+      \strng{authorfullhashraw}{186f99b33d835f3175ded1f498188a92}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{econ.EM}
+      \field{eprinttype}{arXiv}
+      \field{title}{Difference-in-Differences Estimation with Spatial Spillovers}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2105.03737
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2105.03737
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2105.03737
+      \endverb
+    \endentry
+    \entry{caballero_cadena_kovak_2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2ca7830509cfb5de8394ff93afe58ae5}{%
+           family={Caballero},
+           familyi={C\bibinitperiod},
+           given={Maria\bibnamedelima Esther},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d7f11713bb235634784f61de2ce8592}{%
+           family={Cadena},
+           familyi={C\bibinitperiod},
+           given={Brian\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95d75e9e7556b93ab8587e825f40b6ce}{%
+           family={Kovak},
+           familyi={K\bibinitperiod},
+           given={Brian\bibnamedelima K.},
+           giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{881e1f58aefea9a070b38cd160c09d3b}
+      \strng{fullhash}{9bf02acab991792640686eead26f65a0}
+      \strng{fullhashraw}{9bf02acab991792640686eead26f65a0}
+      \strng{bibnamehash}{9bf02acab991792640686eead26f65a0}
+      \strng{authorbibnamehash}{9bf02acab991792640686eead26f65a0}
+      \strng{authornamehash}{881e1f58aefea9a070b38cd160c09d3b}
+      \strng{authorfullhash}{9bf02acab991792640686eead26f65a0}
+      \strng{authorfullhashraw}{9bf02acab991792640686eead26f65a0}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Demography}
+      \field{number}{3}
+      \field{title}{Measuring Geographic Migration Patterns Using {Matrículas Consulares}}
+      \field{volume}{55}
+      \field{year}{2018}
+      \field{pages}{1119\bibrangedash 1145}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1007/s13524-018-0675-6
+      \endverb
+    \endentry
+    \entry{caballero_2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=fe19627ee74d66270f4dc6241011121c}{%
+           family={Caballero},
+           familyi={C\bibinitperiod},
+           given={María\bibnamedelima Esther},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d7f11713bb235634784f61de2ce8592}{%
+           family={Cadena},
+           familyi={C\bibinitperiod},
+           given={Brian\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95d75e9e7556b93ab8587e825f40b6ce}{%
+           family={Kovak},
+           familyi={K\bibinitperiod},
+           given={Brian\bibnamedelima K.},
+           giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ea678d6e815b1a6306d89b6f3492981e}
+      \strng{fullhash}{0971ff894973b3b6c8d660f4dabb17c2}
+      \strng{fullhashraw}{0971ff894973b3b6c8d660f4dabb17c2}
+      \strng{bibnamehash}{0971ff894973b3b6c8d660f4dabb17c2}
+      \strng{authorbibnamehash}{0971ff894973b3b6c8d660f4dabb17c2}
+      \strng{authornamehash}{ea678d6e815b1a6306d89b6f3492981e}
+      \strng{authorfullhash}{0971ff894973b3b6c8d660f4dabb17c2}
+      \strng{authorfullhashraw}{0971ff894973b3b6c8d660f4dabb17c2}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of International Economics}
+      \field{title}{The International Transmission of Local Economic Shocks Through Migrant Networks}
+      \field{volume}{145}
+      \field{year}{2023}
+      \field{pages}{103832}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jinteco.2023.103832
+      \endverb
+    \endentry
+    \entry{callaway2024}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4a5a67b3788b4a3653a14d9ab03fba0e}{%
+           family={Callaway},
+           familyi={C\bibinitperiod},
+           given={Brantly},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=437b3fad5b4a40d10f45b4fc16dd7730}{%
+           family={Goodman-Bacon},
+           familyi={G\bibinithyphendelim B\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f90144f1e670fa40bee88166593b00ea}{%
+           family={Sant'Anna},
+           familyi={S\bibinitperiod},
+           given={Pedro\bibnamedelima HC},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{5eec62f9fa8fafa0729f52df408f7d2e}
+      \strng{fullhash}{100b0960671e592b2885c4af9a18389d}
+      \strng{fullhashraw}{100b0960671e592b2885c4af9a18389d}
+      \strng{bibnamehash}{100b0960671e592b2885c4af9a18389d}
+      \strng{authorbibnamehash}{100b0960671e592b2885c4af9a18389d}
+      \strng{authornamehash}{5eec62f9fa8fafa0729f52df408f7d2e}
+      \strng{authorfullhash}{100b0960671e592b2885c4af9a18389d}
+      \strng{authorfullhashraw}{100b0960671e592b2885c4af9a18389d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{Difference-in-differences with a continuous treatment}
+      \field{volume}{241}
+      \field{year}{2024}
+      \field{pages}{105746}
+      \range{pages}{1}
+    \endentry
+    \entry{card2001}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a9e88233ec6ce30d2d31e294961e3e76}{%
+           family={Card},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{fullhash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{fullhashraw}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{bibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authorbibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authornamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authorfullhash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authorfullhashraw}{a9e88233ec6ce30d2d31e294961e3e76}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Labor Economics}
+      \field{number}{1}
+      \field{title}{Immigrant Inflows, Native Outflows, and the Local Labor Market Impacts of Higher Immigration}
+      \field{volume}{19}
+      \field{year}{2001}
+      \field{pages}{22\bibrangedash 64}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1086/209979
+      \endverb
+    \endentry
+    \entry{clarke2017}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7204ab999847c8c9feb361bcaca06b02}{%
+           family={Clarke},
+           familyi={C\bibinitperiod},
+           given={Damian},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University Library of Munich}%
+      }
+      \strng{namehash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{fullhash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{fullhashraw}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{bibnamehash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{authorbibnamehash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{authornamehash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{authorfullhash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{authorfullhashraw}{7204ab999847c8c9feb361bcaca06b02}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{81604}
+      \field{title}{Estimating Difference-in-Differences in the Presence of Spillovers}
+      \field{type}{MPRA Paper}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://mpra.ub.uni-muenchen.de/81604/
+      \endverb
+      \verb{url}
+      \verb https://mpra.ub.uni-muenchen.de/81604/
+      \endverb
+    \endentry
+    \entry{conley1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0ad31912dab5ec3db2a9008277e91428}{%
+           family={Conley},
+           familyi={C\bibinitperiod},
+           given={Timothy\bibnamedelima G.},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{fullhash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{fullhashraw}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{bibnamehash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{authorbibnamehash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{authornamehash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{authorfullhash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{authorfullhashraw}{0ad31912dab5ec3db2a9008277e91428}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{GMM estimation with cross sectional dependence}
+      \field{volume}{92}
+      \field{year}{1999}
+      \field{pages}{1\bibrangedash 45}
+      \range{pages}{45}
+    \endentry
+    \entry{fussell_2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=715eff7d976d637b56c5e58a530cb5f9}{%
+           family={Fussell},
+           familyi={F\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=391452a9b0d8a685d93a128f3794c1dc}{%
+           family={DeWaard},
+           familyi={D\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3aa647d892c79969a6896b58db3bba3}{%
+           family={Curtis},
+           familyi={C\bibinitperiod},
+           given={Katherine\bibnamedelima J},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5a22be44615fb927f1b0806bab74249e}
+      \strng{fullhash}{573bbe6a627c8c57b3b8a488e4905404}
+      \strng{fullhashraw}{573bbe6a627c8c57b3b8a488e4905404}
+      \strng{bibnamehash}{573bbe6a627c8c57b3b8a488e4905404}
+      \strng{authorbibnamehash}{573bbe6a627c8c57b3b8a488e4905404}
+      \strng{authornamehash}{5a22be44615fb927f1b0806bab74249e}
+      \strng{authorfullhash}{573bbe6a627c8c57b3b8a488e4905404}
+      \strng{authorfullhashraw}{573bbe6a627c8c57b3b8a488e4905404}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Int. Migr.}
+      \field{number}{5}
+      \field{title}{Environmental migration as short- or long-term differences from a trend: A case study of Hurricanes Katrina and Rita effects on out-migration in the Gulf of Mexico}
+      \field{volume}{61}
+      \field{year}{2023}
+      \field{pages}{60\bibrangedash 74}
+      \range{pages}{15}
+    \endentry
+    \entry{gordillo2017movilidad}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=563cc77f15f26bdc0cdd5ce0fbd1ac1c}{%
+           family={Gordillo\bibnamedelimb de\bibnamedelima Anda},
+           familyi={G\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=287961bc9bb15f830acfeda530c0317b}{%
+           family={Plassot},
+           familyi={P\bibinitperiod},
+           given={Teresa},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {El Colegio Mexiquense}%
+      }
+      \strng{namehash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{fullhash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{fullhashraw}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{bibnamehash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{authorbibnamehash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{authornamehash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{authorfullhash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{authorfullhashraw}{da8c2ad2984810d010799943c30b4bc3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Economía, Sociedad y Territorio}
+      \field{number}{55}
+      \field{title}{Movilidad interna en México: tendencias recientes y patrones regionales}
+      \field{volume}{17}
+      \field{year}{2017}
+      \field{pages}{1021\bibrangedash 1050}
+      \range{pages}{30}
+    \endentry
+    \entry{chicago_fed_2002}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d825aae70232eafd15342a11e25670ec}{%
+           family={Handlin},
+           familyi={H\bibinitperiod},
+           given={Liz},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be1a430919dcee4429dba1571ad2d377}{%
+           family={Krontoft},
+           familyi={K\bibinitperiod},
+           given={Margrethe},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1eb0a9c28cc37a8a48895cb9813a95de}{%
+           family={Testa},
+           familyi={T\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Federal Reserve Bank of Chicago}%
+      }
+      \strng{namehash}{d42ca10c5f2bbf6901fc13ad51c3e884}
+      \strng{fullhash}{98aaa9a34f2e671a0d3696534cc97ede}
+      \strng{fullhashraw}{98aaa9a34f2e671a0d3696534cc97ede}
+      \strng{bibnamehash}{98aaa9a34f2e671a0d3696534cc97ede}
+      \strng{authorbibnamehash}{98aaa9a34f2e671a0d3696534cc97ede}
+      \strng{authornamehash}{d42ca10c5f2bbf6901fc13ad51c3e884}
+      \strng{authorfullhash}{98aaa9a34f2e671a0d3696534cc97ede}
+      \strng{authorfullhashraw}{98aaa9a34f2e671a0d3696534cc97ede}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chicago Fed Letter}
+      \field{number}{175a}
+      \field{title}{Remittances and the Unbanked (Special Issue)}
+      \field{year}{2002}
+    \endentry
+    \entry{hudgens2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=715440b35d440732218c463db01fa7b2}{%
+           family={Hudgens},
+           familyi={H\bibinitperiod},
+           given={Michael\bibnamedelima G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6117faae164e31aa94ebb421c00480af}{%
+           family={Halloran},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi Elizabeth},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{fullhash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{fullhashraw}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{bibnamehash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{authorbibnamehash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{authornamehash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{authorfullhash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{authorfullhashraw}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{482}
+      \field{title}{Toward Causal Inference with Interference}
+      \field{volume}{103}
+      \field{year}{2008}
+      \field{pages}{832\bibrangedash 842}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1198/016214508000000292
+      \endverb
+    \endentry
+    \entry{ime_estadisticas_2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c55479e87b5efbcd517d8ed3233a9803}{%
+           family={{Instituto de los Mexicanos en el Exterior}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Secretaría de Relaciones Exteriores}%
+      }
+      \strng{namehash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{fullhash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{fullhashraw}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{bibnamehash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{authorbibnamehash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{authornamehash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{authorfullhash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{authorfullhashraw}{c55479e87b5efbcd517d8ed3233a9803}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Estadísticas: Información Estadística de la Población Mexicana en el Exterior}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ime.gob.mx/estadisticas
+      \endverb
+      \verb{url}
+      \verb https://ime.gob.mx/estadisticas
+      \endverb
+    \endentry
+    \entry{melitz2003}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=703df9dcc139135fd81171274f1fbc95}{%
+           family={Melitz},
+           familyi={M\bibinitperiod},
+           given={Marc\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{fullhash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{fullhashraw}{703df9dcc139135fd81171274f1fbc95}
+      \strng{bibnamehash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{authorbibnamehash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{authornamehash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{authorfullhash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{authorfullhashraw}{703df9dcc139135fd81171274f1fbc95}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{6}
+      \field{title}{The Impact of Trade on Intra-Industry Reallocations and Aggregate Industry Productivity}
+      \field{volume}{71}
+      \field{year}{2003}
+      \field{pages}{1695\bibrangedash 1725}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1111/1468-0262.00467
+      \endverb
+    \endentry
+    \entry{MORARIVERA2021105349}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a819df3238ce664c6d717e8c610914d9}{%
+           family={Mora-Rivera},
+           familyi={M\bibinithyphendelim R\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f010882b41fcd8a8fe97efbad88e5101}{%
+           family={Gameren},
+           familyi={G\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{fullhash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{fullhashraw}{2ff115d69f0d8509ab732694a276f530}
+      \strng{bibnamehash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{authorbibnamehash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{authornamehash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{authorfullhash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{authorfullhashraw}{2ff115d69f0d8509ab732694a276f530}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{World Development}
+      \field{title}{The Impact of Remittances on Food Insecurity: Evidence from {Mexico}}
+      \field{volume}{140}
+      \field{year}{2021}
+      \field{pages}{105349}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.worlddev.2020.105349
+      \endverb
+    \endentry
+    \entry{MozumderEtAl2008}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=21213602526582ae624e39ea2252120f}{%
+           family={Mozumder},
+           familyi={M\bibinitperiod},
+           given={Pallab},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01b217e42593c78cd38be8b86fe6c9ab}{%
+           family={Bohara},
+           familyi={B\bibinitperiod},
+           given={Alok\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a58661fd047ddb563e9366986f773b26}{%
+           family={Berrens},
+           familyi={B\bibinitperiod},
+           given={Robert\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81c3528ac16c08640b14e8736dca923d}{%
+           family={Halim},
+           familyi={H\bibinitperiod},
+           given={Nafisa},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{d9a209723e78b58e8c474d55ca1b4d87}
+      \strng{fullhash}{e80f000d4258c5e538bee1ab9d82da2f}
+      \strng{fullhashraw}{e80f000d4258c5e538bee1ab9d82da2f}
+      \strng{bibnamehash}{e80f000d4258c5e538bee1ab9d82da2f}
+      \strng{authorbibnamehash}{e80f000d4258c5e538bee1ab9d82da2f}
+      \strng{authornamehash}{d9a209723e78b58e8c474d55ca1b4d87}
+      \strng{authorfullhash}{e80f000d4258c5e538bee1ab9d82da2f}
+      \strng{authorfullhashraw}{e80f000d4258c5e538bee1ab9d82da2f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Environment and Development Economics}
+      \field{number}{2}
+      \field{title}{Private transfers to cope with a natural disaster: evidence from Bangladesh}
+      \field{volume}{14}
+      \field{year}{2009}
+      \field{pages}{187\bibrangedash 210}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1017/S1355770X08004804
+      \endverb
+    \endentry
+    \entry{munshi2003}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6816d4e0f394b6c0a181c781985587bb}{%
+           family={Munshi},
+           familyi={M\bibinitperiod},
+           given={Kaivan},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{fullhash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{fullhashraw}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{bibnamehash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{authorbibnamehash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{authornamehash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{authorfullhash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{authorfullhashraw}{6816d4e0f394b6c0a181c781985587bb}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Quarterly Journal of Economics}
+      \field{number}{2}
+      \field{title}{Networks in the Modern Economy: {Mexican} Migrants in the {U.S.} Labor Market}
+      \field{volume}{118}
+      \field{year}{2003}
+      \field{pages}{549\bibrangedash 599}
+      \range{pages}{51}
+      \verb{doi}
+      \verb 10.1162/003355303321675455
+      \endverb
+    \endentry
+    \entry{nawrotzki2017climate}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=428d3c201e2560e96d0a2a8557b01e83}{%
+           family={Nawrotzki},
+           familyi={N\bibinitperiod},
+           given={Raphael\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a886645453d2a19f8759147818278e9a}{%
+           family={Hunter},
+           familyi={H\bibinitperiod},
+           given={Lori\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3dcc880d7cd94a61c3978b8c2c0a7105}{%
+           family={Runfola},
+           familyi={R\bibinitperiod},
+           given={Daniel\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf56be02528754490ce9723fa2d2f3ed}{%
+           family={Riosmena},
+           familyi={R\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a6939c92deb02ab98046b19e10174f6f}
+      \strng{fullhash}{83b7bebd0f8d957339e85a09b4158239}
+      \strng{fullhashraw}{83b7bebd0f8d957339e85a09b4158239}
+      \strng{bibnamehash}{83b7bebd0f8d957339e85a09b4158239}
+      \strng{authorbibnamehash}{83b7bebd0f8d957339e85a09b4158239}
+      \strng{authornamehash}{a6939c92deb02ab98046b19e10174f6f}
+      \strng{authorfullhash}{83b7bebd0f8d957339e85a09b4158239}
+      \strng{authorfullhashraw}{83b7bebd0f8d957339e85a09b4158239}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Population and Environment}
+      \field{number}{4}
+      \field{title}{Climate shocks and rural-urban migration in Mexico: Exploring nonlinearities and thresholds}
+      \field{volume}{38}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 28}
+      \range{pages}{28}
+    \endentry
+    \entry{rambachan_roth_2023}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=85edb53244c29c17ce57830271014b46}{%
+           family={Rambachan},
+           familyi={R\bibinitperiod},
+           given={Ashesh},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73c1da3266b3c7728f6b1f38a73c7671}{%
+           family={Roth},
+           familyi={R\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c7db070288680264f6dfa86410e8586f}
+      \strng{fullhash}{c7db070288680264f6dfa86410e8586f}
+      \strng{fullhashraw}{c7db070288680264f6dfa86410e8586f}
+      \strng{bibnamehash}{c7db070288680264f6dfa86410e8586f}
+      \strng{authorbibnamehash}{c7db070288680264f6dfa86410e8586f}
+      \strng{authornamehash}{c7db070288680264f6dfa86410e8586f}
+      \strng{authorfullhash}{c7db070288680264f6dfa86410e8586f}
+      \strng{authorfullhashraw}{c7db070288680264f6dfa86410e8586f}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Review of Economic Studies}
+      \field{number}{5}
+      \field{title}{A More Credible Approach to Parallel Trends}
+      \field{volume}{90}
+      \field{year}{2023}
+      \field{pages}{2555\bibrangedash 2591}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1093/restud/rdad018
+      \endverb
+    \endentry
+    \entry{ramsey1969}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a0611b94837c1b0cf35c6ec0ee7ce4eb}{%
+           family={Ramsey},
+           familyi={R\bibinitperiod},
+           given={J.\bibnamedelimi B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{fullhash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{fullhashraw}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{bibnamehash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{authorbibnamehash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{authornamehash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{authorfullhash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{authorfullhashraw}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Royal Statistical Society B}
+      \field{number}{2}
+      \field{title}{Tests for Specification Errors in Classical Linear Least Squares Regression Analysis}
+      \field{volume}{31}
+      \field{year}{1969}
+      \field{pages}{350\bibrangedash 371}
+      \range{pages}{22}
+    \endentry
+    \entry{rubin1980}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=49a367b6280de8a239f8bbdd573f996f}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Donald\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{fullhash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{fullhashraw}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{bibnamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authorbibnamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authornamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authorfullhash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authorfullhashraw}{49a367b6280de8a239f8bbdd573f996f}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{371}
+      \field{title}{Randomization Analysis of Experimental Data: The {Fisher} Randomization Test Comment}
+      \field{volume}{75}
+      \field{year}{1980}
+      \field{pages}{591\bibrangedash 593}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1080/01621459.1980.10477517
+      \endverb
+    \endentry
+    \entry{SavageHarvey2007}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1b90fe672faeae90dda0bd414525ddac}{%
+           family={Savage},
+           familyi={S\bibinitperiod},
+           given={Katrina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a05ce5021e403f7d6be47cea74939cd4}{%
+           family={Harvey},
+           familyi={H\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Humanitarian Policy Group, Overseas Development Institute (ODI)}%
+      }
+      \list{location}{1}{%
+        {London, United Kingdom}%
+      }
+      \strng{namehash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{fullhash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{fullhashraw}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{bibnamehash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{authorbibnamehash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{authornamehash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{authorfullhash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{authorfullhashraw}{5e0f69e9da6b87b151fb51240a00bc31}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{HPG Briefing Paper}
+      \field{number}{34}
+      \field{title}{Remittances during Crises: Implications for Humanitarian Response}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb https://odi.cdn.ngo/media/documents/263.pdf
+      \endverb
+      \verb{url}
+      \verb https://odi.cdn.ngo/media/documents/263.pdf
+      \endverb
+    \endentry
+    \entry{silva_tenreyro_2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=48c3783c9f699a8ab7182d1d688c548b}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi M.\bibnamedelimi C.\bibnamedelimi Santos},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=476ad06d8906e302627f01a0af0a60aa}{%
+           family={Tenreyro},
+           familyi={T\bibinitperiod},
+           given={Silvana},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{fullhash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{fullhashraw}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{bibnamehash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{authorbibnamehash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{authornamehash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{authorfullhash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{authorfullhashraw}{99c1847071b10b85a0bedba4d8f579f8}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Review of Economics and Statistics}
+      \field{number}{4}
+      \field{title}{The Log of Gravity}
+      \field{volume}{88}
+      \field{year}{2006}
+      \field{pages}{641\bibrangedash 658}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1162/rest.88.4.641
+      \endverb
+    \endentry
+    \entry{adamsetal2005}{report}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=b11c454be6664944b5a1f55b438f9302}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={J.\bibnamedelimi Edward},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72b63aeeeae65f1ba613b88372937b08}{%
+           family={Mora},
+           familyi={M\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1df80eb3a36f33cdc5d3dbb5d76a6b56}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Richard\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a26d43bda1f5c23962aa43605d2ca8b6}{%
+           family={Lopez-Feldman},
+           familyi={L\bibinithyphendelim F\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{2}{%
+        {University of California, Davis, Department of Agricultural}%
+        {Resource Economics}%
+      }
+      \strng{namehash}{4453f8f5bd571df15fbe74cb32b5a335}
+      \strng{fullhash}{f38cddaf0b464bf618ce7b41e4376502}
+      \strng{fullhashraw}{f38cddaf0b464bf618ce7b41e4376502}
+      \strng{bibnamehash}{f38cddaf0b464bf618ce7b41e4376502}
+      \strng{authorbibnamehash}{f38cddaf0b464bf618ce7b41e4376502}
+      \strng{authornamehash}{4453f8f5bd571df15fbe74cb32b5a335}
+      \strng{authorfullhash}{f38cddaf0b464bf618ce7b41e4376502}
+      \strng{authorfullhashraw}{f38cddaf0b464bf618ce7b41e4376502}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{05-003}
+      \field{title}{Remittances, Inequality and Poverty: Evidence from Rural {Mexico}}
+      \field{type}{Working Paper}
+      \field{year}{2005}
+      \verb{doi}
+      \verb 10.22004/ag.econ.60287
+      \endverb
+    \endentry
+    \entry{wooldridge2010}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c93aeef4998e670d5343b7e632c431dc}{%
+           family={Wooldridge},
+           familyi={W\bibinitperiod},
+           given={Jeffrey\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{fullhash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{fullhashraw}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{bibnamehash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{authorbibnamehash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{authornamehash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{authorfullhash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{authorfullhashraw}{c93aeef4998e670d5343b7e632c431dc}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{title}{Econometric Analysis of Cross Section and Panel Data}
+      \field{year}{2010}
+    \endentry
+    \entry{worldbank_remittances}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=32730e15a7ca0bf0686ea8d4a3a46ab9}{%
+           family={{World Bank}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{fullhash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{fullhashraw}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{bibnamehash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{authorbibnamehash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{authornamehash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{authorfullhash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{authorfullhashraw}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{World Development Indicators, series BX.TRF.PWKR.CD.DT}
+      \field{title}{Personal Remittances, Received (current {US\$})}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://data.worldbank.org/indicator/BX.TRF.PWKR.CD.DT?locations=MX
+      \endverb
+      \verb{url}
+      \verb https://data.worldbank.org/indicator/BX.TRF.PWKR.CD.DT?locations=MX
+      \endverb
+    \endentry
+    \entry{yang_choi_2007}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ec5dcc8c968cea90e00182b3af9cc823}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Dean},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9910b48544bdbdaef97ac48a66156251}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={HwaJung},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{fullhash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{fullhashraw}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{bibnamehash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{authorbibnamehash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{authornamehash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{authorfullhash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{authorfullhashraw}{46c719b928a8bc77cf31734e9091a55f}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The World Bank Economic Review}
+      \field{number}{2}
+      \field{title}{Are Remittances Insurance? Evidence from Rainfall Shocks in the {Philippines}}
+      \field{volume}{21}
+      \field{year}{2007}
+      \field{pages}{219\bibrangedash 248}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1093/wber/lhm003
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{albert_monras_2022}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fd60d56b188558a7c71185d2fd695fa2}{%
+           family={Albert},
+           familyi={A\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2731dffc9be5533d49e3adf42ae3f404}{%
+           family={Monras},
+           familyi={M\bibinitperiod},
+           given={Joan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{fullhash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{fullhashraw}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{bibnamehash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{authorbibnamehash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{authornamehash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{authorfullhash}{2a57cf7fdbd009df908c8184b36893f8}
+      \strng{authorfullhashraw}{2a57cf7fdbd009df908c8184b36893f8}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Economic Review}
+      \field{number}{11}
+      \field{title}{Immigration and Spatial Equilibrium: The Role of Expenditures in the Country of Origin}
+      \field{volume}{112}
+      \field{year}{2022}
+      \field{pages}{3763\bibrangedash 3802}
+      \range{pages}{40}
+      \verb{doi}
+      \verb 10.1257/aer.20211241
+      \endverb
+    \endentry
+    \entry{ALCARAZ2012156}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1765602d9ce870830af2b92f69a654f2}{%
+           family={Alcaraz},
+           familyi={A\bibinitperiod},
+           given={Carlo},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6c84676895c0adce6bf7deb9da8fd292}{%
+           family={Chiquiar},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=623a59171f48d05d9e88f21fab1ffcad}{%
+           family={Salcedo},
+           familyi={S\bibinitperiod},
+           given={Alejandrina},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0fd05cf56acedfc6caa781832bad7b76}
+      \strng{fullhash}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \strng{fullhashraw}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \strng{bibnamehash}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \strng{authorbibnamehash}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \strng{authornamehash}{0fd05cf56acedfc6caa781832bad7b76}
+      \strng{authorfullhash}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \strng{authorfullhashraw}{0ba1ffcc8af0ef25eab05dfc7f39da0a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Development Economics}
+      \field{number}{1}
+      \field{title}{Remittances, Schooling, and Child Labor in {Mexico}}
+      \field{volume}{97}
+      \field{year}{2012}
+      \field{pages}{156\bibrangedash 165}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.jdeveco.2010.11.004
+      \endverb
+    \endentry
+    \entry{dorantes_pozo_2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=98ad6b1422bdb26c9fff5c1b805bde63}{%
+           family={Amuedo-Dorantes},
+           familyi={A\bibinithyphendelim D\bibinitperiod},
+           given={Catalina},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f75a3b8f8eb469fc01a85be63226fcf7}{%
+           family={Pozo},
+           familyi={P\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{fullhash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{fullhashraw}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{bibnamehash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{authorbibnamehash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{authornamehash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{authorfullhash}{b86b793e38dd2b5602f8654c6592684d}
+      \strng{authorfullhashraw}{b86b793e38dd2b5602f8654c6592684d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Population Economics}
+      \field{month}{06}
+      \field{title}{Remittances as insurance: Evidence from Mexican immigrants}
+      \field{volume}{19}
+      \field{year}{2006}
+      \field{pages}{227\bibrangedash 254}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1007/s00148-006-0079-6
+      \endverb
+    \endentry
+    \entry{aronow2017}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=edad3f3ce580076d5d7b40c23b2a494f}{%
+           family={Aronow},
+           familyi={A\bibinitperiod},
+           given={Peter\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a90ecb8b014be65da2e690c5ddd4e0f2}{%
+           family={Samii},
+           familyi={S\bibinitperiod},
+           given={Cyrus},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{fullhash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{fullhashraw}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{bibnamehash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{authorbibnamehash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{authornamehash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{authorfullhash}{961f9dcb3b73e64dd295e41f9181bd33}
+      \strng{authorfullhashraw}{961f9dcb3b73e64dd295e41f9181bd33}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Applied Statistics}
+      \field{number}{4}
+      \field{title}{Estimating Average Causal Effects Under General Interference, with Application to a Social Network Experiment}
+      \field{volume}{11}
+      \field{year}{2017}
+      \field{pages}{1912\bibrangedash 1947}
+      \range{pages}{36}
+      \verb{doi}
+      \verb 10.1214/16-AOAS1005
+      \endverb
+    \endentry
+    \entry{banxico_ce168}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0d4573467792951d4ea73629bfda5bac}{%
+           family={{Banco de México}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \strng{bibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorbibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authornamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Sistema de Información Económica (SIE), Banco de México}
+      \field{title}{Estado de origen de los ingresos por remesas provenientes de {Estados Unidos} ({CE168})}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CE168&locale=es
+      \endverb
+      \verb{url}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CE168&locale=es
+      \endverb
+    \endentry
+    \entry{banxico_remittances_ca11}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0d4573467792951d4ea73629bfda5bac}{%
+           family={{Banco de México}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \strng{bibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorbibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authornamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Sistema de Información Económica (SIE), Banco de México}
+      \field{title}{Ingresos por remesas familiares ({CA11})}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA11&sector=1&locale=es
+      \endverb
+      \verb{url}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadroAnalitico&idCuadro=CA11&sector=1&locale=es
+      \endverb
+    \endentry
+    \entry{banxico_ce166}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0d4573467792951d4ea73629bfda5bac}{%
+           family={{Banco de México}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{fullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \strng{bibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorbibnamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authornamehash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhash}{0d4573467792951d4ea73629bfda5bac}
+      \strng{authorfullhashraw}{0d4573467792951d4ea73629bfda5bac}
+      \field{extraname}{3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Sistema de Información Económica (SIE), Banco de México}
+      \field{title}{Ingresos por remesas, distribución por municipio ({CE166})}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CE166&locale=es
+      \endverb
+      \verb{url}
+      \verb https://www.banxico.org.mx/SieInternet/consultarDirectorioInternetAction.do?accion=consultarCuadro&idCuadro=CE166&locale=es
+      \endverb
+    \endentry
+    \entry{bettin_2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=af8ff089539cc8cb6d95c5d7779b3ec0}{%
+           family={Bettin},
+           familyi={B\bibinitperiod},
+           given={Giulia},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ca01b0514629c633364b5e19f8ce510}{%
+           family={Jallow},
+           familyi={J\bibinitperiod},
+           given={Amadou},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5fbc58ba6296b50408a0f3147de67fde}{%
+           family={Zazzaro},
+           familyi={Z\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a261f8b4addd1b603d19d575130fa5d0}
+      \strng{fullhash}{233da3a63f2f37ac43781b77993080c1}
+      \strng{fullhashraw}{233da3a63f2f37ac43781b77993080c1}
+      \strng{bibnamehash}{233da3a63f2f37ac43781b77993080c1}
+      \strng{authorbibnamehash}{233da3a63f2f37ac43781b77993080c1}
+      \strng{authornamehash}{a261f8b4addd1b603d19d575130fa5d0}
+      \strng{authorfullhash}{233da3a63f2f37ac43781b77993080c1}
+      \strng{authorfullhashraw}{233da3a63f2f37ac43781b77993080c1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Development Economics}
+      \field{title}{Responding to Natural Disasters: What Do Monthly Remittance Data Tell Us?}
+      \field{volume}{174}
+      \field{year}{2025}
+      \field{pages}{103413}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jdeveco.2024.103413
+      \endverb
+    \endentry
+    \entry{natural_disasters_US}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=977bb0d156bd9a4f11d72cb1cd1a9159}{%
+           family={Boustan},
+           familyi={B\bibinitperiod},
+           given={Leah\bibnamedelima Platt},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d388e55470172d7e86c427fe6935fd71}{%
+           family={Kahn},
+           familyi={K\bibinitperiod},
+           given={Matthew\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d56048e6cfbd70a7feba6769a7141d5e}{%
+           family={Rhode},
+           familyi={R\bibinitperiod},
+           given={Paul\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=720b51b3728b919db037ef3312d2a801}{%
+           family={Yanguas},
+           familyi={Y\bibinitperiod},
+           given={Maria\bibnamedelima Lucia},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{11c50133fc12b9f558836a2d4f5386f4}
+      \strng{fullhash}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \strng{fullhashraw}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \strng{bibnamehash}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \strng{authorbibnamehash}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \strng{authornamehash}{11c50133fc12b9f558836a2d4f5386f4}
+      \strng{authorfullhash}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \strng{authorfullhashraw}{8b6dc9e3fa63f47ea08f4c4670c4549c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Urban Economics}
+      \field{title}{The Effect of Natural Disasters on Economic Activity in {US} Counties: A Century of Data}
+      \field{volume}{118}
+      \field{year}{2020}
+      \field{pages}{103257}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jue.2020.103257
+      \endverb
+    \endentry
+    \entry{nhc_ian_2026}{report}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=4496a82ad94a14676abdccbf345bc987}{%
+           family={Bucci},
+           familyi={B\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=55f226ba36e7022babce1214c64554ec}{%
+           family={Alaka},
+           familyi={A\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e15ebddd09f6ef805e07814eac43143e}{%
+           family={Hagen},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=403a00ae0185b047e9ab4e28373f8785}{%
+           family={Delgado},
+           familyi={D\bibinitperiod},
+           given={Sandy},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a28af47c5ea668c1cb6068bb707ccd5f}{%
+           family={Beven},
+           familyi={B\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{2}{%
+        {National Hurricane Center, National Oceanic}%
+        {Atmospheric Administration}%
+      }
+      \strng{namehash}{dc03c30efb390f9bcc5f56dd67aa3f1d}
+      \strng{fullhash}{fd6fa09a51f81dab6db270c7bc42a911}
+      \strng{fullhashraw}{fd6fa09a51f81dab6db270c7bc42a911}
+      \strng{bibnamehash}{fd6fa09a51f81dab6db270c7bc42a911}
+      \strng{authorbibnamehash}{fd6fa09a51f81dab6db270c7bc42a911}
+      \strng{authornamehash}{dc03c30efb390f9bcc5f56dd67aa3f1d}
+      \strng{authorfullhash}{fd6fa09a51f81dab6db270c7bc42a911}
+      \strng{authorfullhashraw}{fd6fa09a51f81dab6db270c7bc42a911}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{month}{3}
+      \field{title}{Tropical Cyclone Report: {Hurricane Ian} ({AL092022}), 23--30 {September} 2022}
+      \field{type}{techreport}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nhc.noaa.gov/data/tcr/AL092022_Ian.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.nhc.noaa.gov/data/tcr/AL092022_Ian.pdf
+      \endverb
+    \endentry
+    \entry{butts2023}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=186f99b33d835f3175ded1f498188a92}{%
+           family={Butts},
+           familyi={B\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{186f99b33d835f3175ded1f498188a92}
+      \strng{fullhash}{186f99b33d835f3175ded1f498188a92}
+      \strng{fullhashraw}{186f99b33d835f3175ded1f498188a92}
+      \strng{bibnamehash}{186f99b33d835f3175ded1f498188a92}
+      \strng{authorbibnamehash}{186f99b33d835f3175ded1f498188a92}
+      \strng{authornamehash}{186f99b33d835f3175ded1f498188a92}
+      \strng{authorfullhash}{186f99b33d835f3175ded1f498188a92}
+      \strng{authorfullhashraw}{186f99b33d835f3175ded1f498188a92}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{econ.EM}
+      \field{eprinttype}{arXiv}
+      \field{title}{Difference-in-Differences Estimation with Spatial Spillovers}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2105.03737
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2105.03737
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2105.03737
+      \endverb
+    \endentry
+    \entry{caballero_cadena_kovak_2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2ca7830509cfb5de8394ff93afe58ae5}{%
+           family={Caballero},
+           familyi={C\bibinitperiod},
+           given={Maria\bibnamedelima Esther},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d7f11713bb235634784f61de2ce8592}{%
+           family={Cadena},
+           familyi={C\bibinitperiod},
+           given={Brian\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95d75e9e7556b93ab8587e825f40b6ce}{%
+           family={Kovak},
+           familyi={K\bibinitperiod},
+           given={Brian\bibnamedelima K.},
+           giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{881e1f58aefea9a070b38cd160c09d3b}
+      \strng{fullhash}{9bf02acab991792640686eead26f65a0}
+      \strng{fullhashraw}{9bf02acab991792640686eead26f65a0}
+      \strng{bibnamehash}{9bf02acab991792640686eead26f65a0}
+      \strng{authorbibnamehash}{9bf02acab991792640686eead26f65a0}
+      \strng{authornamehash}{881e1f58aefea9a070b38cd160c09d3b}
+      \strng{authorfullhash}{9bf02acab991792640686eead26f65a0}
+      \strng{authorfullhashraw}{9bf02acab991792640686eead26f65a0}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Demography}
+      \field{number}{3}
+      \field{title}{Measuring Geographic Migration Patterns Using {Matrículas Consulares}}
+      \field{volume}{55}
+      \field{year}{2018}
+      \field{pages}{1119\bibrangedash 1145}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1007/s13524-018-0675-6
+      \endverb
+    \endentry
+    \entry{caballero_2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=fe19627ee74d66270f4dc6241011121c}{%
+           family={Caballero},
+           familyi={C\bibinitperiod},
+           given={María\bibnamedelima Esther},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d7f11713bb235634784f61de2ce8592}{%
+           family={Cadena},
+           familyi={C\bibinitperiod},
+           given={Brian\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95d75e9e7556b93ab8587e825f40b6ce}{%
+           family={Kovak},
+           familyi={K\bibinitperiod},
+           given={Brian\bibnamedelima K.},
+           giveni={B\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ea678d6e815b1a6306d89b6f3492981e}
+      \strng{fullhash}{0971ff894973b3b6c8d660f4dabb17c2}
+      \strng{fullhashraw}{0971ff894973b3b6c8d660f4dabb17c2}
+      \strng{bibnamehash}{0971ff894973b3b6c8d660f4dabb17c2}
+      \strng{authorbibnamehash}{0971ff894973b3b6c8d660f4dabb17c2}
+      \strng{authornamehash}{ea678d6e815b1a6306d89b6f3492981e}
+      \strng{authorfullhash}{0971ff894973b3b6c8d660f4dabb17c2}
+      \strng{authorfullhashraw}{0971ff894973b3b6c8d660f4dabb17c2}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of International Economics}
+      \field{title}{The International Transmission of Local Economic Shocks Through Migrant Networks}
+      \field{volume}{145}
+      \field{year}{2023}
+      \field{pages}{103832}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jinteco.2023.103832
+      \endverb
+    \endentry
+    \entry{callaway2024}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4a5a67b3788b4a3653a14d9ab03fba0e}{%
+           family={Callaway},
+           familyi={C\bibinitperiod},
+           given={Brantly},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=437b3fad5b4a40d10f45b4fc16dd7730}{%
+           family={Goodman-Bacon},
+           familyi={G\bibinithyphendelim B\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f90144f1e670fa40bee88166593b00ea}{%
+           family={Sant'Anna},
+           familyi={S\bibinitperiod},
+           given={Pedro\bibnamedelima HC},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{5eec62f9fa8fafa0729f52df408f7d2e}
+      \strng{fullhash}{100b0960671e592b2885c4af9a18389d}
+      \strng{fullhashraw}{100b0960671e592b2885c4af9a18389d}
+      \strng{bibnamehash}{100b0960671e592b2885c4af9a18389d}
+      \strng{authorbibnamehash}{100b0960671e592b2885c4af9a18389d}
+      \strng{authornamehash}{5eec62f9fa8fafa0729f52df408f7d2e}
+      \strng{authorfullhash}{100b0960671e592b2885c4af9a18389d}
+      \strng{authorfullhashraw}{100b0960671e592b2885c4af9a18389d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{Difference-in-differences with a continuous treatment}
+      \field{volume}{241}
+      \field{year}{2024}
+      \field{pages}{105746}
+      \range{pages}{1}
+    \endentry
+    \entry{card2001}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a9e88233ec6ce30d2d31e294961e3e76}{%
+           family={Card},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{fullhash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{fullhashraw}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{bibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authorbibnamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authornamehash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authorfullhash}{a9e88233ec6ce30d2d31e294961e3e76}
+      \strng{authorfullhashraw}{a9e88233ec6ce30d2d31e294961e3e76}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Labor Economics}
+      \field{number}{1}
+      \field{title}{Immigrant Inflows, Native Outflows, and the Local Labor Market Impacts of Higher Immigration}
+      \field{volume}{19}
+      \field{year}{2001}
+      \field{pages}{22\bibrangedash 64}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1086/209979
+      \endverb
+    \endentry
+    \entry{clarke2017}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7204ab999847c8c9feb361bcaca06b02}{%
+           family={Clarke},
+           familyi={C\bibinitperiod},
+           given={Damian},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University Library of Munich}%
+      }
+      \strng{namehash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{fullhash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{fullhashraw}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{bibnamehash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{authorbibnamehash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{authornamehash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{authorfullhash}{7204ab999847c8c9feb361bcaca06b02}
+      \strng{authorfullhashraw}{7204ab999847c8c9feb361bcaca06b02}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{81604}
+      \field{title}{Estimating Difference-in-Differences in the Presence of Spillovers}
+      \field{type}{MPRA Paper}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://mpra.ub.uni-muenchen.de/81604/
+      \endverb
+      \verb{url}
+      \verb https://mpra.ub.uni-muenchen.de/81604/
+      \endverb
+    \endentry
+    \entry{conley1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0ad31912dab5ec3db2a9008277e91428}{%
+           family={Conley},
+           familyi={C\bibinitperiod},
+           given={Timothy\bibnamedelima G.},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{fullhash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{fullhashraw}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{bibnamehash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{authorbibnamehash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{authornamehash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{authorfullhash}{0ad31912dab5ec3db2a9008277e91428}
+      \strng{authorfullhashraw}{0ad31912dab5ec3db2a9008277e91428}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{GMM estimation with cross sectional dependence}
+      \field{volume}{92}
+      \field{year}{1999}
+      \field{pages}{1\bibrangedash 45}
+      \range{pages}{45}
+    \endentry
+    \entry{fussell_2023}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=715eff7d976d637b56c5e58a530cb5f9}{%
+           family={Fussell},
+           familyi={F\bibinitperiod},
+           given={Elizabeth},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=391452a9b0d8a685d93a128f3794c1dc}{%
+           family={DeWaard},
+           familyi={D\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3aa647d892c79969a6896b58db3bba3}{%
+           family={Curtis},
+           familyi={C\bibinitperiod},
+           given={Katherine\bibnamedelima J},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5a22be44615fb927f1b0806bab74249e}
+      \strng{fullhash}{573bbe6a627c8c57b3b8a488e4905404}
+      \strng{fullhashraw}{573bbe6a627c8c57b3b8a488e4905404}
+      \strng{bibnamehash}{573bbe6a627c8c57b3b8a488e4905404}
+      \strng{authorbibnamehash}{573bbe6a627c8c57b3b8a488e4905404}
+      \strng{authornamehash}{5a22be44615fb927f1b0806bab74249e}
+      \strng{authorfullhash}{573bbe6a627c8c57b3b8a488e4905404}
+      \strng{authorfullhashraw}{573bbe6a627c8c57b3b8a488e4905404}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Int. Migr.}
+      \field{number}{5}
+      \field{title}{Environmental migration as short- or long-term differences from a trend: A case study of Hurricanes Katrina and Rita effects on out-migration in the Gulf of Mexico}
+      \field{volume}{61}
+      \field{year}{2023}
+      \field{pages}{60\bibrangedash 74}
+      \range{pages}{15}
+    \endentry
+    \entry{gordillo2017movilidad}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=563cc77f15f26bdc0cdd5ce0fbd1ac1c}{%
+           family={Gordillo\bibnamedelimb de\bibnamedelima Anda},
+           familyi={G\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Gustavo},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=287961bc9bb15f830acfeda530c0317b}{%
+           family={Plassot},
+           familyi={P\bibinitperiod},
+           given={Teresa},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {El Colegio Mexiquense}%
+      }
+      \strng{namehash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{fullhash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{fullhashraw}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{bibnamehash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{authorbibnamehash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{authornamehash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{authorfullhash}{da8c2ad2984810d010799943c30b4bc3}
+      \strng{authorfullhashraw}{da8c2ad2984810d010799943c30b4bc3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Economía, Sociedad y Territorio}
+      \field{number}{55}
+      \field{title}{Movilidad interna en México: tendencias recientes y patrones regionales}
+      \field{volume}{17}
+      \field{year}{2017}
+      \field{pages}{1021\bibrangedash 1050}
+      \range{pages}{30}
+    \endentry
+    \entry{chicago_fed_2002}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d825aae70232eafd15342a11e25670ec}{%
+           family={Handlin},
+           familyi={H\bibinitperiod},
+           given={Liz},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be1a430919dcee4429dba1571ad2d377}{%
+           family={Krontoft},
+           familyi={K\bibinitperiod},
+           given={Margrethe},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1eb0a9c28cc37a8a48895cb9813a95de}{%
+           family={Testa},
+           familyi={T\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Federal Reserve Bank of Chicago}%
+      }
+      \strng{namehash}{d42ca10c5f2bbf6901fc13ad51c3e884}
+      \strng{fullhash}{98aaa9a34f2e671a0d3696534cc97ede}
+      \strng{fullhashraw}{98aaa9a34f2e671a0d3696534cc97ede}
+      \strng{bibnamehash}{98aaa9a34f2e671a0d3696534cc97ede}
+      \strng{authorbibnamehash}{98aaa9a34f2e671a0d3696534cc97ede}
+      \strng{authornamehash}{d42ca10c5f2bbf6901fc13ad51c3e884}
+      \strng{authorfullhash}{98aaa9a34f2e671a0d3696534cc97ede}
+      \strng{authorfullhashraw}{98aaa9a34f2e671a0d3696534cc97ede}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chicago Fed Letter}
+      \field{number}{175a}
+      \field{title}{Remittances and the Unbanked (Special Issue)}
+      \field{year}{2002}
+    \endentry
+    \entry{hudgens2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=715440b35d440732218c463db01fa7b2}{%
+           family={Hudgens},
+           familyi={H\bibinitperiod},
+           given={Michael\bibnamedelima G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6117faae164e31aa94ebb421c00480af}{%
+           family={Halloran},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi Elizabeth},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{fullhash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{fullhashraw}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{bibnamehash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{authorbibnamehash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{authornamehash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{authorfullhash}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \strng{authorfullhashraw}{623ae8ed6ad52b6959f7ff21d7c48da2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{482}
+      \field{title}{Toward Causal Inference with Interference}
+      \field{volume}{103}
+      \field{year}{2008}
+      \field{pages}{832\bibrangedash 842}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1198/016214508000000292
+      \endverb
+    \endentry
+    \entry{ime_estadisticas_2026}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c55479e87b5efbcd517d8ed3233a9803}{%
+           family={{Instituto de los Mexicanos en el Exterior}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Secretaría de Relaciones Exteriores}%
+      }
+      \strng{namehash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{fullhash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{fullhashraw}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{bibnamehash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{authorbibnamehash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{authornamehash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{authorfullhash}{c55479e87b5efbcd517d8ed3233a9803}
+      \strng{authorfullhashraw}{c55479e87b5efbcd517d8ed3233a9803}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Estadísticas: Información Estadística de la Población Mexicana en el Exterior}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ime.gob.mx/estadisticas
+      \endverb
+      \verb{url}
+      \verb https://ime.gob.mx/estadisticas
+      \endverb
+    \endentry
+    \entry{melitz2003}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=703df9dcc139135fd81171274f1fbc95}{%
+           family={Melitz},
+           familyi={M\bibinitperiod},
+           given={Marc\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{fullhash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{fullhashraw}{703df9dcc139135fd81171274f1fbc95}
+      \strng{bibnamehash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{authorbibnamehash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{authornamehash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{authorfullhash}{703df9dcc139135fd81171274f1fbc95}
+      \strng{authorfullhashraw}{703df9dcc139135fd81171274f1fbc95}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{6}
+      \field{title}{The Impact of Trade on Intra-Industry Reallocations and Aggregate Industry Productivity}
+      \field{volume}{71}
+      \field{year}{2003}
+      \field{pages}{1695\bibrangedash 1725}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1111/1468-0262.00467
+      \endverb
+    \endentry
+    \entry{MORARIVERA2021105349}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a819df3238ce664c6d717e8c610914d9}{%
+           family={Mora-Rivera},
+           familyi={M\bibinithyphendelim R\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f010882b41fcd8a8fe97efbad88e5101}{%
+           family={Gameren},
+           familyi={G\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod},
+           givenun=0,
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{fullhash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{fullhashraw}{2ff115d69f0d8509ab732694a276f530}
+      \strng{bibnamehash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{authorbibnamehash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{authornamehash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{authorfullhash}{2ff115d69f0d8509ab732694a276f530}
+      \strng{authorfullhashraw}{2ff115d69f0d8509ab732694a276f530}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{World Development}
+      \field{title}{The Impact of Remittances on Food Insecurity: Evidence from {Mexico}}
+      \field{volume}{140}
+      \field{year}{2021}
+      \field{pages}{105349}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.worlddev.2020.105349
+      \endverb
+    \endentry
+    \entry{MozumderEtAl2008}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=21213602526582ae624e39ea2252120f}{%
+           family={Mozumder},
+           familyi={M\bibinitperiod},
+           given={Pallab},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01b217e42593c78cd38be8b86fe6c9ab}{%
+           family={Bohara},
+           familyi={B\bibinitperiod},
+           given={Alok\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a58661fd047ddb563e9366986f773b26}{%
+           family={Berrens},
+           familyi={B\bibinitperiod},
+           given={Robert\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81c3528ac16c08640b14e8736dca923d}{%
+           family={Halim},
+           familyi={H\bibinitperiod},
+           given={Nafisa},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{d9a209723e78b58e8c474d55ca1b4d87}
+      \strng{fullhash}{e80f000d4258c5e538bee1ab9d82da2f}
+      \strng{fullhashraw}{e80f000d4258c5e538bee1ab9d82da2f}
+      \strng{bibnamehash}{e80f000d4258c5e538bee1ab9d82da2f}
+      \strng{authorbibnamehash}{e80f000d4258c5e538bee1ab9d82da2f}
+      \strng{authornamehash}{d9a209723e78b58e8c474d55ca1b4d87}
+      \strng{authorfullhash}{e80f000d4258c5e538bee1ab9d82da2f}
+      \strng{authorfullhashraw}{e80f000d4258c5e538bee1ab9d82da2f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Environment and Development Economics}
+      \field{number}{2}
+      \field{title}{Private transfers to cope with a natural disaster: evidence from Bangladesh}
+      \field{volume}{14}
+      \field{year}{2009}
+      \field{pages}{187\bibrangedash 210}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1017/S1355770X08004804
+      \endverb
+    \endentry
+    \entry{munshi2003}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6816d4e0f394b6c0a181c781985587bb}{%
+           family={Munshi},
+           familyi={M\bibinitperiod},
+           given={Kaivan},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{fullhash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{fullhashraw}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{bibnamehash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{authorbibnamehash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{authornamehash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{authorfullhash}{6816d4e0f394b6c0a181c781985587bb}
+      \strng{authorfullhashraw}{6816d4e0f394b6c0a181c781985587bb}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Quarterly Journal of Economics}
+      \field{number}{2}
+      \field{title}{Networks in the Modern Economy: {Mexican} Migrants in the {U.S.} Labor Market}
+      \field{volume}{118}
+      \field{year}{2003}
+      \field{pages}{549\bibrangedash 599}
+      \range{pages}{51}
+      \verb{doi}
+      \verb 10.1162/003355303321675455
+      \endverb
+    \endentry
+    \entry{nawrotzki2017climate}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=428d3c201e2560e96d0a2a8557b01e83}{%
+           family={Nawrotzki},
+           familyi={N\bibinitperiod},
+           given={Raphael\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a886645453d2a19f8759147818278e9a}{%
+           family={Hunter},
+           familyi={H\bibinitperiod},
+           given={Lori\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3dcc880d7cd94a61c3978b8c2c0a7105}{%
+           family={Runfola},
+           familyi={R\bibinitperiod},
+           given={Daniel\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cf56be02528754490ce9723fa2d2f3ed}{%
+           family={Riosmena},
+           familyi={R\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{a6939c92deb02ab98046b19e10174f6f}
+      \strng{fullhash}{83b7bebd0f8d957339e85a09b4158239}
+      \strng{fullhashraw}{83b7bebd0f8d957339e85a09b4158239}
+      \strng{bibnamehash}{83b7bebd0f8d957339e85a09b4158239}
+      \strng{authorbibnamehash}{83b7bebd0f8d957339e85a09b4158239}
+      \strng{authornamehash}{a6939c92deb02ab98046b19e10174f6f}
+      \strng{authorfullhash}{83b7bebd0f8d957339e85a09b4158239}
+      \strng{authorfullhashraw}{83b7bebd0f8d957339e85a09b4158239}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Population and Environment}
+      \field{number}{4}
+      \field{title}{Climate shocks and rural-urban migration in Mexico: Exploring nonlinearities and thresholds}
+      \field{volume}{38}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 28}
+      \range{pages}{28}
+    \endentry
+    \entry{rambachan_roth_2023}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=85edb53244c29c17ce57830271014b46}{%
+           family={Rambachan},
+           familyi={R\bibinitperiod},
+           given={Ashesh},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73c1da3266b3c7728f6b1f38a73c7671}{%
+           family={Roth},
+           familyi={R\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c7db070288680264f6dfa86410e8586f}
+      \strng{fullhash}{c7db070288680264f6dfa86410e8586f}
+      \strng{fullhashraw}{c7db070288680264f6dfa86410e8586f}
+      \strng{bibnamehash}{c7db070288680264f6dfa86410e8586f}
+      \strng{authorbibnamehash}{c7db070288680264f6dfa86410e8586f}
+      \strng{authornamehash}{c7db070288680264f6dfa86410e8586f}
+      \strng{authorfullhash}{c7db070288680264f6dfa86410e8586f}
+      \strng{authorfullhashraw}{c7db070288680264f6dfa86410e8586f}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Review of Economic Studies}
+      \field{number}{5}
+      \field{title}{A More Credible Approach to Parallel Trends}
+      \field{volume}{90}
+      \field{year}{2023}
+      \field{pages}{2555\bibrangedash 2591}
+      \range{pages}{37}
+      \verb{doi}
+      \verb 10.1093/restud/rdad018
+      \endverb
+    \endentry
+    \entry{ramsey1969}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a0611b94837c1b0cf35c6ec0ee7ce4eb}{%
+           family={Ramsey},
+           familyi={R\bibinitperiod},
+           given={J.\bibnamedelimi B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{fullhash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{fullhashraw}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{bibnamehash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{authorbibnamehash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{authornamehash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{authorfullhash}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \strng{authorfullhashraw}{a0611b94837c1b0cf35c6ec0ee7ce4eb}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Royal Statistical Society B}
+      \field{number}{2}
+      \field{title}{Tests for Specification Errors in Classical Linear Least Squares Regression Analysis}
+      \field{volume}{31}
+      \field{year}{1969}
+      \field{pages}{350\bibrangedash 371}
+      \range{pages}{22}
+    \endentry
+    \entry{rubin1980}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=49a367b6280de8a239f8bbdd573f996f}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Donald\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{fullhash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{fullhashraw}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{bibnamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authorbibnamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authornamehash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authorfullhash}{49a367b6280de8a239f8bbdd573f996f}
+      \strng{authorfullhashraw}{49a367b6280de8a239f8bbdd573f996f}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{371}
+      \field{title}{Randomization Analysis of Experimental Data: The {Fisher} Randomization Test Comment}
+      \field{volume}{75}
+      \field{year}{1980}
+      \field{pages}{591\bibrangedash 593}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1080/01621459.1980.10477517
+      \endverb
+    \endentry
+    \entry{SavageHarvey2007}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1b90fe672faeae90dda0bd414525ddac}{%
+           family={Savage},
+           familyi={S\bibinitperiod},
+           given={Katrina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a05ce5021e403f7d6be47cea74939cd4}{%
+           family={Harvey},
+           familyi={H\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Humanitarian Policy Group, Overseas Development Institute (ODI)}%
+      }
+      \list{location}{1}{%
+        {London, United Kingdom}%
+      }
+      \strng{namehash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{fullhash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{fullhashraw}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{bibnamehash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{authorbibnamehash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{authornamehash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{authorfullhash}{5e0f69e9da6b87b151fb51240a00bc31}
+      \strng{authorfullhashraw}{5e0f69e9da6b87b151fb51240a00bc31}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{HPG Briefing Paper}
+      \field{number}{34}
+      \field{title}{Remittances during Crises: Implications for Humanitarian Response}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb https://odi.cdn.ngo/media/documents/263.pdf
+      \endverb
+      \verb{url}
+      \verb https://odi.cdn.ngo/media/documents/263.pdf
+      \endverb
+    \endentry
+    \entry{silva_tenreyro_2006}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=48c3783c9f699a8ab7182d1d688c548b}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi M.\bibnamedelimi C.\bibnamedelimi Santos},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=476ad06d8906e302627f01a0af0a60aa}{%
+           family={Tenreyro},
+           familyi={T\bibinitperiod},
+           given={Silvana},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{fullhash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{fullhashraw}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{bibnamehash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{authorbibnamehash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{authornamehash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{authorfullhash}{99c1847071b10b85a0bedba4d8f579f8}
+      \strng{authorfullhashraw}{99c1847071b10b85a0bedba4d8f579f8}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Review of Economics and Statistics}
+      \field{number}{4}
+      \field{title}{The Log of Gravity}
+      \field{volume}{88}
+      \field{year}{2006}
+      \field{pages}{641\bibrangedash 658}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1162/rest.88.4.641
+      \endverb
+    \endentry
+    \entry{adamsetal2005}{report}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=b11c454be6664944b5a1f55b438f9302}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={J.\bibnamedelimi Edward},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72b63aeeeae65f1ba613b88372937b08}{%
+           family={Mora},
+           familyi={M\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1df80eb3a36f33cdc5d3dbb5d76a6b56}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Richard\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a26d43bda1f5c23962aa43605d2ca8b6}{%
+           family={Lopez-Feldman},
+           familyi={L\bibinithyphendelim F\bibinitperiod},
+           given={Alejandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{2}{%
+        {University of California, Davis, Department of Agricultural}%
+        {Resource Economics}%
+      }
+      \strng{namehash}{4453f8f5bd571df15fbe74cb32b5a335}
+      \strng{fullhash}{f38cddaf0b464bf618ce7b41e4376502}
+      \strng{fullhashraw}{f38cddaf0b464bf618ce7b41e4376502}
+      \strng{bibnamehash}{f38cddaf0b464bf618ce7b41e4376502}
+      \strng{authorbibnamehash}{f38cddaf0b464bf618ce7b41e4376502}
+      \strng{authornamehash}{4453f8f5bd571df15fbe74cb32b5a335}
+      \strng{authorfullhash}{f38cddaf0b464bf618ce7b41e4376502}
+      \strng{authorfullhashraw}{f38cddaf0b464bf618ce7b41e4376502}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{05-003}
+      \field{title}{Remittances, Inequality and Poverty: Evidence from Rural {Mexico}}
+      \field{type}{Working Paper}
+      \field{year}{2005}
+      \verb{doi}
+      \verb 10.22004/ag.econ.60287
+      \endverb
+    \endentry
+    \entry{wooldridge2010}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c93aeef4998e670d5343b7e632c431dc}{%
+           family={Wooldridge},
+           familyi={W\bibinitperiod},
+           given={Jeffrey\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{fullhash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{fullhashraw}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{bibnamehash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{authorbibnamehash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{authornamehash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{authorfullhash}{c93aeef4998e670d5343b7e632c431dc}
+      \strng{authorfullhashraw}{c93aeef4998e670d5343b7e632c431dc}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{title}{Econometric Analysis of Cross Section and Panel Data}
+      \field{year}{2010}
+    \endentry
+    \entry{worldbank_remittances}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=32730e15a7ca0bf0686ea8d4a3a46ab9}{%
+           family={{World Bank}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{fullhash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{fullhashraw}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{bibnamehash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{authorbibnamehash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{authornamehash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{authorfullhash}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \strng{authorfullhashraw}{32730e15a7ca0bf0686ea8d4a3a46ab9}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{World Development Indicators, series BX.TRF.PWKR.CD.DT}
+      \field{title}{Personal Remittances, Received (current {US\$})}
+      \field{urlday}{26}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://data.worldbank.org/indicator/BX.TRF.PWKR.CD.DT?locations=MX
+      \endverb
+      \verb{url}
+      \verb https://data.worldbank.org/indicator/BX.TRF.PWKR.CD.DT?locations=MX
+      \endverb
+    \endentry
+    \entry{yang_choi_2007}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ec5dcc8c968cea90e00182b3af9cc823}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Dean},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9910b48544bdbdaef97ac48a66156251}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={HwaJung},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{fullhash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{fullhashraw}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{bibnamehash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{authorbibnamehash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{authornamehash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{authorfullhash}{46c719b928a8bc77cf31734e9091a55f}
+      \strng{authorfullhashraw}{46c719b928a8bc77cf31734e9091a55f}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The World Bank Economic Review}
+      \field{number}{2}
+      \field{title}{Are Remittances Insurance? Evidence from Rainfall Shocks in the {Philippines}}
+      \field{volume}{21}
+      \field{year}{2007}
+      \field{pages}{219\bibrangedash 248}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1093/wber/lhm003
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
