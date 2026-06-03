@@ -8,6 +8,7 @@ library(fixest)
 library(ggplot2)
 library(knitr)
 library(zoo)
+library(patchwork) # Added for side-by-side plotting
 
 ################################################################################
 # DATA PREPARATION
@@ -18,7 +19,7 @@ source("figures-tables/theme.R")
 
 # Loading the data
 migration <- read.csv("data/migration_matrix_rows.csv")
-remit     <- read.csv("data/mx_muni_inflows.csv")                                                                                                                                                                                                                                                                                                  
+remit     <- read.csv("data/mx_muni_inflows.csv")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 
 # Converting remittance data to unit dollars and formatting date variable
 remit_clean <- remit %>%
@@ -194,6 +195,92 @@ final_table_data %>%
   ) %>%
   cat(file = "figures-tables/spillovers/spillovers_tx_ca.tex")
 
+
+################################################################################
+# VISUALIZATION 1: SIDE-BY-SIDE SPILLOVER EFFECTS
+################################################################################
+
+# Helper function to extract ONLY the interaction event study data
+event_study_spillover <- function(model_object, model_label) {
+  coef_mat <- as.data.frame(fixest::coeftable(model_object))
+  names(coef_mat) <- c("estimate", "std_error", "t_stat", "p_value")
+  coef_mat$term <- rownames(coef_mat)
+  
+  # Filter strictly to the interaction terms
+  coef_mat <- coef_mat[grepl("interaction", coef_mat$term), ]
+  
+  # Extract dates
+  coef_mat$date_str <- stringr::str_extract(coef_mat$term, "\\d{4}-\\d{2}-\\d{2}")
+  coef_mat$period_date <- as.Date(coef_mat$date_str)
+  
+  # Categorize which variable the coefficient belongs to
+  coef_mat$var_label <- dplyr::case_when(
+    grepl("fl_tx_interaction", coef_mat$term) ~ "Texas Spillover",
+    grepl("fl_ca_interaction", coef_mat$term) ~ "California Spillover",
+    TRUE                                      ~ "Other"
+  )
+  
+  # Calculate 95% CI
+  coef_mat$ci_low  <- coef_mat$estimate - (1.96 * coef_mat$std_error)
+  coef_mat$ci_high <- coef_mat$estimate + (1.96 * coef_mat$std_error)
+  coef_mat$model_label <- model_label
+  
+  # Add an omitted reference period row
+  unique_vars <- unique(coef_mat$var_label)
+  ref_rows <- data.frame(
+    estimate = 0, std_error = 0, t_stat = NA, p_value = NA, term = "reference",
+    date_str = "2022-07-01", period_date = as.Date("2022-07-01"),
+    var_label = unique_vars, 
+    ci_low = 0, ci_high = 0, model_label = model_label
+  )
+  
+  clean_df <- rbind(coef_mat, ref_rows)
+  clean_df <- clean_df[order(clean_df$period_date), ]
+  
+  # Convert regular dates to continuous quarterly variables for plotting
+  clean_df$period_quarter <- zoo::as.yearqtr(clean_df$period_date)
+  
+  return(clean_df)
+}
+
+# Plotting function optimized for single-variable plots
+plot_spillover <- function(data, title, y_limits, subtitle = NULL) {
+  ggplot(data, aes(x = period_quarter, y = estimate, color = var_label)) +
+    geom_hline(yintercept = 0, linetype = "dotted", color = "grey75", linewidth = 0.5) +
+    geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-10-01")), 
+               linetype = "dotted", color = "grey75", linewidth = 0.5) +
+    geom_errorbar(aes(ymin = ci_low, ymax = ci_high), 
+                  width = 0.05, linewidth = 0.5, color = "grey50") +
+    geom_point(size = 1.5) + 
+    scale_x_yearqtr(format = "%Y Q%q", 
+                    breaks = seq(min(data$period_quarter), max(data$period_quarter), by = 0.25)) +
+    scale_y_continuous(limits = y_limits) +
+    labs(
+      title = title, 
+      subtitle = subtitle,
+      x = NULL, 
+      y = "Coefficient Effect"
+    ) +
+    theme(legend.position = "none")
+}
+
+# Extract and plot
+data_tx_spillover <- event_study_spillover(ppml_tx_base, "Texas Spillover Model")
+data_ca_spillover <- event_study_spillover(ppml_ca_base, "California Spillover Model")
+
+p_tx <- plot_spillover(data_tx_spillover, "Spillover Analysis: Texas", c(-0.0015, 0.0015))
+p_ca <- plot_spillover(data_ca_spillover, "Spillover Analysis: California", c(-0.0015, 0.0015))
+
+# Combine and save
+spillover_combined_plot <- p_tx + p_ca
+
+ggsave(
+  filename = "figures-tables/spillovers/spillovers_main_regression.pdf",
+  plot = spillover_combined_plot,
+  width = 16, height = 4, dpi = 300,
+  device = cairo_pdf
+)
+
 ################################################################################
 # ESTIMATION 2: BETA1 FOR DIFFERENT RECENTERINGS OF TEXAS
 ################################################################################ 
@@ -260,11 +347,11 @@ etable(
 )
 
 ################################################################################
-# VISUALIZATION: 10th vs 90th exposure percentile
+# VISUALIZATION 2: 10th vs 90th EXPOSURE PERCENTILE
 ################################################################################
 
-# Helper function to extract event study data
-event_study <- function(model_object, model_label) {
+# Helper function strictly for extracting the main net effect
+event_study_main <- function(model_object, model_label) {
   coef_mat <- as.data.frame(fixest::coeftable(model_object))
   names(coef_mat) <- c("estimate", "std_error", "t_stat", "p_value")
   coef_mat$term <- rownames(coef_mat)
@@ -301,8 +388,8 @@ event_study <- function(model_object, model_label) {
 }
 
 # Extract data using helper function
-data_p10 <- event_study(ppml_tx_p10, "10th Pct: Low Texas Network")
-data_p90 <- event_study(ppml_tx_p90, "90th Pct: High Texas Network")
+data_p10 <- event_study_main(ppml_tx_p10, "10th Pct: Low Texas Network")
+data_p90 <- event_study_main(ppml_tx_p90, "90th Pct: High Texas Network")
 
 # Combine into one plotting dataframe
 percentile_plot_data <- bind_rows(data_p10, data_p90)
@@ -323,9 +410,9 @@ percentile_gg <- ggplot(
 ) +
   
   # Baseline zero and shock vertical lines
-  geom_hline(yintercept = 0, color = "grey20", linewidth = 0.5, linetype = "dotted") +
+  geom_hline(yintercept = 0, color = "grey75", linewidth = 0.5, linetype = "dotted") +
   geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-10-01")), 
-             linetype = "dotted", color = "grey20", linewidth = 0.7) +
+             linetype = "dotted", color = "grey75", linewidth = 0.5) +
   
   # Confidence intervals
   geom_errorbar(data = subset(percentile_plot_data, 
