@@ -197,8 +197,8 @@ resid_plot <- ggplot(analysis_data, aes(x = mu_ppml, y = pearson_resid)) +
     y = "Pearson residuals"
   ) 
 
-ggsave(file.path(fig_dir, "pearson-resids-ppml.pdf"),
-       plot = resid_plot, height = 4, width = 5)
+ggsave(file.path(fig_dir, "pearson-resids-ppml.png"),
+       plot = resid_plot, height = 4, width = 5, dpi = 300)
 
 ################################################################################
 # ---- 4. Why PPML: mean-variance relationship --------------------------------#
@@ -225,8 +225,8 @@ diag_check <- remit_clean %>%
   filter(n_obs >= 4, mean_remit > 0, var_remit > 0)
 
 mv_plot <- ggplot(diag_check, aes(x = mean_remit, y = var_remit)) +
-  geom_point(alpha = 0.3) +
-  geom_smooth(method = "lm", color = "grey20") +
+  geom_point(alpha = 0.3, size = 1.5, color = "#08306b") +
+  geom_smooth(method = "lm", linewidth = 0.75, color= "red3") +
   geom_abline(slope = 1, intercept = 0, color = "grey40", linetype = "dashed") +
   scale_x_log10(labels = scales::label_scientific()) +
   scale_y_log10(labels = scales::label_scientific()) +
@@ -235,8 +235,8 @@ mv_plot <- ggplot(diag_check, aes(x = mean_remit, y = var_remit)) +
     y = "Variance of remittance inflow (log)"
   ) 
 
-ggsave(file.path(fig_dir, "muni-inflows-mean-var.pdf"),
-       plot = mv_plot, height = 4, width = 6)
+ggsave(file.path(fig_dir, "muni-inflows-mean-var.png"),
+       plot = mv_plot, width = 6, height = 4, dpi = 300)
 
 mv_fit <- lm(log(var_remit) ~ log(mean_remit), data = diag_check)
 summary(mv_fit)

@@ -27,13 +27,6 @@ fig_dir   <- "figures-tables/descriptive"
 
 ian_year <- 2022.75   # Ian landfall, on the continuous year axis
 
-# Shared black-and-white encodings. Color + shape are mapped to the same series
-# so the lines stay distinguishable in grayscale print.
-bw_scale <- list(
-  scale_color_manual(values = c("grey10", "grey35", "grey55", "grey75")),
-  scale_shape_manual(values = c(16, 17, 15, 18))
-)
-
 # Reusable Ian marker (grey dotted line)
 ian_marker <- geom_vline(xintercept = ian_year, linetype = "dotted",
                          color = "grey40", linewidth = 0.6)
@@ -141,11 +134,10 @@ sector_ts <- florida_data %>%
   summarise(workers = survey_total(vartype = "ci"), .groups = "drop")
 
 p_sector <- ggplot(sector_ts, aes(YEAR, workers / 1000, color = sector, shape = sector)) +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2.5) +
+  geom_line(linewidth = 0.5) +
+  geom_point(size = 1.5) +
   ian_marker +
   scale_x_continuous(breaks = 2021:2024) +
-  bw_scale +
   labs(
     x = NULL, y = "Employed workers (thousands)", color = NULL, shape = NULL
   ) +
@@ -172,11 +164,10 @@ construction_status <- florida_data %>%
   summarise(workers = sum(PERWT), .groups = "drop")
 
 p_status <- ggplot(construction_status, aes(YEAR, workers / 1000, color = status, shape = status)) +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2.5) +
+  geom_line(linewidth = 0.5) +
+  geom_point(size = 1.5) +
   ian_marker +
   scale_x_continuous(breaks = 2021:2024) +
-  bw_scale +
   labs(
     x = NULL, y = "Workers (thousands)", color = NULL, shape = NULL
   ) +
@@ -199,11 +190,10 @@ construction_natnon <- florida_data %>%
 
 p_natnon <- ggplot(construction_natnon, aes(YEAR, workers / 1000, 
                                             color = status, shape = status)) +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2.5) +
+  geom_line(linewidth = 0.5) +
+  geom_point(size = 1.5) +
   ian_marker +
   scale_x_continuous(breaks = 2021:2024) +
-  bw_scale +
   labs(
     x = NULL, y = "Workers (thousands)", color = NULL, shape = NULL
   ) +
@@ -225,12 +215,11 @@ wages_sector <- florida_data %>%
   )
 
 p_wages <- ggplot(wages_sector, aes(YEAR, median_wage, color = sector, shape = sector)) +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2.5) +
+  geom_line(linewidth = 0.5) +
+  geom_point(size = 1.5) +
   ian_marker +
   scale_x_continuous(breaks = 2021:2024) +
   scale_y_continuous(labels = scales::dollar) +
-  bw_scale +
   labs(
     x = NULL, y = "Median wage income (USD)", color = NULL, shape = NULL
   ) +
@@ -258,12 +247,11 @@ wage_dist <- florida_data %>%
                            labels = c("75th percentile", "Median", "25th percentile")))
 
 p_wagedist <- ggplot(wage_dist, aes(YEAR, wage, color = quantile, shape = quantile)) +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2.5) +
+  geom_line(linewidth = 0.5) +
+  geom_point(size = 1.5) +
   ian_marker +
   scale_x_continuous(breaks = 2021:2024) +
   scale_y_continuous(labels = scales::dollar) +
-  bw_scale +
   labs(
     x = NULL, y = "Wage income (USD)", color = NULL, shape = NULL
   ) +
@@ -301,11 +289,10 @@ construction_origin <- data3 %>%
 
 p_index <- ggplot(construction_origin, aes(YEAR, index, color = origin, shape = origin)) +
   geom_hline(yintercept = 100, color = "grey80") +
-  geom_line(linewidth = 1) +
-  geom_point(size = 2.5) +
+  geom_line(linewidth = 0.5) +
+  geom_point(size = 1.5) +
   ian_marker +
   scale_x_continuous(breaks = 2021:2024) +
-  bw_scale +
   labs(
     x = NULL, y = "Index (2021 = 100)", color = NULL, shape = NULL
   ) +
