@@ -1,92 +1,15 @@
+\begin{table}
 
-\begin{table}[htbp]
-   \caption{\label{tab:spillovers_tx_ca} Network Spillovers: Texas vs. California}
-   \centering
-   \begin{tabular}{lcc}
-      \tabularnewline \midrule \midrule
-      Dependent Variable: & \multicolumn{2}{c}{remittances}\\
-                                                                   & Texas Network           & California Network \\   
-      Model:                                                       & (1)                     & (2)\\  
-      \midrule
-      \emph{Variables}\\
-      fl\_tx\_interaction $\times$ period\_date $=$ 2020-10-01     & $7.44\times 10^{-5}$    &   \\   
-                                                                   & (0.0001)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2021-01-01     & $-3.24\times 10^{-6}$   &   \\   
-                                                                   & (0.0002)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2021-04-01     & $2.67\times 10^{-5}$    &   \\   
-                                                                   & (0.0002)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2021-07-01     & 0.0001                  &   \\   
-                                                                   & (0.0001)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2021-10-01     & 0.0001                  &   \\   
-                                                                   & (0.0002)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2022-01-01     & $4.38\times 10^{-5}$    &   \\   
-                                                                   & (0.0001)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2022-04-01     & $-2.69\times 10^{-5}$   &   \\   
-                                                                   & (0.0001)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2022-10-01     & $6.09\times 10^{-5}$    &   \\   
-                                                                   & ($5.46\times 10^{-5}$)  &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2023-01-01     & -0.0002$^{***}$         &   \\   
-                                                                   & ($7.11\times 10^{-5}$)  &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2023-04-01     & -0.0002$^{***}$         &   \\   
-                                                                   & ($7.01\times 10^{-5}$)  &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2023-07-01     & -0.0002$^{**}$          &   \\   
-                                                                   & ($7.06\times 10^{-5}$)  &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2023-10-01     & -0.0001                 &   \\   
-                                                                   & (0.0001)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2024-01-01     & -0.0004$^{**}$          &   \\   
-                                                                   & (0.0001)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2024-04-01     & -0.0004$^{**}$          &   \\   
-                                                                   & (0.0001)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2024-07-01     & -0.0005$^{***}$         &   \\   
-                                                                   & (0.0001)                &   \\   
-      fl\_tx\_interaction $\times$ period\_date $=$ 2024-10-01     & -0.0005$^{***}$         &   \\   
-                                                                   & (0.0001)                &   \\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2020-10-01     &                         & $-3.75\times 10^{-5}$\\    
-                                                                   &                         & (0.0002)\\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2021-01-01     &                         & 0.0002\\   
-                                                                   &                         & (0.0002)\\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2021-04-01     &                         & 0.0001\\   
-                                                                   &                         & (0.0001)\\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2021-07-01     &                         & 0.0002\\   
-                                                                   &                         & (0.0001)\\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2021-10-01     &                         & 0.0002\\   
-                                                                   &                         & (0.0002)\\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2022-01-01     &                         & 0.0002\\   
-                                                                   &                         & (0.0001)\\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2022-04-01     &                         & 0.0001\\   
-                                                                   &                         & (0.0001)\\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2022-10-01     &                         & $1.56\times 10^{-5}$\\    
-                                                                   &                         & ($4.55\times 10^{-5}$)\\    
-      fl\_ca\_interaction $\times$ period\_date $=$ 2023-01-01     &                         & $-1.95\times 10^{-5}$\\    
-                                                                   &                         & ($6.39\times 10^{-5}$)\\    
-      fl\_ca\_interaction $\times$ period\_date $=$ 2023-04-01     &                         & $-5.41\times 10^{-5}$\\    
-                                                                   &                         & ($7.69\times 10^{-5}$)\\    
-      fl\_ca\_interaction $\times$ period\_date $=$ 2023-07-01     &                         & $1.25\times 10^{-5}$\\    
-                                                                   &                         & ($7.51\times 10^{-5}$)\\    
-      fl\_ca\_interaction $\times$ period\_date $=$ 2023-10-01     &                         & $-1.02\times 10^{-6}$\\    
-                                                                   &                         & ($8.69\times 10^{-5}$)\\    
-      fl\_ca\_interaction $\times$ period\_date $=$ 2024-01-01     &                         & $-6.04\times 10^{-5}$\\    
-                                                                   &                         & (0.0001)\\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2024-04-01     &                         & $-4.4\times 10^{-5}$\\    
-                                                                   &                         & (0.0001)\\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2024-07-01     &                         & $-4.48\times 10^{-5}$\\    
-                                                                   &                         & (0.0001)\\   
-      fl\_ca\_interaction $\times$ period\_date $=$ 2024-10-01     &                         & $-7.56\times 10^{-5}$\\    
-                                                                   &                         & (0.0001)\\   
-      \midrule
-      \emph{Fixed-effects}\\
-      cvegeo                                                       & Yes                     & Yes\\  
-      mx\_state-period\_date                                       & Yes                     & Yes\\  
-      \midrule
-      \emph{Fit statistics}\\
-      Observations                                                 & 41,327                  & 41,327\\  
-      Squared Correlation                                          & 0.98093                 & 0.98091\\  
-      Pseudo R$^2$                                                 & 0.98937                 & 0.98936\\  
-      BIC                                                          & 2,147,483,647.5         & 2,147,483,647.5\\  
-      \midrule \midrule
-      \multicolumn{3}{l}{\emph{Clustered (cvegeo) standard-errors in parentheses}}\\
-      \multicolumn{3}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
-   \end{tabular}
+\caption{Network Spillovers: Texas vs. California (Post-Shock Periods). \textit{Note: Coefficients and standard errors are multiplied by 100 to represent percentage effects.} \label{tab:spillovers_tx_ca}}
+\centering
+\begin{tabular}[t]{lccccccccc}
+\toprule
+Network & \rotatebox{45}{2022 Q4} & \rotatebox{45}{2023 Q1} & \rotatebox{45}{2023 Q2} & \rotatebox{45}{2023 Q3} & \rotatebox{45}{2023 Q4} & \rotatebox{45}{2024 Q1} & \rotatebox{45}{2024 Q2} & \rotatebox{45}{2024 Q3} & \rotatebox{45}{2024 Q4}\\
+\midrule
+Texas & 0.01 & -0.02*** & -0.02*** & -0.02** & -0.01 & -0.04** & -0.04** & -0.05*** & -0.05***\\
+ & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01)\\
+California & 0.00 & -0.00 & -0.01 & 0.00 & -0.00 & -0.01 & -0.00 & -0.00 & -0.01\\
+ & (0.00) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01)\\
+\bottomrule
+\end{tabular}
 \end{table}
-
-

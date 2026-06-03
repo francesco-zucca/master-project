@@ -142,13 +142,13 @@ event_study <- function(model_object, model_label) {
 # Generic plotting function for single event studies
 plot_event_study <- function(data, title, y_limits) {
   ggplot(data, aes(x = period_quarter, y = estimate)) +
-    geom_hline(yintercept = 0, linetype = "dashed", 
-               color = "grey60", linewidth = 0.5) +
-    geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-07-01")), 
-               linetype = "dotted", color = "grey30", linewidth = 0.7) +
+    geom_hline(yintercept = 0, linetype = "dotted", 
+               color = "grey75", linewidth = 0.5) +
+    geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-10-01")), 
+               linetype = "dotted", color = "grey75", linewidth = 0.5) +
     geom_errorbar(aes(ymin = ci_low, ymax = ci_high), 
-                  width = 0.05, linewidth = 0.6, color = "grey10") +
-    geom_point(size = 1, color = "grey10") +
+                  width = 0.05, linewidth = 0.5, color = "grey60") +
+    geom_point(size = 1.5, color = "grey10") +
     scale_x_yearqtr(format = "%Y Q%q", 
                     breaks = seq(min(data$period_quarter), 
                                  max(data$period_quarter), by = 0.25)) +
@@ -195,7 +195,7 @@ ppml_single_plot <- plot_event_study(data_ppml,
 ggsave(
   filename = "figures-tables/municipality-inflows/muni_did_ppml.png",
   plot = ppml_single_plot,
-  width = 10, height = 5, dpi = 300
+  width = 11, height = 6, dpi = 300
 )
 
 ################################################################################
@@ -221,21 +221,22 @@ spatial_plot_data$model_label <- factor(
 spatial_gg_center <- ggplot(
   spatial_plot_data, aes(x = period_quarter, 
                          y = estimate, color = model_label)) +
-  geom_hline(yintercept = 0, color = "grey60", linewidth = 0.5) +
+  geom_hline(yintercept = 0, color = "grey75", linewidth = 0.5, 
+             linetype = "dotted") +
   geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-10-01")), 
-             linetype = "dotted", color = "grey20", linewidth = 0.7) +
+             linetype = "dotted", color = "grey75", linewidth = 0.5) +
   
   # Confidence intervals
   geom_errorbar(data = subset(spatial_plot_data, 
                               period_quarter != zoo::as.yearqtr(as.Date("2022-07-01"))),
                 aes(ymin = ci_low, ymax = ci_high), 
                 width = 0.06, position = position_dodge(width = 0.12), 
-                linewidth = 0.6, lineend = "square") +
+                linewidth = 0.45, lineend = "square") +
   
   # Point estimates
   geom_point(data = subset(spatial_plot_data, model_label == "Municipality"), 
              aes(x = period_quarter, y = estimate), 
-             color = "grey10", size = 1.5) +
+             color = "grey10", size = 1) +
   
   scale_x_yearqtr(format = "%Y Q%q", 
                   breaks = seq(min(spatial_plot_data$period_quarter), 
