@@ -1,11 +1,14 @@
 % !TeX root = ../main.tex
 \chapter{Investigating Spillover Effects}
 
-A fundamental requirement for standard causal inference models is the Stable Unit Treatment Value Assumption (SUTVA), formalized by \textcite{rubin1980}. SUTVA assumes that the potential outcomes of any unit depend exclusively on its own treatment assignment, excluding the possibility of any indirect spillover between units.
+A fundamental requirement for standard causal inference models is the Stable Unit Treatment Value Assumption (SUTVA), formalized by \textcite{rubin1980}, which assumes that the potential outcomes of any unit depend exclusively on its own treatment assignment, excluding the possibility of any indirect spillover between units.
 
 In our context, U.S. states not directly exposed to a local shock might still be affected if control units are exposed to the treatment through indirect channels, leading to biased estimates \parencite{clarke2017}. For instance, given that California and Texas all host a big proportion of Mexican migrants, we hypothesize that these two states might have played a role in offsetting the negative Florida shock. If a Mexican municipality highly dependent on Florida remittances experiences an income shock due to Hurricane Ian, connected migrants residing in Texas might respond by increasing their transfers to compensate for the drop. If this was the case, the estimated Florida-exposure effect on total remittances would capture the net effect of the shock after within-network adjustment, rather than the direct fall in Florida-origin remittances. 
 
-Therefore, we argue that our estimates are subject to general equilibrium effects. We base our analysis on the exposure-mapping logic of \textcite{aronow2017} to define indirect exposure through alternative migrant networks. Rather than assuming that a municipality's remittances respond only to Florida exposure, we allow the response to vary with exposure to other major U.S. destinations, especially Texas and California. 
+Therefore, we argue that our estimates are subject to general equilibrium effects. We base our analysis on the exposure-mapping logic of \textcite{aronow2017} to define indirect exposure through alternative migrant networks. Rather than assuming that a municipality's remittances respond only to Florida exposure, we allow the response to vary with exposure to Texas and California. 
+
+While we do find economically plausible spillover effects from Texas, these findings are modest: the shock is not large enough to disturb the whole of Florida's economy. Again, we emphasize on the idea of interpreting cautiously the impact of small, localized shocks.
+
 
 \section{Empirical Strategy}
 
