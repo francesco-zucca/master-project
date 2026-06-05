@@ -454,6 +454,6 @@ percentile_gg <- ggplot(
 ggsave(
   filename = "figures-tables/spillovers/total_effect_texas_exposure.pdf",
   plot = percentile_gg,
-  width = 8, height = 6, dpi = 300,
+  width = 8, height = 4, dpi = 300,
   device = cairo_pdf
 )

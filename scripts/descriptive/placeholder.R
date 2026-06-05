@@ -143,7 +143,7 @@ ggplot(outflows_clean, aes(x = period_date, y = remittances, color = group)) +
   theme(legend.title = element_blank())
 
 ggsave("figures-tables/state-outflows/total_remittance_outflows.pdf", 
-       width = 8, height = 6, dpi=300, device = cairo_pdf)
+       width = 8, height = 4, dpi=300, device = cairo_pdf)
 
 #################################################################################
 # PLOT 2
@@ -170,7 +170,7 @@ ggplot(plot_data,
   )
 
 ggsave("figures-tables/municipality-inflows/indexed_remittances_by_florida_exposure_quartile.pdf", 
-       width = 8, height = 5, dpi = 300, device = cairo_pdf)
+       width = 8, height = 4, dpi = 300, device = cairo_pdf)
 
 ################################################################################
 # NETWORK PERSISTENCE DECAY: ALL BASE YEARS
@@ -259,7 +259,7 @@ ggplot(
   
   geom_line(
   aes(linetype = highlight_group),
-  linewidth = 0.9,
+  linewidth = 0.5,
   alpha = 0.9,
   show.legend = FALSE
   ) +
@@ -298,4 +298,4 @@ ggplot(
   )
 
 ggsave("figures-tables/municipality-inflows/network_persistence_all_base_years.pdf", 
-       width = 8, height = 6, dpi = 300, device = cairo_pdf)
+       width = 8, height = 4, dpi = 300, device = cairo_pdf)
