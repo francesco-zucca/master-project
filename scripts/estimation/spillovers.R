@@ -19,7 +19,7 @@ source("figures-tables/theme.R")
 
 # Loading the data
 migration <- read.csv("data/migration_matrix_rows.csv")
-remit     <- read.csv("data/mx_muni_inflows.csv")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+remit     <- read.csv("data/mx_muni_inflows.csv")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 
 # Converting remittance data to unit dollars and formatting date variable
 remit_clean <- remit %>%
@@ -109,92 +109,177 @@ ppml_ca_base <- fepois(
 )
 
 ################################################################################
-# TABLE 1: TEXAS VS CALIFORNIA SPILLOVERS (POST-SHOCK ONLY)
+# TABLE 1: TEXAS VS CALIFORNIA SPILLOVERS (PRE & POST, SIDE-BY-SIDE SE)
 ################################################################################
 
-# Extract and format the Texas results into a dataframe
+# Extract and format the Texas results (including pre-periods)
 tx_df <- as.data.frame(coeftable(ppml_tx_base)) %>%
   rownames_to_column("term") %>%
   filter(grepl("fl_tx_interaction", term)) %>%
   mutate(
-    raw_date = str_extract(term, "\\d{4}-\\d{2}-\\d{2}")
+    raw_date = as.Date(str_extract(term, "\\d{4}-\\d{2}-\\d{2}"))
   ) %>%
-  # Keep only the shock quarter (2022-10-01) and subsequent quarters
-  filter(as.Date(raw_date) >= as.Date("2022-10-01")) %>%
   mutate(
-    Date = format(zoo::as.yearqtr(as.Date(raw_date)), "%Y Q%q"),
+    Date = format(zoo::as.yearqtr(raw_date), "%Y Q%q"),
     stars = case_when(
       `Pr(>|z|)` < 0.01 ~ "***",
       `Pr(>|z|)` < 0.05 ~ "**",
       `Pr(>|z|)` < 0.1  ~ "*",
       TRUE              ~ ""
     ),
-    # Multiply by 100 for percentage terms, keep 2 decimal places
-    Estimate_str = paste0(sprintf("%.2f", Estimate * 100), stars),
-    SE_str       = paste0("(", sprintf("%.2f", `Std. Error` * 100), ")")
+    FL_TX = paste0(sprintf("%.2f", Estimate * 100), stars, " (", sprintf("%.2f", `Std. Error` * 100), ")")
   ) %>%
-  select(Date, Estimate_str, SE_str) %>%
-  pivot_longer(cols = c(Estimate_str, SE_str), names_to = "type", values_to = "Texas")
+  select(raw_date, Date, FL_TX)
 
-# Extract and format the California results into a dataframe
+# Extract and format the California results (including pre-periods)
 ca_df <- as.data.frame(coeftable(ppml_ca_base)) %>%
   rownames_to_column("term") %>%
   filter(grepl("fl_ca_interaction", term)) %>%
   mutate(
-    raw_date = str_extract(term, "\\d{4}-\\d{2}-\\d{2}")
+    raw_date = as.Date(str_extract(term, "\\d{4}-\\d{2}-\\d{2}"))
   ) %>%
-  # Keep only the shock quarter (2022-10-01) and subsequent quarters
-  filter(as.Date(raw_date) >= as.Date("2022-10-01")) %>%
   mutate(
-    Date = format(zoo::as.yearqtr(as.Date(raw_date)), "%Y Q%q"),
+    Date = format(zoo::as.yearqtr(raw_date), "%Y Q%q"),
     stars = case_when(
       `Pr(>|z|)` < 0.01 ~ "***",
       `Pr(>|z|)` < 0.05 ~ "**",
       `Pr(>|z|)` < 0.1  ~ "*",
       TRUE              ~ ""
     ),
-    Estimate_str = paste0(sprintf("%.2f", Estimate * 100), stars),
-    SE_str       = paste0("(", sprintf("%.2f", `Std. Error` * 100), ")")
+    FL_CA = paste0(sprintf("%.2f", Estimate * 100), stars, " (", sprintf("%.2f", `Std. Error` * 100), ")")
   ) %>%
-  select(Date, Estimate_str, SE_str) %>%
-  pivot_longer(cols = c(Estimate_str, SE_str), names_to = "type", values_to = "California")
+  select(raw_date, Date, FL_CA)
 
-# Merge and pivot columns
-final_table_data <- tx_df %>%
-  left_join(ca_df, by = c("Date", "type")) %>%
-  
-  # Stack into rows
-  pivot_longer(cols = c(Texas, California), names_to = "Network", values_to = "Coefficient") %>%
-  
-  # Push Dates into columns
-  pivot_wider(names_from = Date, values_from = Coefficient) %>%
-  
-  # Sort
-  arrange(desc(Network), type) %>%
-  
-  # Blank out standard error row labels
-  mutate(Network = ifelse(type == "SE_str", "", Network)) %>%
-  select(-type)
+# Merge the parallel timelines side-by-side and sort chronologically
+table_body <- tx_df %>%
+  inner_join(ca_df, by = c("raw_date", "Date")) %>%
+  arrange(raw_date) %>%
+  select(Quarter = Date, FL_TX, FL_CA)
 
-# Wrap column names
-rotated_colnames <- colnames(final_table_data)
-rotated_colnames[-1] <- paste0("\\rotatebox{45}{", rotated_colnames[-1], "}")
+# Create summary statistics row (Obs)
+obs_row <- data.frame(
+  Quarter = "Obs",
+  FL_TX = format(nobs(ppml_tx_base), big.mark = ","),
+  FL_CA = format(nobs(ppml_ca_base), big.mark = ",")
+)
 
-# Setup dynamic column alignment
-align_string <- paste0("l", strrep("c", ncol(final_table_data) - 1))
+# Stack body data and summary row together
+final_table_data <- rbind(table_body, obs_row)
 
-# Export dataset into latex
-final_table_data %>%
+# --- NEW: CUSTOM GAP SEPARATION LOGIC ---
+# Create a blank vector matching the row count, then flag the target shock boundaries
+custom_linesep <- rep("", nrow(final_table_data))
+custom_linesep[which(final_table_data$Quarter == "2022 Q2")] <- "\\addlinespace"
+custom_linesep[which(final_table_data$Quarter == "2022 Q4")] <- "\\addlinespace"
+
+# Generate the base kable object
+base_latex_table <- final_table_data %>%
   kable(
     format = "latex", 
     booktabs = TRUE, 
-    align = align_string,
-    col.names = rotated_colnames, 
-    caption = "Network Spillovers: Texas vs. California (Post-Shock Periods). \\textit{Note: Coefficients and standard errors are multiplied by 100 to represent percentage effects.} \\label{tab:spillovers_tx_ca}",
+    align = "lcc",
+    linesep = custom_linesep, # Apply targeted shock framing gaps
+    col.names = c("Quarter", "FL $\\times$ TX", "FL $\\times$ CA"), 
+    caption = "$\\beta_3$ Coefficient Event-Study Estimates (Pre and Post Periods). \\textit{Note: Coefficients and standard errors are multiplied by 100 to represent percentage effects. Significance levels: * p < 0.1, ** p < 0.05, *** p < 0.01.} \\label{tab:spillovers_tx_ca}",
     escape = FALSE 
-  ) %>%
-  cat(file = "figures-tables/spillovers/spillovers_tx_ca.tex")
+  )
 
+# --- NEW: HORIZONTAL & VERTICAL SPACING ADJUSTMENTS ---
+# Inject custom local adjustments into the saved .tex output string
+styled_table <- c(
+  "{\\renewcommand{\\arraystretch}{1.25}", # Dynamically scales row gaps upward slightly
+  "\\setlength{\\tabcolsep}{22pt}",         # Widens column separation to stretch across page
+  as.character(base_latex_table),
+  "}"                                      # Closes the local environment scope
+)
+
+# Save out the complete code block 
+writeLines(styled_table, "figures-tables/spillovers/spillovers_tx_ca.tex")
+
+################################################################################
+# VISUALIZATION 1: SIDE-BY-SIDE SPILLOVER EFFECTS
+################################################################################
+
+# Helper function to extract ONLY the interaction event study data
+event_study_spillover <- function(model_object, model_label) {
+  coef_mat <- as.data.frame(fixest::coeftable(model_object))
+  names(coef_mat) <- c("estimate", "std_error", "t_stat", "p_value")
+  coef_mat$term <- rownames(coef_mat)
+  
+  # Filter strictly to the interaction terms
+  coef_mat <- coef_mat[grepl("interaction", coef_mat$term), ]
+  
+  # Extract dates
+  coef_mat$date_str <- stringr::str_extract(coef_mat$term, "\\d{4}-\\d{2}-\\d{2}")
+  coef_mat$period_date <- as.Date(coef_mat$date_str)
+  
+  # Categorize which variable the coefficient belongs to
+  coef_mat$var_label <- dplyr::case_when(
+    grepl("fl_tx_interaction", coef_mat$term) ~ "Texas Spillover",
+    grepl("fl_ca_interaction", coef_mat$term) ~ "California Spillover",
+    TRUE                                      ~ "Other"
+  )
+  
+  # Calculate 95% CI
+  coef_mat$ci_low  <- coef_mat$estimate - (1.96 * coef_mat$std_error)
+  coef_mat$ci_high <- coef_mat$estimate + (1.96 * coef_mat$std_error)
+  coef_mat$model_label <- model_label
+  
+  # Add an omitted reference period row
+  unique_vars <- unique(coef_mat$var_label)
+  ref_rows <- data.frame(
+    estimate = 0, std_error = 0, t_stat = NA, p_value = NA, term = "reference",
+    date_str = "2022-07-01", period_date = as.Date("2022-07-01"),
+    var_label = unique_vars, 
+    ci_low = 0, ci_high = 0, model_label = model_label
+  )
+  
+  clean_df <- rbind(coef_mat, ref_rows)
+  clean_df <- clean_df[order(clean_df$period_date), ]
+  
+  # Convert regular dates to continuous quarterly variables for plotting
+  clean_df$period_quarter <- zoo::as.yearqtr(clean_df$period_date)
+  
+  return(clean_df)
+}
+
+# Plotting function optimized for single-variable plots
+plot_spillover <- function(data, title, y_limits, subtitle = NULL) {
+  ggplot(data, aes(x = period_quarter, y = estimate, color = var_label)) +
+    geom_hline(yintercept = 0, linetype = "dotted", color = "grey75", linewidth = 0.5) +
+    geom_vline(xintercept = zoo::as.yearqtr(as.Date("2022-10-01")), 
+               linetype = "dotted", color = "grey75", linewidth = 0.5) +
+    geom_errorbar(aes(ymin = ci_low, ymax = ci_high), 
+                  width = 0.05, linewidth = 0.5, color = "grey50") +
+    geom_point(size = 1.5) + 
+    scale_x_yearqtr(format = "%Y Q%q", 
+                    breaks = seq(min(data$period_quarter), max(data$period_quarter), by = 0.25)) +
+    scale_y_continuous(limits = y_limits) +
+    labs(
+      title = title, 
+      subtitle = subtitle,
+      x = NULL, 
+      y = "Coefficient Effect"
+    ) +
+    theme(legend.position = "none")
+}
+
+# Extract and plot
+data_tx_spillover <- event_study_spillover(ppml_tx_base, "Texas Spillover Model")
+data_ca_spillover <- event_study_spillover(ppml_ca_base, "California Spillover Model")
+
+p_tx <- plot_spillover(data_tx_spillover, "Spillover Analysis: Texas", c(-0.0015, 0.0015))
+p_ca <- plot_spillover(data_ca_spillover, "Spillover Analysis: California", c(-0.0015, 0.0015))
+
+# Combine and save
+spillover_combined_plot <- p_tx + p_ca
+
+ggsave(
+  filename = "figures-tables/spillovers/spillovers_main_regression.pdf",
+  plot = spillover_combined_plot,
+  width = 16, height = 4, dpi = 300,
+  device = cairo_pdf
+)
 
 ################################################################################
 # VISUALIZATION 1: SIDE-BY-SIDE SPILLOVER EFFECTS

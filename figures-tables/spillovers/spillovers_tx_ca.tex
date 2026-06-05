@@ -1,15 +1,38 @@
+{\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{22pt}
 \begin{table}
 
-\caption{Network Spillovers: Texas vs. California (Post-Shock Periods). \textit{Note: Coefficients and standard errors are multiplied by 100 to represent percentage effects.} \label{tab:spillovers_tx_ca}}
+\caption{$\beta_3$ Coefficient Event-Study Estimates (Pre and Post Periods). \textit{Note: Coefficients and standard errors are multiplied by 100 to represent percentage effects. Significance levels: * p < 0.1, ** p < 0.05, *** p < 0.01.} \label{tab:spillovers_tx_ca}}
 \centering
-\begin{tabular}[t]{lccccccccc}
+\begin{tabular}[t]{lrr}
 \toprule
-Network & \rotatebox{45}{2022 Q4} & \rotatebox{45}{2023 Q1} & \rotatebox{45}{2023 Q2} & \rotatebox{45}{2023 Q3} & \rotatebox{45}{2023 Q4} & \rotatebox{45}{2024 Q1} & \rotatebox{45}{2024 Q2} & \rotatebox{45}{2024 Q3} & \rotatebox{45}{2024 Q4}\\
+Quarter & FL $\times$ TX & FL $\times$ CA\\
 \midrule
-Texas & 0.01 & -0.02*** & -0.02*** & -0.02** & -0.01 & -0.04** & -0.04** & -0.05*** & -0.05***\\
- & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01)\\
-California & 0.00 & -0.00 & -0.01 & 0.00 & -0.00 & -0.01 & -0.00 & -0.00 & -0.01\\
- & (0.00) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01) & (0.01)\\
+2020 Q4 & 0.01\phantom{***} (0.01) & -0.00\phantom{***} (0.02)\\
+2021 Q1 & -0.00\phantom{***} (0.02) & 0.02\phantom{***} (0.02)\\
+2021 Q2 & 0.00\phantom{***} (0.02) & 0.01\phantom{***} (0.01)\\
+2021 Q3 & 0.01\phantom{***} (0.01) & 0.02\phantom{***} (0.01)\\
+2021 Q4 & 0.01\phantom{***} (0.02) & 0.02\phantom{***} (0.02)\\
+2022 Q1 & 0.00\phantom{***} (0.01) & 0.02\phantom{***} (0.01)\\
+2022 Q2 & -0.00\phantom{***} (0.01) & 0.01\phantom{***} (0.01)\\
+\addlinespace
+2022 Q4 & 0.01\phantom{***} (0.01) & 0.00\phantom{***} (0.00)\\
+\addlinespace
+2023 Q1 & -0.02*** (0.01) & -0.00\phantom{***} (0.01)\\
+2023 Q2 & -0.02*** (0.01) & -0.01\phantom{***} (0.01)\\
+2023 Q3 & -0.02**\phantom{*} (0.01) & 0.00\phantom{***} (0.01)\\
+2023 Q4 & -0.01\phantom{***} (0.01) & -0.00\phantom{***} (0.01)\\
+2024 Q1 & -0.04**\phantom{*} (0.01) & -0.01\phantom{***} (0.01)\\
+2024 Q2 & -0.04**\phantom{*} (0.01) & -0.00\phantom{***} (0.01)\\
+2024 Q3 & -0.05*** (0.01) & -0.00\phantom{***} (0.01)\\
+2024 Q4 & -0.05*** (0.01) & -0.01\phantom{***} (0.01)\\
+\midrule
+Observations & \multicolumn{2}{c}{41,327} \\
+Pseudo $R^2$ & \multicolumn{2}{c}{0.989} \\
+Municipality FE & \multicolumn{2}{c}{Yes} \\
+State $\times$ Quarter FE & \multicolumn{2}{c}{Yes} \\
+SE Cluster & \multicolumn{2}{c}{Municipality} \\
 \bottomrule
 \end{tabular}
 \end{table}
+}
