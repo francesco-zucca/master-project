@@ -14,16 +14,16 @@ Beyond its aggregate toll, Ian's destruction fell on sectors that employ a large
     \centering
     \begin{subfigure}{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../figures-tables/descriptive/mexican_construction_citizenship.png}
-        \caption{Mexican-born construction workers by citizenship status}
-        \label{fig:construction-citizenship}
+        \includegraphics[width=\textwidth]{../figures-tables/descriptive/FL_construction_indexed_by_origin.pdf}
+        \caption{Construction employment by region of birth, indexed to 2021}
+        \label{fig:construction-origin}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.48\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{../figures-tables/descriptive/FL_construction_indexed_by_origin.png}
-        \caption{Construction employment by region of birth, indexed to 2021}
-        \label{fig:construction-origin}
+        \includegraphics[width=\textwidth]{../figures-tables/descriptive/mexican_construction_citizenship.pdf}
+        \caption{Mexican-born construction workers by citizenship status}
+        \label{fig:construction-citizenship}
     \end{subfigure}
 \ 
     \caption{Mexican-born construction employment in Florida around Hurricane Ian. Source: IPUMS USA, ACS 1-year samples 2021--2024; employed Florida construction workers. Dotted line marks Hurricane Ian (2022Q4).}
@@ -34,8 +34,8 @@ Crucially for our identification strategy, Hurricane Ian did not affect Mexico. 
 To motivate the analysis, \autoref{fig:florida-outflows} presents the evolution of remittance outflows from Florida to Mexico using data from Banxico series CE168 \parencite{banxico_ce168}. A sharp decline in remittance outflows can be observed in the quarter immediately following Hurricane Ian, with flows falling by approximately 40\% relative to the previous quarter. This pronounced contraction suggests that the hurricane generated a substantial disruption in remittance activity from Florida to Mexico, thereby providing a strong motivation for examining its effects on Mexican municipalities' remittance inflows.\footnote{Florida outflows are plotted against the average outflows of all other U.S. states. Because the comparison series is constructed as an average, potential opposite shocks affecting individual states during the Hurricane Ian period may be attenuated. Nevertheless, the purpose of the figure is simply to illustrate the magnitude of the decline observed in Florida.}
 \begin{figure}[H]
     \centering
-    \IfFileExists{../figures-tables/state-outflows/total_remittance_outflows.png}{%
-        \includegraphics[width=0.85\textwidth]{../figures-tables/state-outflows/total_remittance_outflows.png}%
+    \IfFileExists{../figures-tables/state-outflows/total_remittance_outflows.pdf}{%
+        \includegraphics[width=0.85\textwidth]{../figures-tables/state-outflows/total_remittance_outflows.pdf}%
     }{%
         \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}[Figure pending]\vspace{2cm}}}%
     }
@@ -67,8 +67,8 @@ By construction, the sum of $w_{ms}$ across all U.S. states for a given Mexican 
 The validity of this estimation relies on the assumption of temporal persistence of migration flows, implying that the distribution of migrants recorded in the MCAS data is representative of the active remitting population. The stability of migration patterns over time is well-documented in the literature, with studies showing that existing migration networks tend to dictate future migration patterns, creating persistent flows between specific origin and destination pairs \parencite{card2001, munshi2003}. To verify this assumption within our specific sample period, we conduct a validation exercise using MCAS data. Figure \ref{fig:persistence} computes the Pearson correlation of our constructed weighting matrices across years. As observed, when taking any year from 2014 onward as the base year, the correlation with subsequent years is consistently above 0.90. 
 \begin{figure}[H]
     \centering
-    \IfFileExists{../figures-tables/municipality-inflows/network_persistence_all_base_years.png}{%
-        \includegraphics[width=0.85\textwidth]{../figures-tables/municipality-inflows/network_persistence_all_base_years.png}%
+    \IfFileExists{../figures-tables/municipality-inflows/network_persistence_all_base_years.pdf}{%
+        \includegraphics[width=0.85\textwidth]{../figures-tables/municipality-inflows/network_persistence_all_base_years.pdf}%
     }{%
         \fbox{\parbox{0.85\textwidth}{\centering\vspace{2cm}[Figure pending]\vspace{2cm}}}%
     }
