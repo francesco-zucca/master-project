@@ -140,7 +140,7 @@ event_study <- function(model_object, model_label) {
 }
 
 # Generic plotting function for single event studies
-plot_event_study <- function(data, title, y_limits, subtitle = NULL) {
+plot_event_study <- function(data, y_limits, title = NULL, subtitle = NULL) {
   ggplot(data, aes(x = period_quarter, y = estimate, color = model_label)) +
     geom_hline(yintercept = 0, linetype = "dotted", 
                color = "grey75", linewidth = 0.5) +
@@ -171,21 +171,21 @@ data_ols_with_fe <- event_study(ols_with_state_fe, "OLS: With State-Time FE")
 data_ppml        <- event_study(ppml_with_state_fe, "PPML: State-Time FE")
 
 # Construct plots
-p1 <- plot_event_study(data_ols_no_fe, 
-                       "OLS: No State-Time FE", c(-0.15, 0.15))
-p2 <- plot_event_study(data_ols_with_fe, 
-                       "OLS: With State-Time FE", c(-0.15, 0.15))
-p3 <- plot_event_study(data_ppml, 
-                       "PPML: State-Time FE", c(-0.15, 0.15))
+p1 <- plot_event_study(data = data_ols_no_fe, 
+                       title = "OLS: No State-Time FE",  y_limits =c(-0.15, 0.15))
+p2 <- plot_event_study(data = data_ols_with_fe, 
+                       title = "OLS: With State-Time FE", y_limits = c(-0.15, 0.15))
+p3 <- plot_event_study(data = data_ppml, 
+                       title = "PPML: State-Time FE", y_limits = c(-0.15, 0.15))
 
 # Combine using patchwork
 combined_plot <- p1 + p2 + p3 + plot_layout(ncol = 3)
 
 # Save plot
 ggsave(
-  filename = "figures-tables/municipality-inflows/muni_dids.png",
+  filename = "figures-tables/municipality-inflows/muni_dids.pdf",
   plot = combined_plot,
-  width = 12, height = 4, dpi = 300
+  width = 12, height = 4, dpi = 300, device = cairo_pdf
 )
 
 ################################################################################
@@ -194,9 +194,7 @@ ggsave(
 
 # Construct plot
 ppml_single_plot <- plot_event_study(
-  data_ppml, c(-0.015, 0.015),
-  title = "Impact of Hurricane Ian on remittance inflows to Mexican municipalities",
-  subtitle = "PPML TWFE estimates based on exposure to Florida, including state-by-time FE")
+  data = data_ppml, y_limits = c(-0.015, 0.015))
 
 # Save
 ggsave(
@@ -252,8 +250,6 @@ spatial_gg_center <- ggplot(
   scale_y_continuous(limits = c(-0.015, 0.015), breaks = seq(-0.015, 0.015, 0.01)) +
   
   labs(
-    title = "PPML event study: sensitivity to spatial cutoffs",
-    subtitle = "Comparing standard error adjustments across distance thresholds",
     y = "Coefficient",
     color = "Clustering level:"
   )

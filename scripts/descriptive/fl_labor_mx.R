@@ -143,8 +143,8 @@ p_sector <- ggplot(sector_ts, aes(YEAR, workers / 1000, color = sector, shape = 
   ) +
   flat_x
 
-ggsave(file.path(fig_dir, "mexican_workers_FL.png"),
-       p_sector, width = 5.5, height = 3.5, dpi = 300, bg = "white")
+ggsave(file.path(fig_dir, "mexican_workers_FL.pdf"),
+       p_sector, height = 2.5, width = 4, dpi = 300, device = cairo_pdf)
 
 ################################################################################
 # ---- 3. Construction workforce by citizenship status ------------------------# 
@@ -171,10 +171,11 @@ p_status <- ggplot(construction_status, aes(YEAR, workers / 1000, color = status
   labs(
     x = NULL, y = "Workers (thousands)", color = NULL, shape = NULL
   ) +
-  flat_x
+  flat_x +
+  theme(legend.text = element_text(size = 8))
 
-ggsave(file.path(fig_dir, "mexican_construction_citizenship.png"),
-       p_status, width = 5.5, height = 3.5, dpi = 300, bg = "white")
+ggsave(file.path(fig_dir, "mexican_construction_citizenship.pdf"),
+       p_status, width = 4, height = 2.5, dpi = 300, device = cairo_pdf)
 
 ################################################################################
 # ---- 4. Construction: naturalized vs non-citizen (survey CI) ----------------#
@@ -199,8 +200,8 @@ p_natnon <- ggplot(construction_natnon, aes(YEAR, workers / 1000,
   ) +
   flat_x
 
-ggsave(file.path(fig_dir, "mexican_construction_natnon.png"),
-       p_natnon, width = 5.5, height = 3.5, dpi = 300, bg = "white")
+ggsave(file.path(fig_dir, "mexican_construction_natnon.pdf"),
+       p_natnon, width = 4, height = 2.5, dpi = 300, device = cairo_pdf)
 
 ################################################################################
 # ---- 5. Median wage income by sector ----------------------------------------#
@@ -225,8 +226,8 @@ p_wages <- ggplot(wages_sector, aes(YEAR, median_wage, color = sector, shape = s
   ) +
   flat_x
 
-ggsave(file.path(fig_dir, "median_wages_FL_by_sector.png"),
-       p_wages, width = 5.5, height = 3.5, dpi = 300, bg = "white")
+ggsave(file.path(fig_dir, "median_wages_FL_by_sector.pdf"),
+       p_wages, width = 4, height = 2.5, dpi = 300, device = cairo_pdf)
 
 ################################################################################
 # ---- 6. Non-citizen construction wage distribution --------------------------# 
@@ -257,8 +258,8 @@ p_wagedist <- ggplot(wage_dist, aes(YEAR, wage, color = quantile, shape = quanti
   ) +
   flat_x
 
-ggsave(file.path(fig_dir, "non_citizen_wages_FL_construction.png"),
-       p_wagedist, width = 5.5, height = 3.5, dpi = 300, bg = "white")
+ggsave(file.path(fig_dir, "non_citizen_wages_FL_construction.pdf"),
+       p_wagedist, width = 4, height = 2.5, dpi = 300, device = cairo_pdf)
 
 ################################################################################
 # ---- 7. All-birthplace Florida construction panel ---------------------------# 
@@ -296,10 +297,11 @@ p_index <- ggplot(construction_origin, aes(YEAR, index, color = origin, shape = 
   labs(
     x = NULL, y = "Index (2021 = 100)", color = NULL, shape = NULL
   ) +
-  flat_x
+  flat_x +
+  theme(legend.text = element_text(size = 8))
 
 construction_origin %>% 
   filter(origin == "Mexican-born")
 
-ggsave(file.path(fig_dir, "FL_construction_indexed_by_origin.png"),
-       p_index, width = 5.5, height = 3.5, dpi = 300, bg = "white")
+ggsave(file.path(fig_dir, "FL_construction_indexed_by_origin.pdf"),
+       p_index, width = 4, height = 2.5, dpi = 300, device = cairo_pdf)

@@ -197,8 +197,8 @@ resid_plot <- ggplot(analysis_data, aes(x = mu_ppml, y = pearson_resid)) +
     y = "Pearson residuals"
   ) 
 
-ggsave(file.path(fig_dir, "pearson-resids-ppml.png"),
-       plot = resid_plot, height = 4, width = 5, dpi = 300)
+ggsave(file.path(fig_dir, "pearson-resids-ppml.pdf"),
+       plot = resid_plot, height = 4, width = 5, dpi = 300, device = cairo_pdf)
 
 ################################################################################
 # ---- 4. Why PPML: mean-variance relationship --------------------------------#
@@ -235,8 +235,8 @@ mv_plot <- ggplot(diag_check, aes(x = mean_remit, y = var_remit)) +
     y = "Variance of remittance inflow (log)"
   ) 
 
-ggsave(file.path(fig_dir, "muni-inflows-mean-var.png"),
-       plot = mv_plot, width = 6, height = 4, dpi = 300)
+ggsave(file.path(fig_dir, "muni-inflows-mean-var.pdf"),
+       plot = mv_plot, width = 6, height = 4, dpi = 300, device = cairo_pdf)
 
 mv_fit <- lm(log(var_remit) ~ log(mean_remit), data = diag_check)
 summary(mv_fit)
@@ -267,7 +267,7 @@ createSensitivityPlot_relativeMagnitudes(rm_base, orig_base)
 breakdown_base <- cache_rds("breakdown_base", breakdown_mbar(hd_base))
 breakdown_base # MBar = 0.15
 
-# 5.2 Netted PPML: Florida conditional on California and Texas. Breakdown ~ 0.04.
+# 5.2 Netted PPML: Florida conditional on California and Texas. ~ 0.04 (bonus)
 ppml_netted <- fepois(
   remittances ~ i(period_date, florida_pct,    ref = ref_q) +
     i(period_date, california_pct, ref = ref_q) +
@@ -275,7 +275,10 @@ ppml_netted <- fepois(
     cvegeo + mx_state^period_date,
   data = analysis_data_net, cluster = ~cvegeo
 )
+
+
 etable(ppml_netted, keep = "florida")  # Florida e=0 result robust to conditioning on TX/CA migration
+etable(ppml_netted, drop = "florida")  # CA, TX post-shock effects insignificant
 
 hd_net <- honest_inputs(ppml_netted)   # keep = "florida_pct" isolates Florida terms
 

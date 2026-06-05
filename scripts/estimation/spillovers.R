@@ -424,7 +424,11 @@ percentile_gg <- ggplot(
   
   # Point estimates
   geom_point(aes(x = period_quarter, y = estimate), 
-             position = position_dodge(width = 0.1), size = 2) +
+             position = position_dodge(width = 0.1), size = 1.5) +
+  
+  # Fitted line connecting points
+  geom_line(aes(x = period_quarter, y = estimate), linewidth = 0.5,
+            position = position_dodge(width = 0.1)) +
   
   # X-axis formatting
   scale_x_yearqtr(format = "%Y Q%q", 
@@ -432,15 +436,13 @@ percentile_gg <- ggplot(
                                max(percentile_plot_data$period_quarter), by = 0.25)) +
   
   # Colors
-  scale_color_manual(values = c("grey20", "grey20")) +
+  scale_color_manual(values = c("#0b4090", "#4292c6")) +
   
   # Shapes
   scale_shape_manual(values = c(16, 17)) +
   
   # Labels
   labs(
-    title = "Divergent Remittance Responses by Network Density",
-    subtitle = "Evaluating the Florida Shock at High vs. Low Texas Network Exposure",
     x = NULL, 
     y = "Coefficient",
     color = "Network exposure:",
@@ -452,6 +454,6 @@ percentile_gg <- ggplot(
 ggsave(
   filename = "figures-tables/spillovers/total_effect_texas_exposure.pdf",
   plot = percentile_gg,
-  width = 11, height = 6, dpi = 300,
+  width = 8, height = 6, dpi = 300,
   device = cairo_pdf
 )

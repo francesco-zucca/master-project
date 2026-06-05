@@ -125,21 +125,25 @@ ggplot(outflows_clean, aes(x = period_date, y = remittances, color = group)) +
   ) +
   
   labs(
-    title = "Total Remittance Outflows from Florida vs Other States",
     x = "Date",
     y = "Remittances (Million USD)"
   ) +
   
   scale_color_manual(
     values = c(
-      "Florida" = "blue",
-      "Other States" = "grey50"
+      "Florida" = "#0D469E",
+      "Other States" = "#4292c6"
     )
+  ) +
+  scale_x_date(
+    date_breaks = "1 year",
+    date_labels = "%Y"
   ) +
   
   theme(legend.title = element_blank())
 
-ggsave("figures-tables/state-outflows/total_remittance_outflows.png", width = 8, height = 5)
+ggsave("figures-tables/state-outflows/total_remittance_outflows.pdf", 
+       width = 8, height = 6, dpi=300, device = cairo_pdf)
 
 #################################################################################
 # PLOT 2
@@ -160,14 +164,13 @@ ggplot(plot_data,
   ) +
   
   labs(
-  title = "Indexed Remittances by Florida Exposure Group",
-  subtitle = "Series indexed to Hurricane Ian quarter (=100)",
   x = "Date",
   y = "Index (Hurricane Ian Quarter = 100)",
   color = "Exposure Group"
   )
 
-ggsave("figures-tables/municipality-inflows/indexed_remittances_by_florida_exposure_quartile.png", width = 8, height = 5)
+ggsave("figures-tables/municipality-inflows/indexed_remittances_by_florida_exposure_quartile.pdf", 
+       width = 8, height = 5, dpi = 300, device = cairo_pdf)
 
 ################################################################################
 # NETWORK PERSISTENCE DECAY: ALL BASE YEARS
@@ -286,8 +289,6 @@ ggplot(
   ) +
   
   labs(
-    title = "Migration Network Persistence",
-    subtitle = "Correlation of yearly migration matrices using each year as the base",
     x = "Comparison Year",
     y = "Correlation with Base-Year Matrix"
   ) +
@@ -296,6 +297,5 @@ ggplot(
     legend.position = "none"
   )
 
-ggsave("figures-tables/municipality-inflows/network_persistence_all_base_years.png", width = 6, height = 4)
-
-
+ggsave("figures-tables/municipality-inflows/network_persistence_all_base_years.pdf", 
+       width = 8, height = 6, dpi = 300, device = cairo_pdf)

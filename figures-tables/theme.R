@@ -35,8 +35,7 @@ options(ggplot2.continuous.colour = function() scale_colour_distiller(palette = 
 options(ggplot2.continuous.fill   = function() scale_fill_distiller(palette = "Blues", direction = -1))
 
 # Define a custom vector of five blue colors
-cb_blues <- c("#08306b", "#2171b5", "#4292c6", "#6baed6", "#9ecae1")
-
+cb_blues <- c("#0b4090", "#2171b5", "#4292c6", "#6baed6", "#9ecae1")
 # Set global palettes for discrete data
 options(ggplot2.discrete.colour = function() scale_colour_manual(values = cb_blues))
 options(ggplot2.discrete.fill   = function() scale_fill_manual(values = cb_blues))
