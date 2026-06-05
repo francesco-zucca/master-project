@@ -1,5 +1,6 @@
 % !TEX root = ../main.tex
 \chapter{Empirical Methodology and Results} \label{chap:shock_results}
+This chapter presents the core empirical strategy and the main estimation results for the Florida shock. We explain why a continuous DiD event-study design is appropriate when treatment intensity varies across municipalities, and argue for our choice of PPML as a valid and robust approach for handling our remittance data. Then, we show the dynamic effect of Florida exposure on municipal remittance inflows and test for robustness by trying alternative clustering specifications.
 
 \section{Estimation Strategy}
 
@@ -9,7 +10,7 @@ The primary challenge in estimating the impact of the Hurricane Ian shock on rem
 
 We use the following Poisson Pseudo Maximum Likelihood (PPML) event-study specification to analyze the impact of the Hurricane Ian shock on remittance inflows to Mexican municipalities:
 \begin{equation} \label{eq:ppml-event-study}
-\mathbb{E}[R_{mt} \mid \mathbf{X}_{mt}] = \exp \left( \alpha_m + \gamma_{s(m),t} + \sum_{k \neq -1} \beta_k \cdot \left( w_{m,\text{FL}} \cdot \mathbbm{1}\{t - T_0 = k\} \right) \right)
+\mathbb{E}[R_{mt} \mid \mathbf{X}{mt}] = \exp \left( \alpha_m + \gamma{s(m),t} + \sum_{k \neq -1} \beta_k \cdot \left( w_{m,\text{FL}} \cdot \mathbbm{1}\{t - T_0 = k\} \right) \right)
 \end{equation}
 The event-study specification allows us to estimate the dynamic treatment effects of the shock over time. We include municipality fixed effects ($\alpha_m$) to control for all time-invariant, unobserved municipal characteristics that might otherwise introduce omitted variable bias. Additionally, we incorporate state-by-time fixed effects ($\gamma_{s(m),t}$), where $s(m)$ denotes the specific Mexican state to which municipality $m$ belongs. These fixed effects account for both macroeconomic shocks common to all regions and time-varying unobservables at the state level. The interaction term $w_{m,\text{FL}} \cdot \mathbbm{1}\{t - T_0 = k \}$ captures the differential effect of the shock on Mexican municipalities based on their varying degrees of baseline exposure to Florida, where $w_{m,\text{FL}}$ is a measure of pre-shock exposure to Florida and $\mathbbm{1}\{t - T_0 = k \}$ is an indicator for each time period relative to the shock. Therefore, the $\beta_k$ coefficients represent the change in remittance inflows for a one-percent increase in Florida exposure at each time period $k$ relative to the shock. Errors are clustered at the municipality level to account for potential correlation within municipalities over time.
 
@@ -23,7 +24,7 @@ The second question is answered by \autoref{fig:mean-variance}, which plots, for
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{../figures-tables/ppml/muni-inflows-mean-var.pdf}
+    \includegraphics[width=0.8\textwidth]{../figures-tables/ppml/muni-inflows-mean-var.pdf}
     \caption{Mean-variance relationship of municipality remittance inflows. Each
     point represents a Mexican municipality; axes show the variance against the mean of
     its quarterly inflows over the pre-shock window. The solid
