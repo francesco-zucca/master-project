@@ -1,32 +1,78 @@
 % !TeX root = ../main.tex
 \chapter{Investigating Spillover Effects} \label{chap:spillovers}
-This chapter examines that whether the Florida shock affected Mexican municipalities not only through direct Florida exposure, but also through indirect links with Texas and California migrant networks. We build on the exposure-mapping logic from \textcite{aronow2017} and evaluate whether these indirect networks offset or amplify the estimated effect of the Florida shock. We find economically plausible spillover effects from Texas that magnify the negative effect of the shock on remittance patterns.
+This chapter examines whether the Florida shock affected Mexican municipalities not only through direct Florida exposure, but also through indirect links with Texas and California migrant networks. We build on the exposure-mapping logic from \textcite{aronow2017} and evaluate whether these indirect networks offset or amplify the estimated effect of the Florida shock. We find economically plausible spillover effects from Texas that magnify the negative effect of the shock on remittance patterns.
 \section{Motivation}
 A fundamental requirement for standard causal inference models is the Stable Unit Treatment Value Assumption (SUTVA), formalized by \textcite{rubin1980}, which assumes that the potential outcomes of any unit depend exclusively on its own treatment assignment, excluding the possibility of any indirect spillover between units. In our context, U.S. states not directly exposed to a local shock might still be affected if control units are exposed to the treatment through indirect channels, leading to biased estimates \parencite{clarke2017, aronow2017}. For instance, given that California and Texas all host a big proportion of Mexican migrants (each representing an average of 30\% and 20\% from the total, respectively), we hypothesize that these two states might have played a role in offsetting the negative Florida shock. If a Mexican municipality highly dependent on Florida remittances experiences an income shock due to Hurricane Ian, connected migrants residing in Texas might respond by increasing their transfers to compensate for the drop. If this was the case, the estimated Florida-exposure effect on total remittances would capture the net effect of the shock after within-network adjustment, rather than the direct fall in Florida-origin remittances. 
 
 \section{Empirical Strategy}
-We test a possible compensation for the Florida shock from the states of Texas (TX) and California (CA) using an interaction strategy, expanding the PPML specification introduced in Chapter \ref{chap:shock_results}:
-\begin{align}
-\mathbb{E}[R_{mt} \mid \mathbf{X}{mt}] = &\exp \biggl( \alpha_m + \gamma{s(m),t} + \sum_{k \neq -1} \mathbbm{1}\{t - T_0 = k\} \\ 
-&\quad \cdot \Bigl[ \beta_{1,k} w_{m,\text{FL}} + \beta_{2,k} w_{m,\text{TX}} + \beta_{3,k} (w_{m,\text{FL}} \times w_{m,\text{TX}}) \Bigr] \biggr) \nonumber
-\end{align}
-Consistent with the specification of Chapter \ref{chap:shock_results}, the equation above accounts for municipality fixed effects ($\alpha_m$), Mexican state-quarter fixed effects ($\gamma_{s(m),t}$) and clustered standard errors at the municipality level. Note that an analogous specification can be estimated for the CA state, by replacing $w_{m,\text{TX}}$ with $w_{m,\text{CA}}$ .
-Note that an analogous specification can be estimated for California by replacing $w_{m,\text{TX}}$ with $w_{m,\text{CA}}$.
+We test a possible compensation for the Florida shock from the states of Texas (TX) and California (CA) expanding the previous PPML specification with an interaction term:
+{ \small
+\begin{equation}
+\mathbb{E}[R_{mt} \mid \mathbf{X}_{mt}] = \exp \biggl( \alpha_m + \gamma_{s(m),t} + \sum_{k \neq -1} \mathbbm{1}\{t - T_0 = k\} \cdot \Bigl[ \beta_{1,k} w_{m,\text{FL}} + \beta_{2,k} w_{m,\text{TX}} + \beta_{3,k} (w_{m,\text{FL}} \times w_{m,\text{TX}}) \Bigr] \biggr) \nonumber
+\end{equation}
+}
+Consistent with the specification of Chapter \ref{chap:shock_results}, the equation above accounts for municipality fixed effects ($\alpha_m$), Mexican state-quarter fixed effects ($\gamma_{s(m),t}$) and clustered standard errors at the municipality level. Note that an analogous specification can be estimated for the CA state, by replacing $w_{m,\text{TX}}$ with $w_{m,\text{CA}}$.
 
 To understand the mechanics of this spillover model, we can isolate the post-shock marginal effect of Florida exposure on expected municipal remittance inflows. Taking the partial derivative of the log conditional expectation with respect to Florida exposure yields:
 \begin{equation} \label{eq:marginal-effect}
-\frac{\partial \ln \mathbb{E}[R_{mt} \mid \mathbf{X}{mt}]}{\partial w{m,\text{FL}}} \Big|{\text{Post}=1} = \beta_1 + \beta_3 w{m,\text{TX}}
+\frac{\partial \ln \mathbb{E}[R_{mt} \mid \mathbf{X}_{mt}]}{\partial w_{m,\text{FL}}} \Big|{_\text{Post}=1} = \beta_1 + \beta_3 w_{m,\text{TX}}
 \end{equation}
-Mathematically, $\beta_1$ represents the percentage change in remittances resulting from a one-unit increase in Florida exposure, evaluated strictly where Texas exposure is zero ($w_{m,\text{TX}} = 0$). On the other hand, the coefficient of the interaction term, $\beta_3$ measures how the post-shock effect of Florida exposure changes for every one-unit increase in Texas exposure. Intuitively, if $\beta_3 > 0$, the Texas network compensates for the Florida's drop in remittances, mitigating the negative impact of the shock. Conversely, if $\beta_3 < 0$, the Texas network amplifies the negative effect of the Florida shock, potentially due to out-migration costs.
+Mathematically, $\beta_1$ represents the percentage change in remittances resulting from a one-unit increase in Florida exposure, evaluated strictly where Texas exposure is zero ($w_{m,\text{TX}} = 0$). On the other hand, the coefficient of the interaction term, $\beta_3$ measures how the post-shock effect of Florida exposure changes for every one percentage point increase in Texas exposure. Intuitively, if $\beta_3 > 0$, the Texas network compensates for the Florida's drop in remittances, mitigating the negative impact of the shock. Conversely, if $\beta_3 < 0$, the Texas network amplifies the negative effect of the Florida shock, potentially due to out-migration costs.
 
-Because $\beta_1$ measures how the hurricane impacted municipalities that rely on Florida but possess absolutely no alternative migration network in Texas, which might not represent a meaningful real-world baseline for many municipalities, we recenter the $w_{m,\text{TX}}$ variable at different percentiles of exposure to Texas. For example, if we recenter Texas exposure at its 90th percentile, the newly estimated $\beta_1$ gives us the isolated impact of the Florida shock on highly networked municipalities. By comparing the $\beta_1$ estimates across models recentered at low versus high percentiles of Texas exposure, we can formally test how aggressively the presence of a secondary network alters the impact of the Florida shock on remittance inflows.
+Because $\beta_1$ measures how the hurricane impacted municipalities that rely on Florida but possess no alternative migration network in Texas, which might not represent a meaningful real-world baseline for many municipalities, we recenter the $w_{m,\text{TX}}$ variable at different percentiles of exposure to Texas. For example, if we recenter Texas exposure at its 90th percentile, the newly estimated $\beta_1$ gives us the isolated impact of the Florida shock on highly networked municipalities. By comparing the $\beta_1$ estimates across models recentered at low versus high percentiles of Texas exposure, we can formally test how the presence of a secondary network alters the impact of the Florida shock on remittance inflows.
 
 \section{Results}
-Table \ref{tab:spillovers_tx_ca} reports the post-shock estimates of the $\beta_3$ interaction coefficient quarter by quarter for the TX and CA specifications. The contrast across the two states is clear. In the CA case, the coefficients remain close to zero throughout the post-shock period, which suggests that no meaningful spillover effects are detected. By contrast, the TX coefficients become negative, statistically significant, and increasingly persistent over time, meaning that the more exposed a given municipality is to TX, the more pronounced is the negative post-shock effect of FL exposure on remittance patterns. In other words, higher TX exposure is associated with a larger net decline in remittances after the FL shock.
-\input{../figures-tables/spillovers/spillovers_tx_ca.tex}
+Table \ref{tab:spillovers_tx_ca} reports the post-shock estimates of the $\beta_3$ interaction coefficient quarter by quarter for the Texas (TX) and California (CA) specifications. 
+{\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{22pt}
+\begin{table}[H]
 
-Since this result a priori does not support the compensatory spillover hypothesis of the model, we next aim to explore how the post-shock FL effect on remittances varies according to different levels of TX exposure. Figure \ref{fig:total_effect_texas_exposure} plots the $\beta_1$ coefficient, constructed by recentering the values of $w_{m,\text{TX}}$  on the 10th and 90th percentiles of the distribution of TX exposure across municipalities. The net effect of the FL shock on remittances is more negative for municipalities with higher levels of TX exposure, which is consistent with the negative and statisticallysignificant $\beta_3$ coefficient found above. This reinforces the idea that instead of a compensatory effect, we observe an amplification of the negative impact of the FL shock on remittances is more pronounced in municipalities that are also highly exposed to TX.
+\caption{$\beta_3$ Coefficient Event-Study Estimates (Pre and Post Periods). \textit{Note: Coefficients and standard errors are multiplied by 100 to represent percentage effects. Significance levels: * p < 0.1, ** p < 0.05, *** p < 0.01.} \label{tab:spillovers_tx_ca}}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+Quarter & FL $\times$ TX & FL $\times$ CA\\
+\midrule
+2020 Q4 & 0.01\phantom{***} (0.01) & -0.00\phantom{***} (0.02)\\
+2021 Q1 & -0.00\phantom{***} (0.02) & 0.02\phantom{***} (0.02)\\
+2021 Q2 & 0.00\phantom{***} (0.02) & 0.01\phantom{***} (0.01)\\
+2021 Q3 & 0.01\phantom{***} (0.01) & 0.02\phantom{***} (0.01)\\
+2021 Q4 & 0.01\phantom{***} (0.02) & 0.02\phantom{***} (0.02)\\
+2022 Q1 & 0.00\phantom{***} (0.01) & 0.02\phantom{***} (0.01)\\
+2022 Q2 & -0.00\phantom{***} (0.01) & 0.01\phantom{***} (0.01)\\
+\addlinespace
+2022 Q4 & 0.01\phantom{***} (0.01) & 0.00\phantom{***} (0.00)\\
+\addlinespace
+2023 Q1 & -0.02*** (0.01) & -0.00\phantom{***} (0.01)\\
+2023 Q2 & -0.02*** (0.01) & -0.01\phantom{***} (0.01)\\
+2023 Q3 & -0.02**\phantom{*} (0.01) & 0.00\phantom{***} (0.01)\\
+2023 Q4 & -0.01\phantom{***} (0.01) & -0.00\phantom{***} (0.01)\\
+2024 Q1 & -0.04**\phantom{*} (0.01) & -0.01\phantom{***} (0.01)\\
+2024 Q2 & -0.04**\phantom{*} (0.01) & -0.00\phantom{***} (0.01)\\
+2024 Q3 & -0.05*** (0.01) & -0.00\phantom{***} (0.01)\\
+2024 Q4 & -0.05*** (0.01) & -0.01\phantom{***} (0.01)\\
+\midrule
+Observations & \multicolumn{2}{c}{41,327} \\
+Pseudo $R^2$ & \multicolumn{2}{c}{0.989} \\
+Municipality FE & \multicolumn{2}{c}{Yes} \\
+State $\times$ Quarter FE & \multicolumn{2}{c}{Yes} \\
+SE Cluster & \multicolumn{2}{c}{Municipality} \\
+\bottomrule
+\end{tabular}
+\end{table}
+}
 
-One possible interpretation at the 90th percentile of Texas exposure is internal mobility within the US. For municipalities with strong pre-existing connections to Texas, these established networks may allow migrants to easily relocate from Florida to Texas after the hurricane. This behavior aligns with \textcite{fussell_2023}, who document immediate and persistent out-migration from disaster zones following Hurricanes Katrina and Rita. In contrast, migrants from municipalities at the 10th percentile of Texas exposure may find it much harder to relocate, thus remaining in Florida. Paradoxically, Figure \ref{fig:total_effect_texas_exposure} suggests, that those who stay in Florida after the hurricane can participate to the reconstruction boom that follows, experiencing a wage increase and therefore an increase in remittances from the lenses of our model discussed in Chapter \ref{chap:structural_model}. Conversely, those who relocate to Texas might face a decrease in their income due to frictions in the employment process or relocation costs. 
+In the CA case, the coefficients remain close to zero throughout the post-shock period, which suggests that no meaningful spillover effects are detected. By contrast, the TX coefficients become negative, statistically significant, and increasingly persistent over time, meaning that the more exposed a given municipality is to TX, the more pronounced is the negative post-shock effect of FL exposure on remittance patterns. In other words, higher TX exposure is associated with a larger net decline in remittances after the FL shock.
+
+Since this result a priori does not support the compensatory spillover hypothesis of the model, we next aim to explore how the post-shock FL effect on remittances varies according to different levels of TX exposure. Figure \ref{fig:total_effect_texas_exposure} plots the $\beta_1$ coefficient, constructed by recentering the values of $w_{m,\text{TX}}$  on the 10th and 90th percentiles of the distribution of TX exposure across municipalities. The negative net effect of the FL shock on remittances is stronger for municipalities with higher levels of TX exposure, which is consistent with the negative and statistically significant $\beta_3$ coefficient found above. This reinforces the idea that instead of a compensatory effect, we observe an amplification of the negative impact of the FL shock on remittances is more pronounced in municipalities that are also highly exposed to TX.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{../figures-tables/spillovers/total_effect_texas_exposure.pdf}
+    \caption{Net Florida shock evaluated at low and high levels of Texas exposure. The figure compares the implied post-shock Florida effect for municipalities at the 10th and 90th percentiles of Texas exposure.}
+    \vspace{-16pt}
+    \label{fig:total_effect_texas_exposure}
+\end{figure}
+
+A possible interpretation at the 90th percentile of Texas exposure is internal mobility within the US. For municipalities with strong pre-existing connections to Texas, these established networks may allow migrants to easily relocate from Florida to Texas after the hurricane. This behavior aligns with \textcite{fussell_2023}, who document immediate and persistent out-migration from disaster zones following Hurricanes Katrina and Rita. In contrast, migrants from municipalities at the 10th percentile of Texas exposure may find it much harder to relocate, thus remaining in Florida. Paradoxically, Figure \ref{fig:total_effect_texas_exposure} suggests that those who stay in Florida after the hurricane can participate in the reconstruction boom that follows, experiencing a wage increase and therefore an increase in remittances from the lense of our model discussed in Chapter \ref{chap:structural_model}. Conversely, those who relocate to Texas might face a decrease in their income due to frictions in the employment process or relocation costs. 
 \par
-This dynamic explains the timing observed in our event-study estimates. For municipalities highly connected to Texas, remittance inflows do not drop significantly in the exact quarter of the shock. Instead, the relative decline emerges and deepens in the subsequent quarters, particularly when compared to low-exposure municipalities. This delayed drop is consistent with the frictions of the migration process, while the delayed increase for the low-exposure municipalities reflects the participation to the reconstruction boom.
+This dynamic explains the timing observed in our event-study estimates. For municipalities highly connected to Texas, remittance inflows do not drop significantly in the exact quarter of the shock. Instead, the relative decline emerges and deepens in the subsequent quarters, particularly when compared to low-exposure municipalities. This delayed drop is consistent with the frictions of the migration process, while the delayed increase for the low-exposure municipalities reflects the participation in the reconstruction boom.

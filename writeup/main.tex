@@ -28,7 +28,7 @@
 \usepackage{csquotes}
 \usepackage[style=apa, backend=biber, natbib=true]{biblatex}
 \usepackage[skip=6pt]{caption}
-\usepackage{fancyhdr}
+\usepackage{pdfpages} % <--- Added to allow including external PDFs
 
 % page style
 \pagestyle{fancy}
@@ -59,10 +59,10 @@
 
 % Page geometry
 \geometry{
-    top=2.8cm,
-    bottom=2.8cm,
-    left=2.8cm,
-    right=2.8cm,
+    top=2.9cm,
+    bottom=2.9cm,
+    left=2.9cm,
+    right=2.9cm,
     footnotesep=1cm,
 }
 
@@ -112,17 +112,17 @@
 \newcommand{\thesisabstracten}{%
 This paper studies how localized shocks in migrant destination areas propagate to origin communities through remittance networks. We use Hurricane Ian, which struck Florida in 2022, as a spatially concentrated negative shock to remittance senders in the United States. Combining municipality-level remittance data from Banco de México with migration-network measures based on Mexican consular records, we examine whether Mexican municipalities more exposed to Florida experienced differential changes in remittance inflows after the shock. We then use the structure of migrant networks to study whether exposure to other major U.S. destinations, especially Texas and California, mitigated or amplified the shock. The results speak to how international remittance networks transmit local economic disruptions across borders and to the role of migrant-network diversification in shaping the distribution of these effects.
 }
-\newcommand{\thesiskeywordsen}{Remittances, migration networks, localized shocks, Hurricane Ian, Mexico, spillover effects}
+\newcommand{\thesiskeywordsen}{remittances, migration networks, localized shocks}
 \newcommand{\thesisabstractca}{%
-Aquest treball investiga com els xocs localitzats a les \`arees de destinaci\'o dels migrants es propaguen cap a les comunitats d'origen a trav\'es de les xarxes de remeses. Utilitzem l'hurac\`a Ian, que va colpejar Florida l'any 2022, com un xoc negatiu espacialment concentrat sobre els emissors de remeses als Estats Units. Combinant dades de remeses a escala municipal del Banco de M\`exico amb mesures de xarxes migrat\`ories basades en registres consulars mexicans, examinem si els municipis mexicans amb una exposici\'o m\'es gran a Florida van experimentar canvis diferencials en les entrades de remeses despr\'es del xoc. A continuaci\'o, utilitzem l'estructura de les xarxes migrat\`ories per estudiar si l'exposici\'o a altres grans destinacions dels Estats Units, especialment Texas i Calif\`ornia, va mitigar o amplificar el xoc. Els resultats aporten evid\`encia sobre com les xarxes internacionals de remeses transmeten pertorbacions econ\`omiques locals a trav\'es de les fronteres i sobre el paper que t\'e la diversificaci\'o de les xarxes migrat\`ories en la distribuci\'o d'aquests efectes.
+Aquest treball investiga com els xocs localitzats a les \`arees de destinaci\'o dels migrants es propaguen cap a les comunitats d'origen a trav\'es de les xarxes de remeses. Utilitzem l'hurac\`a Ian, que va colpejar Florida l'any 2022, com un xoc negatiu espacialment concentrat sobre els emissors de remeses als Estats Units. Combinant dades de remeses a escala municipal del Banco de M\`exico amb mesures de xarxes migrat\`ories basades en registres consulars mexicans, examinem si els municipis mexicans amb una exposici\'o m\'es gran a Florida van experimentar canvis diferencials en les entrades de remeses despr\'es del xoc. A continuaci\'o, utilitzem l'estructura de les xarxes migrat\`ories per estudiar si l'exposici\'o a altres grans destinacions dels Estats Units, especialment Texas i Calif\`ornia, va mitigar o amplificar el xoc. Els resultats aporten evid\`encia sobre com les xarxes internacionals de remeses transmeten pertorbacions econ\`omiques locals a trav\'es de les fronteres i sobre el paper que t\'e la diversificaci\'o de les xarxes migrat\`ories en la distribució d'aquests efectes.
 }
 \newcommand{\thesiskeywordsca}{Remeses, xarxes migrat\`ories, xocs localitzats, hurac\`a Ian, M\`exic, efectes de propagaci\'o}
 \newcommand{\thesisabstractes}{%
-This paper studies how localized shocks in migrant destination areas propagate to origin communities through remittance networks. We use Hurricane Ian, which struck Florida in 2022, as a spatially concentrated negative shock to remittance senders in the United States. Combining municipality-level remittance data from Banco de MÃ©xico with migration-network measures based on Mexican consular records, we examine whether Mexican municipalities more exposed to Florida experienced differential changes in remittance inflows after the shock. We then use the structure of migrant networks to study whether exposure to other major U.S. destinations, especially Texas and California, mitigated or amplified the shock. The results speak to how international remittance networks transmit local economic disruptions across borders and to the role of migrant-network diversification in shaping the distribution of these effects.
+This paper studies how localized shocks in migrant destination areas propagate to origin communities through remittance networks. We use Hurricane Ian, which struck Florida in 2022, as a spatially concentrated negative shock to remittance senders in the United States. Combining municipality-level remittance data from Banco de México with migration-network measures based on Mexican consular records, we examine whether Mexican municipalities more exposed to Florida experienced differential changes in remittance inflows after the shock. We then use the structure of migrant networks to study whether exposure to other major U.S. destinations, especially Texas and California, mitigated or amplified the shock. The results speak to how international remittance networks transmit local economic disruptions across borders and to the role of migrant-network diversification in shaping the distribution of these effects.
 }
 \newcommand{\thesiskeywordses}{Remittances, migration networks, localized shocks, Hurricane Ian, Mexico, spillover effects}
 \newcommand{\thesisabstractesfinal}{%
-Este trabajo estudia c\'omo los choques localizados en las zonas de destino de los migrantes se propagan hacia las comunidades de origen a trav\'es de las redes de remesas. Utilizamos el hurac\'an Ian, que impact\'o Florida en 2022, como un choque negativo espacialmente concentrado sobre los emisores de remesas en Estados Unidos. Combinando datos de remesas a nivel municipal del Banco de M\'exico con medidas de redes migratorias basadas en registros consulares mexicanos, examinamos si los municipios mexicanos m\'as expuestos a Florida experimentaron cambios diferenciales en las entradas de remesas tras el choque. A continuaci\'on, utilizamos la estructura de las redes migratorias para estudiar si la exposici\'on a otros grandes destinos en Estados Unidos, especialmente Texas y California, mitig\'o o amplific\'o el choque. Los resultados aportan evidencia sobre c\'omo las redes internacionales de remesas transmiten perturbaciones econ\'omicas locales a trav\'es de las fronteras y sobre el papel de la diversificaci\'on de las redes migratorias en la distribuci\'on de estos efectos.
+Este trabajo estudia c\'omo los choques localizados en las zonas de destino de los migrantes se propagan hacia las comunidades de origen a trav\'es de las redes de remesas. Utilizamos el hurac\'an Ian, que impact\'o Florida en 2022, como un choque negativo espacialmente concentrado sobre los emisores de remesas en Estados Unidos. Combinando datos de remesas a nivel municipal del Banco de M\'exico con medidas de redes migratorias basadas en registros consulares mexicanos, examinamos si los municipios mexicanos m\'as expuestos a Florida experimentaron cambios diferenciales en las entradas de remesas tras el choque. A continuaci\'on, utilizamos la estructura de las redes migratorias para estudiar si la exposici\'on a otros grandes destinos en Estados Unidos, especialmente Texas y California, mitig\'o o amplific\'o el choque. Los resultados aportan evidencia sobre c\'omo las redes internacionales de remesas transmiten perturbaciones econ\'omicas locales a trav\'es de las fronteres y sobre el papel de la diversificaci\'on de las redes migratorias en la distribuci\'on de estos efectos.
 }
 \newcommand{\thesiskeywordsesfinal}{Remesas, redes migratorias, choques localizados, hurac\'an Ian, M\'exico, efectos de derrame}
 
@@ -131,75 +131,14 @@ Este trabajo estudia c\'omo los choques localizados en las zonas de destino de l
 
 \hypersetup{pageanchor=false}
 
-% Cover Page
-\begin{titlepage}
-    \centering
-
-    \vspace*{2cm}
-
-    {\large MASTER PROJECT\par}
-    \vspace{2cm}
-
-    {\Large \bfseries Shock propagation through the lens of remittances\par}
-    {\large Who bears the cost? Evidence from US--Mexico migration corridors\par}
-    \vspace{4cm}
-
-    {\large \bfseries Authors\par}
-    {
-    \setlength{\parskip}{2pt}
-    \normalsize
-    Anqi Wang Liu,
-    Francesco Zucca,
-    Joan Costa Rodríguez, \par
-    Michael Fehl,
-    Xènia Alemany Rovira
-    }
-
-    \vspace{2cm}
-
-    {\large \bfseries Barcelona School of Economics\par}
-    {\large Master's program in Economics\par}
-
-    \vspace{2cm}
-
-    \noindent\makebox[\textwidth][s]{
-        \IfFileExists{../figures-tables/introduction/bse_logo.png}{%
-            \includegraphics[width=0.22\textwidth]{../figures-tables/introduction/bse_logo.png}%
-        }{%
-            \hbox to 0.22\textwidth{}%
-        }%
-        \hfill
-        {\normalsize Academic year 2025--2026}%
-    }
-\end{titlepage}
-
-% Abstract page
-\pagenumbering{roman}
-\pagestyle{plain}
-\chapter*{Abstract}
-\thesisabstracten
-
-\vspace{0.5cm}
-\noindent\textbf{Keywords:} \thesiskeywordsen
-
-\vspace{1cm}
-\chapter*{Resum}
-\thesisabstractca
-
-\vspace{0.5cm}
-\noindent\textbf{Paraules clau:} \thesiskeywordsca
-
-%\vspace{1cm}
-%\chapter*{Resumen}
-%\thesisabstractesfinal
-
-%\vspace{0.5cm}
-%\noindent\textbf{Palabras clave:} \thesiskeywordsesfinal
+% STEP 1: Insert your external 2-page PDF here
+% (Change "university_cover.pdf" to your actual PDF filename)
+\includepdf[pages=1-2]{Portada_TFM-BSE.pdf}
 
 \clearpage
 
-% Paper-style title page
-\thispagestyle{plain}
+% STEP 2: Paper-style title page & Abstract (No page numbers)
+\thispagestyle{empty} 
 
 \begin{center}
     {\large MASTER PROJECT\par}
@@ -233,14 +172,15 @@ Este trabajo estudia c\'omo los choques localizados en las zonas de destino de l
 
 \clearpage
 
+% STEP 3: Table of Contents Page (No headers/footers/numbers)
+\pagestyle{empty} 
 \tableofcontents
-
 \clearpage
 
-% Main body
+% STEP 4: Main Body (Starts counting from Page 1 here)
 \hypersetup{pageanchor=true}
-\pagenumbering{arabic}
-\pagestyle{fancy}
+\pagenumbering{arabic} 
+\pagestyle{fancy}     
 
 % Chapter 1: introduction
 \input{chapters_v2/1_introduction}
@@ -263,7 +203,7 @@ Este trabajo estudia c\'omo los choques localizados en las zonas de destino de l
 \newpage
 % Bibliography
 \begingroup
-\renewcommand*{\bibfont}{\fontsize{10pt}{12pt}\selectfont} % 10pt font
+\renewcommand*{\bibfont}{\fontsize{10pt}{12pt}\selectfont} 
 \setstretch{1.2}
 \setlength{\bibitemsep}{2pt}
 \printbibliography[heading=bibintoc, title={References}]
